@@ -1,0 +1,219 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+  --third-family: "Arial", sans-serif;
+  --font3: "Noto Sans", sans-serif;
+  --font4: "Helvetica Neue", sans-serif;
+  --font5: "SF UI Text", sans-serif;
+  --font6: "Roboto", sans-serif;
+  --font7: "SF Pro Text", sans-serif;
+  --font8: "Plus Jakarta Sans", sans-serif;
+  --font9: "Lato", sans-serif;
+  --font10: "Manrope", sans-serif;
+  --font11: "Tajawal", sans-serif;
+  --font12: "DM Sans", sans-serif;
+  --font13: "Poppins", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input:hover,
+input:focus,
+input:active,
+input:valid{
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-block{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+.main-container{
+    max-width: 1400px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.goals-users{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.goals-users h1.page-header{
+    font-family: var(--font6);
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+.goals-users p.page-description{
+    font-family: var(--font7);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    max-width: 520px;
+    text-align: center;
+}
+
+.progress-block{
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 936px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 100px;
+    overflow: hidden;
+}
+
+.progress-block .salute-img{
+    width: 100%; 
+}
+
+.progress-num{
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 128px;
+    line-height: 19%;
+    text-align: center;
+    color: #111;
+}
+
+.progress-description{
+    margin: 30px 0;
+    font-family: var(--font6);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    margin-top: 70px;
+}
+
+.progress-bar-block {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.progress-container {
+  width: 100%;
+  background: #f3f3f3;
+  border-radius: 12px;
+  padding: 5px 15px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+  position: relative;
+  height: 30px;
+  background: #222;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 20%; /* 1000 из 5000 = 20% */
+  background: linear-gradient(90deg, #00aaff, #0077ff);
+  border-radius: 10px 0 0 10px;
+  transition: width 0.5s ease;
+  overflow: visible;
+}
+
+.progress-avatar {
+  position: absolute;
+  top: -10px;
+  left: calc(20% - 25px);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.progress-text {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 133%;
+    font-weight: 400;
+    color: #fff;
+}
+
+.progress-text .special-colored{
+    font-weight: bold;
+    color: #9fddff;
+}
+
+.goal-text {
+    margin-top: 10px;
+    font-weight: 700;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: right;
+    color: #111;
+}
+
+.goals-users-avatar{
+    width: 40px;
+}

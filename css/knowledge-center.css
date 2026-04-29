@@ -1,0 +1,252 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+  --third-family: "Arial", sans-serif;
+  --font3: "Noto Sans", sans-serif;
+  --font4: "Helvetica Neue", sans-serif;
+  --font5: "SF UI Text", sans-serif;
+  --font6: "Roboto", sans-serif;
+  --font7: "SF Pro Text", sans-serif;
+  --font8: "Plus Jakarta Sans", sans-serif;
+  --font9: "Lato", sans-serif;
+  --font10: "Manrope", sans-serif;
+  --font11: "Tajawal", sans-serif;
+  --font12: "DM Sans", sans-serif;
+  --font13: "Poppins", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input:hover,
+input:focus,
+input:active,
+input:valid{
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-block{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+.main-container{
+    max-width: 1400px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.knowledge-center{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    flex-direction: column;
+    max-width: 1220px;
+}
+
+.knowledge-center-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    position: relative;
+}
+
+.knowledge-center-header h1{
+    font-family: var(--font13);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 59%;
+    text-align: center;
+    color: #303a42;
+    margin: 0;
+    padding: 0;
+    z-index: 100; 
+}
+
+.knowledge-center-header img{
+    position: absolute;
+    z-index: 10;
+    left: -30%;
+}
+
+.faq-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 80px;
+  width: 100%;
+}
+
+.faq {
+  border-bottom: 1px solid #eaeaea;
+  padding: 16px 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-family: var(--font12);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 127%;
+    color: #303a42;
+    gap: 15px;
+    max-width: 100%;
+}
+
+.faq-question.active {
+    font-family: var(--font12);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 127%;
+    color: #0093ff;
+}
+
+.faq-question.active .faq-icon{
+    color: #0093ff !important;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    font-family: var(--font12);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 167%;
+    color: #303a42;
+}
+
+.faq-answer.open {
+  margin-top: 10px;
+}
+
+.faq-icon {
+  font-size: 24px;
+  color: #000; /* Черный цвет */
+  transition: transform 0.3s;
+  font-weight: 400;
+  min-width: 24px;
+  text-align: center;
+  line-height: 1;
+}
+
+.faq-question.active .faq-icon {
+  transform: rotate(0deg); /* Убираем вращение */
+  color: #000; /* Остается черным */
+}
+
+.contact-us{
+    display flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-us p{
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 168%;
+    text-align: center;
+    color: #555;
+    width: 100%;
+    max-width: 550px;
+}
+
+.contact-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+} 
+
+.contact-buttons .write-to-manager{
+    border-radius: 6px;
+    min-width: 224px;
+    min-height: 40px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 126%;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-buttons .response-graphic{
+    border-radius: 6px;
+    min-width: 188px;
+    min-height: 40px;
+    background: rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 126%;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+
+@media (max-width: 676px){
+    .faq-container {
+        grid-template-columns: 100%;
+        gap: 0;
+    }
+}
+
+@media (max-width: 470px){
+    .contact-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+}

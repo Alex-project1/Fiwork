@@ -1,0 +1,624 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+  --third-family: "Arial", sans-serif;
+  --font3: "Noto Sans", sans-serif;
+  --font4: "Helvetica Neue", sans-serif;
+  --font5: "SF UI Text", sans-serif;
+  --font6: "Roboto", sans-serif;
+  --font7: "SF Pro Text", sans-serif;
+  --font8: "Plus Jakarta Sans", sans-serif;
+  --font9: "Lato", sans-serif;
+  --font10: "Manrope", sans-serif;
+  --font11: "Tajawal", sans-serif;
+  --font12: "DM Sans", sans-serif;
+  --font13: "Poppins", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input:hover,
+input:focus,
+input:active,
+input:valid{
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-block{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+.main-container{
+    max-width: 1400px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.program-for-creators-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.program-for-creators-header, .program-for-creators-description{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    gap: 20px; 
+}
+
+.program-for-creators-header-text h1{
+    font-family: var(--font10);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #222;
+    max-width: 685px;
+}
+
+.program-for-creators-header-text h1 span{
+    color: #0177ff;
+    display: inline-block;
+}
+
+.program-for-creators-header-text h1 span img{
+    display: inline;
+    height: 60px;
+}
+
+.program-for-creators-header-text p{
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    max-width: 500px;
+}
+
+.program-for-creators-header-text p a{
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    color: #07f;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.program-for-creators-header-banner{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
+
+.create-content-container{
+    background: #f8fafb;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+}
+
+.create-content-container h2{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 108%;
+    color: #171717;
+    margin: 0;
+    padding: 0;
+}
+
+.create-content-container p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 164%;
+    color: #777;
+}
+
+.create-content-container blockquote{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 164%;
+    color: #171717;
+    width: 100%;
+    margin: 25px 0;
+    padding: 0 20px;
+}
+
+.how-it-works {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.how-it-works h2 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 108%;
+    color: #171717;
+}
+
+.hiw-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+}
+
+.hiw-card {
+    background: #f8fafb;
+    border-radius: 20px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.hiw-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.hiw-card img {
+    height: 120px;
+    margin-bottom: 15px;
+}
+
+.hiw-card p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    color: #171717;
+    margin: 0;
+    padding: 0;
+}
+
+.hiw-img-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hiw-img-container img{
+    height: 120px;
+    z-index: 10;
+}
+
+.hiw-img-container .img-background{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 10px;
+    background: #eff0fb;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    .hiw-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .hiw-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .how-it-works h2 {
+        text-align: center;
+    }
+}
+
+.info-box {
+    background: #f7f9fa;
+    padding: 25px 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    margin-top: 50px;
+}
+
+.info-box p {
+    margin: 0;
+    flex: 1;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 164%;
+    color: #171717;
+}
+
+.info-btn {
+    padding: 12px 26px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.25s ease;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 164%;
+    text-align: center;
+    color: #fff;
+    background: #171717;
+    border: 1px solid #171717;
+    border-radius: 16px;
+    min-width: 198px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .info-box {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .info-btn {
+        align-self: flex-start;
+    }
+}
+
+.subscribers-box {
+    background: #f8fafb;
+    padding: 35px 32px;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.subscribers-box h3 {
+    margin-bottom: 18px;
+    margin-top: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 108%;
+    color: #171717;
+}
+
+.subscribers-box p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 162%;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.subscribers-box a {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #777 ;
+}
+
+.subscribers-box a:hover {
+    text-decoration: none;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .subscribers-box {
+        padding: 28px 22px;
+    }
+
+    .subscribers-box h3 {
+        font-size: 20px;
+    }
+}
+
+/* Общие стили для секции */
+.faq-section {
+    padding: 30px;
+    margin: 0 auto;
+    width: 100%;
+    background: #f8fafb;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.faq-section h2 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 106%;
+    color: #171717;
+    margin-top: 0;
+}
+
+.faq-container {
+    padding: 0; 
+    width: 100%;
+}
+
+/* Стили для каждого элемента FAQ */
+.faq-item {
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background: #f2f3f5;
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.faq-toggle {
+    display: none;
+}
+
+.faq-question {
+    display: block;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 16px;
+    position: relative;
+    user-select: none; 
+    background: #f2f3f5;
+}
+
+.faq-item:first-child .faq-question {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.faq-item:last-child .faq-question {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 25px;
+    background: #f8fafb;
+}
+
+.faq-answer p{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 162%;
+    color: #777;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
+    max-height: 500px; /* Достаточно большое значение для раскрытия */
+    padding: 15px 25px 20px;
+}
+
+ .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #999;
+}
+
+.faq-toggle:checked + .faq-question::after {
+    content: '–';
+} 
+
+
+/* ==================== ПОЛНАЯ АДАПТИВНАЯ ВЕРСТКА  ==================== */
+
+/* 1. Обнуляем старые жёсткие размеры и делаем гибкие */
+
+
+/* 2. Как это работает — карточки */
+@media(max-width: 1150px){
+    .hiw-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+}
+
+.hiw-img-container {
+  height: 120px;
+}
+
+.hiw-img-container img {
+  max-height: 100px;
+  width: auto;
+}
+
+
+.info-box p {
+  font-size: clamp(14px, 2vw, 15px);
+}
+
+.info-btn {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.subscribers-box h3 {
+  font-size: clamp(20px, 4vw, 24px);
+}
+
+.subscribers-box p {
+  font-size: clamp(14px, 1.9vw, 15px);
+}
+
+@media (max-width: 1100px) {
+    .program-for-creators-header {
+        grid-template-columns: 1fr;
+    }   
+  
+    .program-for-creators-header {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 32px;
+    }
+    
+    .program-for-creators-header-text h1 {
+      font-size: clamp(32px, 7vw, 56px);
+      max-width: 100%;
+      margin-top: 0;
+    }
+    
+    .program-for-creators-header-text p {
+      font-size: clamp(16px, 2.2vw, 18px);
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .program-for-creators-header-banner img.hello-guy {
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 40px 0;
+    gap: 48px;
+  }
+
+  .create-content-container,
+  .info-box,
+  .subscribers-box,
+  .faq-section {
+    padding: 28px 20px;
+  }
+
+  .how-it-works h2,
+  .faq-section h2 {
+    text-align: center;
+    font-size: clamp(21px, 4vw, 24px);
+  }
+  
+  .program-for-creators-block{
+        margin-top: 30px;
+        margin-bottom: 30px;
+  } 
+}
+
+@media (max-width: 500px) {
+  .hiw-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hiw-card {
+    padding: 32px 20px;
+  }
+
+  .faq-question {
+    padding: 16px 48px 16px 20px !important;
+  }
+
+  .faq-question::after {
+    right: 16px;
+    font-size: 26px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 400px) {
+  .program-for-creators-header-text h1 {
+    font-size: 34px;
+  }
+
+  .info-btn {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Дополнительно: плавная анимация раскрытия FAQ (если старая ломается) */
+.faq-toggle:checked + .faq-question + .faq-answer {
+  max-height: 800px;
+  padding: 8px 24px 24px;
+}
+
+/* Убираем возможные баги с изображениями */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Финальный штрих — красивый скролл на мобильных */
+html {
+  scroll-behavior: smooth;
+}

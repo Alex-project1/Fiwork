@@ -1,0 +1,235 @@
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Poppins", sans-serif;
+  --font3: "Roboto", sans-serif;
+  --font4: "SF Pro Text", sans-serif;
+  --font5: "Tajawal", sans-serif;
+  --font6: "Montserrat", sans-serif;
+  --font7: "DM Sans", sans-serif;
+  --font8: "Tahoma", sans-serif;
+  --font9: "Font Awesome 5 Free", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input:hover,
+input:focus,
+input:active,
+input:valid {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-block{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-container{
+    max-width: 1400px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+header{
+    position: relative;
+    z-index: 11;
+}
+
+.not-found-block{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.not-found-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.not-found-container h2{
+    font-family: var(--font7);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 124%;
+    text-align: center;
+    color: #170f49;
+    margin: 0;
+    padding: 0;
+}
+
+.not-found-container p{
+    font-family: var(--font7);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    color: #6f6c90;
+    margin: 0;
+    padding: 0;
+}
+
+.not-found-container .back-to-main-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 5px;
+    width: 267px;
+    max-width: 100%;
+    min-height: 45px;
+    background: #0177ff;
+    font-family: var(--font3);
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    gap: 15px;
+    text-decoration: none;
+    opacity: 0.8;
+    margin-top: 20px;
+    position: relative;
+}
+
+.not-found-container .back-to-main-page:hover{
+    opacity: 1;
+}
+
+.not-found-container .back-to-main-page .cursor-icon{
+    width: 30px;
+    position: absolute;
+    bottom: -60px;
+    right: -30px;
+}
+
+.not-found-container .back-to-main-page img{
+    width: 18px;
+}
+
+.not-found-banner{
+    width: 975px;
+    max-width: 50%;
+    position: absolute;
+    bottom: -80px;
+}
+
+.vilka-banner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%; 
+}
+
+@media (max-width: 1150px){
+    .not-found-container{
+        margin-left: 100px;
+        padding: 20px;
+    }
+    
+    .not-found-container h2{
+        font-size: 40px;
+    }
+    
+    .not-found-container p{
+        font-size: 16px;
+    }
+    
+        
+    .not-found-banner{
+        bottom: -2em;
+    }
+}
+
+@media (max-width: 950px){
+    .not-found-container{
+        margin-left: 170px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .not-found-container h2{
+        font-size: 32px;
+        margin-top: 100px;
+    }
+    
+    .not-found-banner{
+        bottom: 4em;
+    }
+    
+    
+    .vilka-banner{
+        display: none;
+    }
+    
+    .not-found-container{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px){
+    .not-found-container h2{
+        font-size: 28px;
+    }
+    
+    .not-found-container p{
+        font-size: 14px;
+    }
+    
+    .not-found-container .back-to-main-page{
+        width: auto;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    
+}
+
+@media (max-width: 476px){
+    .not-found-container h2{
+        font-size: 24px;
+    }
+    
+    .not-found-container p{
+        font-size: 12px;
+    }
+}

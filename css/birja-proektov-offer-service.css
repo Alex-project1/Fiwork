@@ -1,0 +1,945 @@
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "SF Pro Text", sans-serif;
+  --font3: "Poppins", sans-serif;
+  --font4: "Roboto", sans-serif;
+  --font5: "Tajawal", sans-serif;
+  --font6: "Montserrat", sans-serif;
+  --font7: "Manrope", sans-serif;
+  --font8: "DM Sans", sans-serif;
+  --font9: "Font Awesome 5 Free", sans-serif;
+  --font10: "Helvetica", sans-serif;
+  --font11: "Tahoma", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input:hover,
+input:focus,
+input:active,
+input:valid{
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-block{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-container{
+    max-width: 1400px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+
+.my-portfolio-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 0 24px;
+    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.my-portfolio-nav .separator-icon{
+    height: 44px;
+}
+
+.my-portfolio-nav .home-icon{
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+
+.my-portfolio-nav span{
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #6b7280;
+}
+
+.birja-proektov-block{
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px;
+}
+
+.birja-proektov-container{
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 80px;
+}
+
+.birja-proektov-block .aside-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.birja-proektov-block .aside-container .back-to-project-list{
+    background: #fff;
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    width: 100%;
+    min-height: 46px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #04b70a;
+    padding :10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+.birja-proektov-block .aside-container .menu-container{
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px;
+    gap: 20px;
+}
+
+.aside-container .menu-container .menu-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
+.aside-container .menu-container .menu-section label{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 144%;
+    color: #111;
+}
+
+.aside-container .menu-container .menu-elem{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 123%;
+    color: #111;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.aside-container .menu-container .menu-elem label{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 123%;
+    color: #111;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.aside-container .menu-container .menu-elem span{
+    font-weight: 400;
+    color: #666;
+}
+
+.aside-container .menu-container .menu-elem a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 123%;
+    color: #177de5;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.download-the-app{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.download-the-app h3{
+    font-family: var(--font6);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 117%;
+    color: #404145;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    max-width: 246px;
+    width: 100%;
+}
+
+.download-the-app p{
+    font-family: var(--font6);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 136%;
+    color: #404145;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    max-width: 246px;
+    width: 100%;
+}
+
+.download-the-app .platforms{
+    max-width: 246px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.download-the-app .platforms .platform{
+    display: flex;
+    width: 100%;
+    aspect-ratio: 1/1;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #f3f2f1;
+    border-radius: 100%;
+}
+
+.download-the-app .platforms .platform img{
+    object-fit: contain;
+}
+
+/*content container*/
+.project-offers-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-offer{
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.project-offer-description-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.project-offer-description-container .project-offer-description{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    max-width: 520px;
+}
+
+.project-offer-description-container .project-offer-description h3{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #090;
+}
+
+
+.project-offer-description-container .project-offer-description .show-full-text{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #177de5;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+
+.project-offer-description-container .preferred-budget-container{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: right;
+    gap: 7px;
+}
+
+.project-offer-description-container .preferred-budget-container .preferred-budget{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 167%;
+    color: #090;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.project-offer-description-container .preferred-budget-container .preferred-budget-count{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #090;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.project-offer-description-container .preferred-budget-container .round-question-icon{
+    width: 12px;
+}
+
+.question-and-description{
+    display: inline-block;    
+}
+
+/* 1. Контейнер для позиционирования */
+.tooltip-container {
+    position: relative; /* Создаем контекст для абсолютного позиционирования подсказки */
+    cursor: help; /* Меняем курсор на знак вопроса */
+}
+
+/* 3. Сама подсказка (изначально скрыта) */
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    z-index: 10;
+    bottom: 150%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* Фиксированная ширина */
+    background-color: #fefefe;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    color: #111;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: normal;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.project-to-do-description{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    margin: 10px 0;
+    padding: 0;
+} 
+
+.customer-description-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.customer-description-container .img-container{
+    width: 65px;
+    aspect-ratio: 1/1;
+    border-radius: 3px;
+}
+
+.customer-description-container .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+}
+
+.customer-description-container .customer-details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+
+.customer-description-container .customer-details-container .customer-detail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+}
+
+.customer-description-container .customer-details-container .customer-detail img{
+    margin-left: 5px;
+}
+
+.customer-description-container .customer-details-container .customer-detail a{
+    color: #177de5;
+    text-decoration: none;
+}
+
+
+.offer-service-data-container{
+    flex: 1;
+}
+
+.offer-service-data-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.offer-service-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    gap: 20px;
+}
+
+
+.offer-service-container .active-until{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 183%;
+    color: #8a8a8a;
+}
+
+.offer-service-container .chevron-right{ 
+    height: 10px;
+}
+
+.offer-service-container .offer-service-data{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 183%;
+    color: #8a8a8a;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.offer-service-container input[type='button']{
+    background: #fafafa;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 216px;
+    max-width: 100%;
+    min-height: 32px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.service-offer-block h2{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 173%;
+    color: #111;
+}
+
+.service-offer-container{
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    background: #fff;
+}
+
+.service-offer-container h3{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.service-offer-container p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    max-width: 600px;
+}
+
+.service-offer-container p a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #177de5;
+    text-decoration: none;
+}
+
+.service-offer-container p .round-question-icon {
+    width: 14px;
+    margin-left: 5px;
+}
+
+.service-offer-description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.service-offer-description label{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.service-offer-description textarea{
+    width: 100%;
+    aspect-ratio: 9/2.6;
+    resize: none;
+    outline: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #000;
+    padding: 10px;
+}
+
+.service-offer-description-counter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+    width: 100%;
+}
+
+.service-offer-cost, .service-offer-time-to-do{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.service-offer-cost label, .service-offer-time-to-do label{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3px;
+}
+
+.service-offer-cost-container, .service-offer-time-to-do-container, .service-offer-portfolio-select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    width: 323px;
+    max-width: 100%;
+    min-height: 40px;
+}
+
+.service-offer-portfolio-select{
+    width: 210px;
+}
+
+.service-offer-cost-container input, .service-offer-time-to-do-container input{
+    flex: 1;
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    /*color: #8a8a8a;*/
+    color: #000;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Отключает стандартный внешний вид */
+    margin: 0; /* Убирает лишний отступ */
+}
+
+
+.service-offer-payment, .service-offer-portfolio{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.service-offer-payment-header, .service-offer-portfolio-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color: #111;
+}
+
+.service-offer-payment-header .round-question-icon{
+    width: 14px;
+}
+
+.service-offer-payment-options{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.service-offer-payment-option{
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+.service-offer-payment-option-header{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid rgba(227, 227, 227, 0.5);
+}
+
+.service-offer-payment-option-description{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.service-offer-payment-option-description img{
+    width: 32px;
+    aspect-ratio: 1/1;
+}
+
+.service-offer-payment-option-description p{
+    margin: 0;
+    padding: 0;
+    max-width: 260px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #333;
+}
+
+.service-offer-time-to-do select, .service-offer-portfolio-select select{
+    flex: 1;
+    width: 100%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    /*color: #8a8a8a;*/
+    color: #000;
+}
+
+.service-offer-portfolio-container{
+    max-width: 670px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.service-offer-portfolio-container .portfolio-elem{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    aspect-ratio: 2.1/1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-offer-portfolio-container .portfolio-elem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+}
+
+.see-more-button{
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 370px;
+    max-width: 100%;
+    min-height: 32px;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.offer-button-container{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-button-container .offer-button{
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 19px 55px;
+    width: 200px;
+    max-width: 100%;
+    min-height: 48px;
+    background: #04b70a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.offer-button-container .offer-button:hover{
+    background: #04a609;
+}
+/*end of content container*/
+
+@media(max-width: 1200px){
+    .birja-proektov-container{
+        gap: 20px;
+    }
+}
+
+@media(max-width: 1000px){
+    .service-offer-payment-options{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+@media(max-width: 860px){
+    .birja-proektov-container{
+        grid-template-columns: 100%;
+    }
+    
+    .service-offer-payment-options{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+    
+    .birja-proektov-block{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media(max-width: 640px){
+    .service-offer-portfolio-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+    
+    .service-offer-description textarea{
+        aspect-ratio: 2/1;
+    }
+    
+    .service-offer-payment-options{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+@media(max-width: 576px){
+    .project-offer-description-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    
+    .project-offer-description-container .project-offer-description{
+        order: 2;
+    }
+    
+    .project-offer-description-container .preferred-budget-container{
+        order: 1;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: right;
+    }
+    
+    .offer-button-container .offer-button{
+        width: 100%; 
+    }
+    
+    .tooltip-text {
+        transform: translateX(-65%);
+    }
+    
+    .service-offer-payment-header .tooltip-text{
+        transform: translateX(-100%);
+    }
+    
+    .offer-service-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
+    }
+}

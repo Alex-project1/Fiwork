@@ -1,0 +1,2531 @@
+/*:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+  --third-family: "Manrope", sans-serif;
+  --font3: "Plus Jakarta Sans", sans-serif;
+  --font4: "Montserrat", sans-serif;
+  --font5: "Tajawal", sans-serif;
+  --font6: "Nunito", sans-serif;
+  --font7: "SF Pro Text", sans-serif;
+}*/
+
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Poppins", sans-serif;
+  --font3: "Roboto", sans-serif;
+  --font4: "SF Pro Text", sans-serif;
+  --font5: "Tajawal", sans-serif;
+  --font6: "Plus Jakarta Sans", sans-serif;
+  --font7: "Manrope", sans-serif;
+  --font8: "Fira Sans", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input:hover,
+input:focus,
+input:active,
+input:valid {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-block{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-container{
+    max-width: 1400px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+textarea:focus, input:focus, select:focus{
+    outline: none;
+}
+
+
+.create-fiwork-block{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;    
+    position: relative;
+}
+
+
+.create-fiwork-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 0 24px;
+    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.create-fiwork-nav .separator-icon{
+    height: 44px;
+}
+
+.create-fiwork-nav .home-icon{
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+
+.create-fiwork-nav span{
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #6b7280;
+}
+
+.back-to-fiworks{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #8a8a8a;
+}
+
+.back-to-fiworks img{
+    height: 10px;
+}
+
+.create-fiwork-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 80px;
+    margin-top: 20px;
+    position: relative;
+}
+
+/*create-fiwork-form-container*/
+.create-fiwork-form-container{
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 40px;
+    background: #fff;
+}
+
+.form-trigger-button{
+    width: 0 !important; 
+    height: 0 !important;
+    opacity: 0;
+}
+
+.create-fiwork-steps-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.create-fiwork-step{
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    padding: 16px 16px;
+}
+
+.continue-to-next-step{
+    padding: 15px;
+    min-height: 70px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.continue-to-next-step.hidden{
+    display: none;
+}
+
+.create-fiwork-step-header{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 108%;
+    color: #bcbcbc;
+}
+
+.create-fiwork-step.active .create-fiwork-step-header{
+    color: #111;
+}
+
+
+.create-fiwork-step .create-fiwork-step-content{
+    display: none;
+}
+
+.create-fiwork-step.active .create-fiwork-step-content{
+    display: block;
+}
+
+.create-fiwork-step-header .create-fiwork-step-num-container{
+    border-radius: 18px;
+    width: 36px;
+    aspect-ratio: 1/1;
+    background: #bcbcbc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 200%;
+    text-align: center;
+    color: #fff;
+}
+
+
+.create-fiwork-step.active .create-fiwork-step-header .create-fiwork-step-num-container{
+    background: #457edb;
+}
+
+.create-fiwork-step.active.filled .create-fiwork-step-header .create-fiwork-step-num-container{
+    background: #04b70a;;
+}
+
+.create-fiwork-step-stages{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #e8e8e8;
+    padding: 16px 0;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.create-fiwork-step-stage{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.create-fiwork-step-stage.hidden{
+    display: none;
+}
+
+.create-fiwork-step-stage .step-stage-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 133%;
+    color: #111;
+}
+
+.create-fiwork-step-stage .step-stage-name .error-description{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #f15b5b;
+    margin: 0;
+    padding: 0;
+}
+
+
+.create-fiwork-step-stage .step-stage-name .error-description.hidden{
+    display: none
+}
+
+.create-fiwork-step-stage .step-stage-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.create-fiwork-step-stage .step-stage-form.two-cols{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 500px;
+    gap: 15px;
+}
+
+.create-fiwork-step-stage .add-own-variant{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #177de5;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.create-fiwork-step-stage .step-stage-form.two-cols .step-stage-form-col{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.create-fiwork-step-enter-name .step-stage-form .textarea-container{
+    width: 100%;
+    position: relative;
+}
+
+.create-fiwork-step-enter-name .step-stage-form textarea{
+    width: 100%;
+    border: 1px solid #a5a5a5;
+    border-radius: 3px;
+    padding: 11px 10px;
+    height: 100px;
+    min-height: 30px;
+    background: #fff;
+    resize: none;
+    font-family: var(--font-family);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 123%;
+    color: #111;
+}
+
+.create-fiwork-step-enter-name .step-stage-form textarea::placeholder{
+    color: #808080;
+}
+
+.create-fiwork-step-enter-name .step-stage-form .word-interval{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+    margin-top: 5px;
+}
+
+.create-fiwork-step-select-section .step-stage-form select{
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 0 12px;
+    width: 260px;
+    height: 40px;
+    max-width: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.create-fiwork-step-select-section #select-subcategory.hidden{
+    display: none;
+}
+
+
+.create-fiwork-step-select-section .step-stage-form .similar-to-selection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 3px;
+    margin-top: 15px;
+}
+
+
+.create-fiwork-step-select-section .step-stage-form .similar-to-selection.hidden{
+    display: none;
+}
+
+
+
+.create-fiwork-step-select-section .step-stage-form .similar-to-selection label{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.create-fiwork-step-select-section .step-stage-form .similar-to-selection-row{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #457edb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.create-fiwork-step-select-section .step-stage-form .select-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.continue-to-next-step-button{
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 9px 36px;
+    min-width: 162px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #fff;
+    background: #04b70a;
+    cursor: pointer;
+}
+
+
+.step-stage-form-description-modal{
+    width: 250px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: -260px;
+    top: -10px;
+    display: none;
+}
+
+
+.step-stage-form-description-modal.upload-cover-description-modal{
+    width: 300px;
+    right: -370px;
+    gap: 0px;
+    top: -250px;
+}
+
+
+.create-fiwork-step-stage .step-stage-form:hover .step-stage-form-description-modal{
+    display: flex;
+}
+
+
+.step-stage-form-description-modal .img-container{
+    width: 100%;
+    aspect-ratio: 2.5/1.5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    overflow: hidden;
+}
+
+.step-stage-form-description-modal .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+}
+
+.step-stage-form-description-modal .description-text{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.step-stage-form-description-modal .description-text label{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.high-competition-modal .description-text label{
+    color: #e53935;
+}
+
+.step-stage-form-description-modal .description-text p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.step-stage-form-description-modal .description-text ul{
+    padding: 0;
+    margin: 0;
+    padding-left: 15px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+}
+
+.step-stage-form-description-modal .description-text .li-element{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #333;
+}
+
+.step-stage-form-description-modal .description-text .li-element .red-x{
+    width: 12px;
+    padding-top: 5px;
+}
+
+.step-stage-form-description-modal .description-text .li-element .green-checkmark{
+    width: 17px;
+    padding-top: 5px; 
+}
+
+
+
+.step-stage-form-description-modal .pointer-icon{
+    position: absolute;
+    width: 10px;
+    left: -10px;
+    top: 15%;
+}
+
+.step-stage-form-description-modal.upload-cover-description-modal .pointer-icon{
+    top: 55%;
+}
+
+.create-fiwork-step-upload-cover{
+    margin-top: 20px;
+}
+
+.create-fiwork-step-upload-cover .upload-cover-container{
+    width: 535px;
+    max-width: 100%;
+    aspect-ratio: 5.3/3.1;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.create-fiwork-step-upload-cover .upload-cover-container:hover{
+    border: 1px solid #04b70a;
+}
+
+
+.create-fiwork-step-upload-cover .upload-cover-container img{
+    width: 48px;
+    aspect-ratio: 1/1;
+}
+
+.create-fiwork-step-upload-cover .upload-cover-container label{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.create-fiwork-step-upload-cover .upload-cover-container p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    text-align: center;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.create-fiwork-step-upload-cover .upload-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.create-fiwork-step-upload-cover .preview-img-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
+.create-fiwork-step-upload-cover .preview-img-container .upload-preview{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    z-index: 10;
+}
+
+.create-fiwork-step-upload-cover .preview-img-container .upload-preview-shadow-left{
+    background: #111;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 11;
+}
+
+
+.create-fiwork-step-upload-cover .preview-img-container .upload-preview-shadow-right{
+    background: #111;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 11;
+}
+
+
+.create-fiwork-step-type .select-type{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.create-fiwork-step-type .fiwork-type-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.create-fiwork-step-type .fiwork-type-container *{
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+/*fiwork-files-and-description-form*/
+    .fiwork-files-and-description-form .editor-wrapper {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .fiwork-files-and-description-form .editor-container {
+      background: white;
+      border-radius: 6px;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .fiwork-files-and-description-form .toolbar {
+      border-bottom: 1px solid #ccc;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      background: #f0f3f4;
+    }
+
+    .fiwork-files-and-description-form .editor {
+        height: 300px;
+        padding: 10px;
+        padding-left: 0px; 
+        font-family: var(--font-family) !important;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        line-height: 171% !important;
+        border: 1px solid #ccc;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .fiwork-files-and-description-form .editor{
+        word-break: break-word;
+    }
+    
+    .fiwork-files-and-description-form #fiworkCustomerDescriptionEditor{
+        height: 175px;
+    }
+
+    .fiwork-files-and-description-form .char-counter {
+        text-align: right;
+        font-size: 13px;
+        color: #888;
+        margin-top: 5px;
+    }
+    
+    .fiwork-files-and-description-form .attach-wrapper {
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+
+    .fiwork-files-and-description-form .attach-label {
+        color: #0077ff;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 157%;
+        color: #177de5;
+    }
+
+    .fiwork-files-and-description-form .attach-label:hover {
+      text-decoration: underline;
+    }
+
+    .fiwork-files-and-description-form .attach-label svg {
+      margin-right: 6px;
+    }
+
+    .fiwork-files-and-description-form .attach-info {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 133%;
+        color: #8a8a8a;
+    }
+
+    .fiwork-files-and-description-form input[type="file"] {
+      display: none;
+    }
+    
+    .fiwork-files-and-description-form .attach-icon{
+        width: 24px;
+    }
+    
+    
+    .file-names-display li{
+        margin-top: 8px;
+        font-family: var(--font-family);
+        font-size: 14px;
+    }
+/*end of fiwork-files-and-description-form*/
+/*fiwork-price-and-options-form*/
+.create-fiwork-step-content .price-and-options-table-container{
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e8e8e8;
+    width: 100%;
+}
+
+.create-fiwork-step-content .fiwork-price-and-options-table-wrapper{
+    width: 100%;
+    position: relative;
+}
+
+.create-fiwork-step-content .price-and-options-table{
+    width: 100%;
+    border: 1px solid #bbb;
+    border-collapse: collapse;
+    position: relative;
+}
+
+
+.create-fiwork-step-content .price-and-options-table thead tr th{
+    padding: 20px 5px;
+    background: #f6f6f6;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #111;
+    border: 1px solid #bbb;
+}
+
+.price-and-options-table tbody tr td{
+    padding: 10px;
+    min-height: 40px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #bbb;
+}
+
+.price-and-options-table tbody tr select{
+    border: 0;
+    outline: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #8a8a8a;
+    width: 100%;
+}
+
+.price-and-options-table tbody tr td:first-child {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 143%;
+    color: #111;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #bbb;
+    text-align: left;
+    min-width: 200px;
+}
+
+
+
+.price-and-options-table td{
+    position: relative;
+}
+
+.price-and-options-table tr.fiwork-option-names td{
+    height: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.price-and-options-table .fiwork-option-name-input{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    color: #111;
+    border: 0;
+    outline: none;
+    resize: none;
+    height: 80px;
+}
+
+
+.price-and-options-table .edit-cell-pencil{
+    position: absolute;
+    width: 10px;
+    right: 5px;
+    top: 5px;
+}
+
+.price-and-options-table .info-icon{
+    position: absolute;
+    width: 12px;
+    right: 3px;
+    top: 3px;
+}
+
+.price-and-options-table .add-own-option-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px; 
+    cursor: pointer;
+}
+
+
+.price-and-options-table .add-own-option-button img{
+    width: 20px;
+}
+
+.price-and-options-table .own-option-text{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 100%;
+    color: #569d35;
+}
+
+.price-and-options-table .own-option-input-template{
+    display: none;
+}
+
+.price-and-options-table .own-option-checkbox-template{
+    display: none;
+}
+
+.price-and-options-table input[type='text']{
+    border: 0;
+    outline: none;
+}
+
+.fiwork-in-three-variants{
+    background: rgba(255,255,255,0.9);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fiwork-in-three-variants h3{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.fiwork-in-three-variants p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #111;
+}
+
+.fiwork-in-three-variants input[type='button']{
+    border: 1px solid #04b70a;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 82px;
+    height: 32px;
+    background: #04b70a;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fiwork-in-three-variants:hover .step-stage-form-description-modal{
+    display: flex;
+    right: -350px;
+}
+
+.fiwork-price-and-options-table-container *{
+    overflow: visible !important;
+}
+
+.price-and-options-table tr:hover .step-stage-form-description-modal{
+    display: flex;
+    position: absolute;
+    width: 250px; 
+    height: max-content;
+    border: 0;
+}
+
+.price-and-options-table .step-stage-form-description-modal p.orange-background{
+    background: #fff5e2;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.price-and-options-table tr:hover .step-stage-form-description-modal label{
+    text-align: left;
+}
+/*fiwork-in-three-variants-switch*/
+.fiwork-in-three-variants-switch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.fiwork-in-three-variants-switch span{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 133%;
+    text-align: right;
+    color: #b8b8bf;
+}
+
+.fiwork-in-three-variants-switch span:first-child{
+    color: #000;
+}
+
+.fiwork-in-three-variants-switch.active span:first-child{
+    color: #b8b8bf;
+}
+
+.fiwork-in-three-variants-switch.active span:second-child{
+    color: #000;
+}
+
+.fiwork-in-three-variants-switch .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.fiwork-in-three-variants-switch .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.fiwork-in-three-variants-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: .4s;
+}
+
+.fiwork-in-three-variants-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.fiwork-in-three-variants-switch input:checked + .slider {
+  background-color: #04b70a; /* Красный цвет, как на картинке */
+}
+
+.fiwork-in-three-variants-switch input:checked + .slider:before {
+  transform: translateX(18px);
+}
+/*end of switch*/
+
+/*end of fiwork-price-and-options-form*/
+
+/*fiwork-options-editional-block*/
+.fiwork-editional-options-block{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.fiwork-editional-options{
+    display: block;
+    width: 100%;
+}
+
+.fiwork-editional-option{
+    display: block;
+    width: 100%;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.fiwork-editional-option.template{
+    display: none;
+}
+
+.fiwork-editional-options-block h3{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 133%;
+    color: #111;
+}
+
+.fiwork-editional-options-container{
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    padding: 15px;
+}
+
+.fiwork-editional-options-container .option-name-and-price-container{
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+
+.fiwork-editional-options-container .option-name-container{
+    width: 415px;
+    max-width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-right: 7px;
+    gap: 5px;
+}
+
+.fiwork-editional-options-container .option-name-input{
+    width: 100%;
+    border: 1px solid #a5a5a5;
+    border-radius: 3px;
+    padding: 6px 10px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+}
+
+.fiwork-editional-options-container .option-name-count-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+}
+
+.fiwork-editional-options-container .option-price-and-day-container{
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.fiwork-editional-options-container .options-price-and-day-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.fiwork-editional-options-container select{
+    width: 90px;
+    height: 32px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #a5a5a5;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.fiwork-editional-options-container .customer-tip-container{
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+.fiwork-editional-options-container .customer-tip-input{
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #808080;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #a5a5a5;
+    border-radius: 3px;
+    padding: 6px 10px;
+    height: 32px;
+    min-height: 32px;
+    background: #fff;
+}
+
+.fiwork-editional-options-container .customer-tip-count-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+    width: 100%;
+}
+
+.fiwork-editional-options-container .add-more-container{
+    width: 100%;
+    text-align: left;
+}
+
+.fiwork-editional-options-container .add-more{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #177de5;
+    cursor: pointer;
+}
+
+.fiwork-editional-options-container img{
+    width: 30px;
+    cursor: pointer;
+}
+/*end of fiwork-options-editional-block*/
+
+/*fiwork-portofolio-block*/
+.fiwork-portfolio-form{
+    position: relativer;
+}
+.fiwork-portfolio-block{
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid; 
+    border-top: 1px solid #e8e8e8;
+    position: relative;
+}
+
+.required-to-do{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #f15b5b;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.required-to-do.hidden{
+    display: none;
+}
+
+.fiwork-portfolio-container{
+    padding: 15px;
+    width: 640px;
+    max-width: 100%;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+}
+
+.fiwork-portfolio-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.fiwork-portfolio-header h2{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.fiwork-portfolio-header p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.fiwork-portfolio-header p.success{
+    display: none;
+    color: #04b70a;
+    flex-shrink: 0;
+}
+
+.fiwork-portfolio-header font{
+    color: #f15b5b;
+}
+
+.fiwork-portfolio-container-description{
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fiwork-portfolio-container-description p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.fiwork-portfolio-container-description .highlighted-text{
+    font-weight: 600;
+}
+
+.fiwork-portfolio-container .add-works-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.fiwork-portfolio-container .add-work-elem{
+    width: 100%;
+    aspect-ratio: 1.9/1.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 12px;
+    cursor: pointer;
+    gap: 10px;
+    position: relative;
+}
+
+.add-work-elem .loaded-modal-content{
+    display: none;
+}
+
+.fiwork-portfolio-container .add-work-elem img{
+    width: 24%;
+    aspect-ratio: 1/1;
+}
+
+.fiwork-portfolio-container .add-work-elem span{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #8a8a8a;
+}
+
+.fiwork-portfolio-container .add-works-container:hover .step-stage-form-description-modal{
+    display: flex;
+    top: 100px;
+    right: -350px;
+}
+
+.fiwork-portfolio-container .add-work-elem-loaded-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fiwork-portfolio-container .add-work-elem-loaded-container .work-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+}
+
+.fiwork-portfolio-container .add-work-elem-loaded-container .delete-icon{
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    width: 33px;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.7);
+    z-index: 100;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fiwork-portfolio-container .add-work-elem-loaded-container .edit-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 33px;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.7);
+    z-index: 100;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fiwork-portfolio-container .add-work-elem-loaded-container .resize-icon{
+    position: absolute;
+    top: 10px;;
+    left: 10px;
+    width: 33px;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.7);
+    z-index: 100;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fiwork-portfolio-container .add-work-elem-loaded-container.hidden{
+    display: none;
+}
+/*end-of-fiwork-portfolio-block*/
+/*end of create-fiwork-form-container*/
+
+/*create-fiwork-aside-block*/
+.create-fiwork-aside-container{
+    width: 100%;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e4e5e7;
+    border-radius: 8px;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.create-fiwork-aside-step{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #1f2937;
+}
+
+.create-fiwork-aside-step.active{
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+
+.create-fiwork-aside-step-num-container{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bcbcbc;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 300%;
+    text-align: center;
+    color: #fff;
+    border-radius: 100%;
+}
+
+.create-fiwork-aside-step.active .create-fiwork-aside-step-num-container{
+    background: #457edb;
+}
+
+.create-fiwork-aside-step.active.filled .create-fiwork-aside-step-num-container{
+    background: #04b70a;
+}
+
+.fiwork-price-and-options-form .create-fiwork-step-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fiwork-price-and-options-form .create-fiwork-step-num-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+/*end of create-fiwork-aside-block*/
+
+
+/*modal-blocks*/
+.add-fiwork-option-modal-block{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+}
+
+.add-fiwork-option-modal-block.hidden{
+    display: none;
+}
+
+.add-fiwork-option-modal-container{
+    width: 400px;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.add-fiwork-option-modal-container .add-fiwork-option-modal-header{
+    padding: 24px;
+    padding-bottom: 16px;
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.05), 0 1px 8px 0 rgba(0, 0, 0, 0.13);
+    background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+}
+
+.add-fiwork-option-modal-header h3{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 127%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.add-fiwork-option-modal-header .x-close-icon{
+    width: 24px;
+    cursor: pointer;
+}
+
+.add-fiwork-option-modal-wrapper{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.add-fiwork-option-modal-wrapper input[type='submit']{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 19px 32px;
+    min-height: 48px;
+    width: 100%;
+    background: #04b70a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-fiwork-option-modal-wrapper .option-prop{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:; flex-start;
+    justify-content: flex-start;
+}
+
+.add-fiwork-option-modal-wrapper .option-prop-description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.add-fiwork-option-modal-wrapper .option-prop-description label{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+} 
+
+.add-fiwork-option-modal-wrapper .option-prop-description img{
+    width: 14px;
+}
+
+.add-fiwork-option-modal-wrapper .option-prop-input{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #8a8a8a;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 10px 36px 10px 12px;
+    min-height: 40px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+} 
+
+.add-fiwork-option-modal-wrapper .option-prop-counter{
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #999;
+    margin-top: 5px;
+}
+
+.add-fiwork-option-modal-wrapper .option-view-type{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-top: 10px;
+}
+
+.add-fiwork-option-modal-wrapper .option-checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.add-fiwork-option-modal-wrapper .option-checkbox input[type='radio']{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.add-fiwork-option-modal-wrapper .option-view-type label{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+    cursor: pointer;
+}
+
+/*add-work-modal-block*/
+.add-work-modal-block{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);   
+    backdrop-filter: blur(8px);
+    z-index: 100;
+}
+
+.add-work-modal-container{
+    width: 720px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    max-height: 90%;
+}
+
+.add-work-modal-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.05), 0 1px 8px 0 rgba(0, 0, 0, 0.13);
+    background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+    min-height: 72px;
+    width: 100%;
+}
+
+.add-work-modal-header h3{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 127%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.add-work-modal-header img{
+    width: 32px;
+    cursor: pointer;
+}
+
+.add-work-modal-wrapper{
+    width: 100%;
+    padding: 24px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.add-work-modal-wrapper .add-work-modal-description{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+}
+
+.add-work-name-container{
+    padding: 15px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    background: #fff;
+    width: 100%;
+}
+
+.add-work-name-label-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.add-work-name-label-container label{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.add-work-name-label-container span{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+}
+
+.add-work-name-container .add-work-name-input{
+    width: 100%;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 10px 36px 10px 12px;
+    min-height: 40px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #8a8a8a;
+    margin-top: 8px;
+}
+
+.add-work-name-container .add-work-name-counter{
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+}
+
+.load-works-container, .load-cover-container{
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.load-works-container .load-works-header, .load-cover-container .load-cover-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    gap: 10px;
+    width: 100%;
+}
+
+.load-works-container .load-works-header h3, .load-cover-container .load-cover-header h3{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.load-works-container .load-works-header span, .load-cover-container .load-cover-header span{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 133%;
+    color: #f15b5b;
+}
+
+.load-works-container .load-works-description{
+    margin-bottom: 5px;
+    border-radius: 8px;
+    padding: 8px 8px 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #333;
+    background: #f1f7fd;
+}
+
+.load-works-container .load-works-description .load-works-container img{
+    width: 32px;
+}
+
+.load-works-container  p, .load-cover-container p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.load-cover-container p{
+    margin: 0;
+}
+
+.add-work-modal-block .add-works-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.add-work-modal-block .add-work-elem{
+    width: 100%;
+    aspect-ratio: 1.9/1.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 12px;
+    cursor: pointer;
+    gap: 10px;
+    background: #fafafa;
+    position: relative;
+}
+
+.add-work-modal-block .add-work-elem.hidden{
+    display: none;
+}
+
+.add-work-modal-block .add-work-elem img{
+    width: 24%;
+    aspect-ratio: 1/1;
+}
+
+.add-work-modal-block .add-work-elem span{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #8a8a8a;
+}
+
+.add-work-modal-block .submit-form-button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.add-work-modal-block .submit-form-button{
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 19px;
+    min-width: 160px;
+    min-height: 48px;
+    background: #04b70a;
+    opacity: 0.5;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-work-modal-block .submit-form-button:hover{
+    opacity: 1;
+}
+
+
+
+.add-work-modal-block .add-work-elem .upload-work-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.add-work-modal-block .preview-work-img-container{
+    width: 100%;
+    aspect-ratio: 1.9/1.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.add-work-modal-block .preview-work-img-container.template{
+    display: none;
+}
+
+.add-work-modal-block .preview-work-img-container .delete-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 33px;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.7);
+    z-index: 100;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.add-work-modal-block .preview-work-img-container .resize-icon{
+    position: absolute;
+    top: 10px;;
+    left: 10px;
+    width: 33px;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.7);
+    z-index: 100;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.add-work-modal-block .preview-work-img-container .upload-work-preview{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    z-index: 10;
+}
+
+.upload-work-modal-block .preview-work-img-container .upload-work-shadow-left{
+    background: #111;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 11;
+}
+
+
+.upload-work-modal-block .preview-work-img-container .upload-work-shadow-right{
+    background: #111;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 11;
+}
+
+
+.add-work-modal-wrapper::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+
+.add-work-modal-wrapper:hover::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+
+.add-work-modal-wrapper:hover::-webkit-scrollbar-thumb{
+  background-color: #ddd;
+}
+
+
+.add-work-modal-wrapper:hover::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+}
+
+.add-work-modal-wrapper:hover::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.add-work-modal-wrapper::-webkit-scrollbar-track{
+  display: none; 
+}
+
+.add-work-modal-block.hidden{
+    display: none;
+}
+
+.add-work-modal-block .loaded-cover-block{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 188px 1fr;
+    gap: 30px;
+    padding-right: 10px;
+    margin-top: 15px;
+}
+
+.add-work-modal-block .loaded-cover-block.hidden{
+    display: none;
+}
+
+.loaded-cover-block .loaded-cover-desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.loaded-cover-block .loaded-cover-desc .img-container{
+    width: 100%;
+    aspect-ratio: 1.9/1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loaded-cover-block .loaded-cover-desc .img-container img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+    position: relative;
+}
+
+.loaded-cover-block .loaded-cover-desc-content{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.loaded-cover-block .loaded-cover-desc-content h3{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 108%;
+    color: #333;
+    text-align: left;
+}
+
+.loaded-cover-block .loaded-cover-desc-content .part2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.loaded-cover-block .loaded-cover-desc-content .work-section{
+    width: 100%;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ddd;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 108%;
+    color: #8a8a8a;
+}
+
+.loaded-cover-block .loaded-cover-desc-content .work-visits{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.work-visits .like-count, .work-visits .visit-count{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+}
+
+.work-visits span{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 125%;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.work-visits img{
+    width: 14px;
+}
+
+.loaded-cover-block .loaded-cover-resize{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-radio: 4/2.7;
+    overflow: hidden;
+}
+
+
+.loaded-cover-block .loaded-cover-resize .overlay-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.loaded-cover-block .loaded-cover-resize .overlay-container img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.loaded-cover-resize .cover-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loaded-cover-resize .select-img-part-container{
+    width: 100%;
+    height: 100%;
+}
+
+.loaded-cover-resize .select-img-part-container img{
+    object-fit: contain;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Стили для Drag & Drop */
+.portfolio-ghost {
+    opacity: 0.6;
+    background: #f8f9fa;
+    border: 2px dashed #28a745;
+}
+
+.portfolio-chosen {
+    transform: rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.portfolio-drag {
+    opacity: 0.8;
+}
+
+.add-work-elem.dragging {
+    cursor: grabbing !important;
+}
+
+.add-work-elem {
+    cursor: grab;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.add-work-elem:active {
+    cursor: grabbing;
+}
+
+.resize-icon {
+    cursor: grab;
+}
+
+.resize-icon:active {
+    cursor: grabbing;
+}
+
+/* Улучшаем визуальную обратную связь при перетаскивании */
+.add-works-container.sortable-chosen .add-work-elem {
+    transition: transform 0.2s ease;
+}
+
+@media (max-width: 1350px){
+    .create-fiwork-aside-container{
+        display: none;
+    }
+}
+
+@media (max-width: 1150px){
+    .create-fiwork-container{
+        grid-template-columns: 880px;
+    }
+    
+    .step-stage-form-description-modal{
+        display: none !important;
+    }
+    
+    .create-fiwork-step-content .price-and-options-table-container{
+        overflow-x: auto; 
+    }
+}
+
+@media (max-width: 950px){
+    .create-fiwork-container{
+        grid-template-columns: 100%;
+    }
+    
+    .fiwork-price-and-options-table-wrapper{
+        width: 790px !important;
+        max-width: auto !important;
+    }
+}
+
+@media (max-width: 860px){
+    .create-fiwork-step-select-section .step-stage-form .select-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start; 
+    }
+    
+    .create-fiwork-step-upload-cover .upload-cover-container{
+        width: 100%;
+    }    
+}
+
+@media (max-width: 768px){
+    .add-work-modal-block .add-works-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 676px){
+    .create-fiwork-form-container{
+        padding: 20px;
+    }
+    
+    .fiwork-portfolio-container .add-works-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+    
+    .create-fiwork-step-stage{
+        grid-template-columns: 1fr;
+    }
+    
+    .fiwork-price-and-options-form .create-fiwork-step-header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .fiwork-portfolio-container .fiwork-portfolio-header{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+    
+    .fiwork-details-form .create-fiwork-step-enter-name .textarea-container textarea{
+        font-size: 24px;
+    }
+    
+        
+    .add-work-modal-block .loaded-cover-block{
+        gap: 10px;
+        padding-right: 0;
+    }
+
+}
+
+@media (max-width: 550px){
+    .create-fiwork-step-stage .step-stage-form.two-cols{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .add-work-modal-block .add-works-container .add-work-elem{
+        width: 100%;
+        aspect-ratio: auto;
+    }
+    
+    
+    .add-work-modal-block .loaded-cover-block{
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+    
+    .loaded-cover-block .loaded-cover-resize{
+        width: 100%;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 476px){
+    .fiwork-portfolio-container .add-works-container{
+        grid-template-columns: 48% 48%;
+        gap: 4%;
+        margin-bottom: 40px;
+    } 
+    
+    .create-fiwork-form-container{
+        padding: 0;
+    }
+    
+    .fiwork-details-form .create-fiwork-step-enter-name .textarea-container textarea{
+        font-size: 20px;
+    }
+    
+    
+    .create-fiwork-step-upload-cover .upload-cover-container{
+        gap: 5px;
+    }
+    
+    
+    .create-fiwork-step-upload-cover .upload-cover-container .round-plus-icon{
+        width: 30px !important;
+    }
+    
+    .create-fiwork-step-header{
+        font-size: 20px;
+    }
+    
+    .option-name-and-price-container .option-price-and-day-container{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 450px){
+    .add-work-modal-block .add-works-container{
+        grid-template-columns: 1fr;
+    }
+    
+    .add-work-modal-block .add-work-name-label-container,
+    .add-work-modal-block .load-works-header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+}
+
+/*end of add-work-modal-block*/
+/*end of modal-blocks*/

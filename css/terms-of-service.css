@@ -1,0 +1,402 @@
+/*:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+  --third-family: "Manrope", sans-serif;
+  --font3: "Plus Jakarta Sans", sans-serif;
+  --font4: "Montserrat", sans-serif;
+  --font5: "Tajawal", sans-serif;
+  --font6: "Nunito", sans-serif;
+  --font7: "SF Pro Text", sans-serif;
+}*/
+
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --second-family: "Wix Madefor Text", sans-serif;
+  --third-family: "Inter", sans-serif;
+  --font3: "Poppins", sans-serif;
+  --font4: "Roboto", sans-serif;
+  --font5: "Manrope", sans-serif;
+  --font6: "DM Sans", sans-serif;
+  --font7: "Plus Jakarta Sans", sans-serif;
+  --font8: "Noto Sans", sans-serif;
+  --font9: "SF UI Text", sans-serif;
+  --font10: "Tajawal", sans-serif;
+  --font11: "SF Pro Text", sans-serif;
+  --font12: "Montserrat", sans-serif;
+  --font13: "Outfit", sans-serif;
+}
+
+
+*{
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input:hover,
+input:focus,
+input:active,
+input:valid {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-block{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-container{
+    max-width: 1400px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terms-of-service-block{
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.terms-of-service-content{
+    width: 100%;
+    text-align: left;
+    padding: 40px;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    padding-top: 25px;
+}
+
+
+.terms-of-service-content h2{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 94%;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.terms-of-service-content h3{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 128%;
+    color: #000;
+}
+
+.terms-of-service-content p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 153%;
+    color: #111;
+    text-align: left;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.terms-of-service-content a{
+    color: #177de5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.terms-of-service-content ul{
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.terms-of-service-content ul li{
+    text-indent: 15px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 153%;
+    color: #111;
+}
+
+
+.terms-of-service-nav-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    border: 1px solid #e8e8e8;
+    border-radius: 7px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+}
+
+.terms-of-service-nav-container h3{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 144%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.terms-of-service-nav-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.terms-of-service-nav-content a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 123%;
+    color: #111;
+    text-decoration: none;
+}
+
+.terms-of-service-nav-content a:hover{
+    color: #177de5;
+}
+
+.terms-of-service-nav-container label{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 144%;
+    color: #111;
+}
+
+.terms-of-service-nav-container .search-input{
+    width: 100%; 
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    min-height: 28px;
+    background: #fff;
+    padding: 10px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 123%;
+    color: #111;
+    display: inline-block;
+}
+
+.we-help-customers-block{
+    width: 100%;
+    background: #e5f3ff;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-top: 20px;
+}
+
+.we-help-customers-block h2{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 20px;
+}
+
+.we-help-customers-block .round-help{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.we-help-customers-block .price-num{
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.we-help-customers-block .price-description{
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    max-width: 240px;
+}
+
+.we-help-customers-block .contact-our-support-block{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: 90%;
+    max-width: 240px;
+}
+
+.we-help-customers-block .go-by-link{
+    text-decoration: none;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    min-width: 127px;
+    min-height: 48px;
+    padding-left: 12px;
+    color: #0177ff;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    cursor: pointer;
+    background: white;
+}
+
+.we-help-customers-block .go-by-link:hover{
+    color: #177de5;
+}
+
+.go-by-link img{
+    width: 32px;
+}
+
+/* Стили для подсветки (как в браузере) */
+mark {
+    background: #ffeb3b !important;
+    color: #000 !important;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+/* Активное совпадение (опционально) */
+mark.current {
+    background: #ff9800 !important;
+    color: white !important;
+}
+
+@media (max-width: 1000px){
+    .terms-of-service-block{
+        gap: 20px;
+    }
+} 
+
+@media (max-width: 900px){
+    .terms-of-service-block{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .terms-of-service-nav-container{
+        order: 1;
+    }
+    .terms-of-service-content{
+        order: 2;
+    }
+    
+    .terms-of-service-nav-content{
+        display: block;
+    }
+    
+    .terms-of-service-nav-content a{
+        display: inline-block;
+        margin: 5px; 
+    }
+    
+    
+    .we-help-customers-block .round-help{
+        display: none;
+    }
+    
+    .we-help-customers-block h2{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    
+    .we-help-customers-block .price-description{
+        max-width: 500px;
+    }
+    
+    .we-help-customers-block .contact-our-support-block{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 500px){
+    .terms-of-service-content{
+        padding: 20px;
+    }
+    
+    .terms-of-service-content h2{
+        font-size: 24px;
+    } 
+    
+    .we-help-customers-block .price-description{
+        max-width: 300px;
+    }
+    
+    .we-help-customers-block .contact-our-support-block{
+        max-width: 300px;
+    }
+}
+
+
+
+
+

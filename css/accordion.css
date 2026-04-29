@@ -1,0 +1,105 @@
+.accordion {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.accordion-item {
+  color: #1f2640;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: var(--font3);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 151%;
+  color: #222325;
+  background: none;
+  padding: 0; 
+  margin-bottom: 10px;
+}
+
+.accordion-body {
+  display: none; 
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-body a{
+    font-size: 20px;
+    font-family: var(--font3);
+    line-height: 151%;
+    color: #222325;
+    text-decoration: none;
+    display: block;
+} 
+
+.accordion-header.active + .accordion-body {
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadbdd;;
+}
+
+.accordion-header .plus {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+  aspect-ratio: 1/1;
+  width: 24px;
+}
+
+.accordion-header.active .plus {
+  transform: rotate(0deg); /* превращаем "+" в "×" */
+}
+
+.accordion-header img{
+    width: 100%;
+}
+/*END OF ACCORDION BLOCK*/
+
+
+
+
+@media (max-width: 768px) {
+    .accordion-header {
+        font-size: 20px;
+    }
+    
+    .accordion-body a{
+        font-size: 18px;
+    } 
+}
+
+
+@media (max-width: 576px) {
+    .accordion-header {
+        font-size: 18px;
+    }
+    
+    .accordion-body a{
+        font-size: 16px;
+    } 
+}
+
+
+
+@media (max-width: 375px) {
+    .accordion-header {
+        font-size: 16px;
+    }
+    
+    .accordion-body a{
+        font-size: 14px;
+    } 
+}
