@@ -1,4 +1,6 @@
-
+<?php
+require_once "./modules/base.php";
+?>
 
 <!doctype html>
 <html lang="ru">
@@ -534,7 +536,7 @@
                 </li>
                 <li class="header__user-menu-item">
                   <a class="header__user-menu-link" href="#">
-                    <div class="message-count">
+                    <div class="message-count newMessage">
                       <svg
                         class="header__user-icon"
                         width="24"
@@ -779,7 +781,7 @@
 
                 <li class="header__user-menu-item">
                   <a class="header__user-menu-link" href="#">
-                    <div class="message-count">
+                    <div class="message-count newMessage">
                       <svg
                         class="header__user-icon"
                         width="24"
@@ -3795,6 +3797,7 @@
       </div>
     </div>
 
+    <?=$fiworkFooter;?> <?=$modalWindows;?>
   </body>
   <script src="./js/jQuery/jquery-3.5.1.min.js"></script>
   <script src="/js/swiper.js"></script>
