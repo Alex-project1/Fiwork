@@ -4,8 +4,8 @@ const overlayGray = document.querySelector('.overlayGray');
 const modalCloseBtns = document.querySelectorAll('.modal__close');
 const loginBtn = document.querySelector('#loginBtn');
 const headerReg = document.getElementById('headerReg')
+const headerUser = document.querySelector('.userBlock')
 const headerBox = document.querySelector('.computer-header');
-
 modals.forEach(modal => {
     modal.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -64,3 +64,24 @@ avatarInput.addEventListener('change', function () {
 
     reader.readAsDataURL(file);
 });
+
+const userRoles = document.querySelectorAll('.user__list-role');
+
+userRoles.forEach(userRole => {
+    userRole.addEventListener("click", function () {
+        userRoles.forEach(item => {
+            item.classList.remove('active');
+        });
+
+        this.classList.add('active');
+    });
+});
+const exit = document.querySelectorAll('.exit')
+console.log(exit)
+exit.forEach(btn=>{
+    btn.addEventListener("click",()=>{
+        headerBox.classList.remove("user")
+        headerBox.classList.remove("reg")
+    })
+
+})
