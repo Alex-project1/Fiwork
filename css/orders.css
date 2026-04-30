@@ -83,6 +83,9 @@ button{
 
 .order-details-container{
     width: 100%; 
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 25px;
 }
 
 /*order-in-block*/
