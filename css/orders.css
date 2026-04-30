@@ -83,6 +83,7 @@ button{
 
 .order-details-container{
     width: 100%; 
+    max-width: 1240px;
     padding: 24px;
     background-color: #fff;
     border-radius: 25px;
@@ -318,7 +319,7 @@ color: #1E293B;
     text-underline-offset: 5px; 
 }*/
 
-.order-filter-count{
+.order-filter-ordercount{
     width: 100%;
     display: flex;
     gap: 16px;
@@ -326,7 +327,7 @@ color: #1E293B;
 
 }
 
-.order-filter-count .order-filter-option{
+.order-filter-ordercount .order-filter-option{
     display: flex;
     gap: 8px;
     align-items: center;
@@ -342,33 +343,33 @@ color: #1E293B;
  }
  
  /* HOVER */
- .order-filter-count .order-filter-option:hover{
+ .order-filter-ordercount .order-filter-option:hover{
     border-color: #B6D4FF;
     background-color: #F5FAFF;
     transform: translateY(-1px);
  }
  
  /* ACTIVE (нажатие мышью) */
- .order-filter-count .order-filter-option:active{
+ .order-filter-ordercount .order-filter-option:active{
     transform: translateY(0px) scale(0.98);
     background-color: #EAF4FF;
  }
  
  /* SELECTED (уже выбранный фильтр) */
- .order-filter-count .order-filter-option.selected{
+ .order-filter-ordercount .order-filter-option.selected{
    border-color: #0062FF;
    color: #0062FF;
    background-color: #E2F3FF;
  }
  
  /* HOVER для selected */
- .order-filter-count .order-filter-option.selected:hover{
+ .order-filter-ordercount .order-filter-option.selected:hover{
    background-color: #D8ECFF;
    border-color: #0053D6;
  }
  
- /* COUNT */
- .order-filter-count .order-filter-option .count{
+ /* ordercount */
+ .order-filter-ordercount .order-filter-option .ordercount{
     background-color: #F1F5F9;
     padding: 0 4px;
     border-radius: 12px;
@@ -377,8 +378,8 @@ color: #1E293B;
     justify-content: center;
  }
  
- /* COUNT в selected */
- .order-filter-count .order-filter-option.selected .count{
+ /* ordercount в selected */
+ .order-filter-ordercount .order-filter-option.selected .ordercount{
      background: #0062FF;
      color: #fff;
  }
@@ -696,4 +697,8 @@ min-width: 30px;
 }
 .done .order-status-link{
     display: block;
+}
+header {
+    
+   background:  #f5f5f5;
 }
