@@ -24,7 +24,7 @@
     cursor: pointer;
     font-family: var(--font6);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #62646a;
     background: #fff;
@@ -277,7 +277,7 @@
     padding: 0;
     font-family: var(--font9);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     letter-spacing: -0.02em;
     color: #0a0614;

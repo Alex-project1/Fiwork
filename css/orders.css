@@ -32,6 +32,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: var( --second-family);
 }
 
 input:hover,
@@ -42,7 +43,11 @@ input:valid {
   outline: none;
   box-shadow: none;
 }
-
+button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
 .main-block{ 
     width: 100%;
     display: flex;
@@ -83,11 +88,9 @@ input:valid {
 /*order-in-block*/
 .order-in-block{
     width: 100%;
-    background: #fff;
-    border-radius: 8px;
-    border: 1px solid #efeff0;
-    border: 1px solid #e2e2e2;
+
     margin-top: 20px;
+    border-radius: 8px;
 }
 
 .order-in-table-wrapper{
@@ -103,15 +106,18 @@ input:valid {
     justify-content: flex-start;
     width: auto;
     min-width: 768px;
-    margin-bottom: 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    overflow: hidden;
 } 
 
 .order-in-table .table-header{
     min-width: 100%;
     width: auto;
     display: grid;
-    grid-template-columns: 1fr 200px 190px 130px 90px 200px;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr;
     border-bottom: 1px solid #e2e2e2;
+    background-color: #F1F5F9;
 }
 
 .order-in-table .table-header div{
@@ -119,11 +125,10 @@ input:valid {
     display: flex;
     align-items: center; 
     justify-content: center;
-    font-family: var(--second-family);
     font-weight: 700;
     font-size: 14px;
     line-height: 171%;
-    color: #666;
+    color: #1E293B;
     text-align: left;
 }
 
@@ -139,9 +144,10 @@ input:valid {
     width: min-content;
     min-width: 100%;
     display: grid;
-    grid-template-columns: 1fr 200px 190px 130px 90px 200px;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr;
     background: #fff;
     border-bottom: 1px solid #e2e2e2;
+    /* justify-content: space-between; */
 }
 
 .order-in-table .table-row:last-child{
@@ -150,13 +156,19 @@ input:valid {
 
 .order-in-table .table-row .table-cell{
     padding: 15px; 
-    font-family: var(--second-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
     color: #000;
+    line-height: 1.5;
+    text-align: center;
 }
-
+.order-in-table .table-row .table-cell.customer
+.order-in-table .table-row .table-cell.order-paid,
+.order-in-table .table-row .table-cell.order-cost,
+.order-in-table .table-row .table-cell.order-note{
+color: #1E293B;
+}
 .order-in-table .table-row .order-name,
 .order-in-table .table-header .order-name{
     padding-left: 40px;
@@ -206,7 +218,7 @@ input:valid {
 }
 
 .order-in-table .table-row .customer-img-container .name-initial{
-    font-family: var(--second-family);
+
     font-weight: 700;
     font-size: 17px;
     line-height: 100%;
@@ -242,34 +254,46 @@ input:valid {
 }
 
 .order-in-table .order-status .order-status-value{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--second-family);
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 143%;
-    text-align: center;
-    color: #fff;
-    background: #23c366;
-    border-radius: 4px;
+
+ border-radius: 6px;
+ font-size: 14px;
+ line-height: 18px;
+ padding: 2px 18px;
+ font-weight: 500;
+ text-align: center;
+
 }
 
-.order-in-table .order-status .order-status-value.in-process{
-    background-color: orange;
-}
+/* Выполнен */
+.order-in-table .table-row.done .order-status .order-status-value {
+    background-color: #E7FFE5;
+    color: #23C366;
+  }
+  
+  /* В процессе */
+  .order-in-table .table-row.in-process .order-status .order-status-value {
+ 
+    background-color: #D4EDFF;
+    color: #3088CB;
+  }
+  
+  /* Ожидает / pending */
+  .order-in-table .table-row.pending .order-status .order-status-value {
+    background-color: #FFF2E5;
+    color: #FC984D;
+  }
 
 .order-in-table .order-status .order-status-link{
     text-decoration: none;
-    font-family: var(--second-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 71%;
     text-align: center;
     color: #007bfb;
 }
-
+.order-in-table .order-status .order-status-link:hover{
+    color: #005fcc;
+}
 
 .order-in-table .table-header .chevron-triangle{
     width: 16px;
@@ -293,52 +317,68 @@ input:valid {
 
 .order-filter-count{
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-bottom: 1px solid #dedfe4;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px; 
+    gap: 16px;
+    margin-top: 16px;
+
 }
 
 .order-filter-count .order-filter-option{
     display: flex;
-    flex-direction: row;
+    gap: 8px;
     align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
-    min-height: 34px;
-    font-family: var(--second-family);
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    color: #333;
-    cursor: pointer;
-}
-
-.order-filter-count .order-filter-option .count{
-    width: min-content;
-    aspect-ratio: 1/1; 
-    border-radius: 50%; 
-    padding: 5px; 
-    border: 1px solid #dedfe4;
-    border-radius: 20px;
-    background: #dedfe4;
-    overflow: hidden; 
-    line-height: 100%;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    padding: 8px;
     font-size: 12px;
-}
-
-.order-filter-count .order-filter-option.selected{
-    color: #23c366;
-}
-
-.order-filter-count .order-filter-option.selected .count{
-    background: #23c366;
-    color: white;
-}
+    background-color: #fff;
+    cursor: pointer;
+ 
+    transition: all 0.2s ease;
+ }
+ 
+ /* HOVER */
+ .order-filter-count .order-filter-option:hover{
+    border-color: #B6D4FF;
+    background-color: #F5FAFF;
+    transform: translateY(-1px);
+ }
+ 
+ /* ACTIVE (нажатие мышью) */
+ .order-filter-count .order-filter-option:active{
+    transform: translateY(0px) scale(0.98);
+    background-color: #EAF4FF;
+ }
+ 
+ /* SELECTED (уже выбранный фильтр) */
+ .order-filter-count .order-filter-option.selected{
+   border-color: #0062FF;
+   color: #0062FF;
+   background-color: #E2F3FF;
+ }
+ 
+ /* HOVER для selected */
+ .order-filter-count .order-filter-option.selected:hover{
+   background-color: #D8ECFF;
+   border-color: #0053D6;
+ }
+ 
+ /* COUNT */
+ .order-filter-count .order-filter-option .count{
+    background-color: #F1F5F9;
+    padding: 0 4px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ /* COUNT в selected */
+ .order-filter-count .order-filter-option.selected .count{
+     background: #0062FF;
+     color: #fff;
+ }
 
 .order-search{
     display: flex;
@@ -356,7 +396,6 @@ input:valid {
 }
 
 .order-search h2{
-    font-family: var(--second-family);
     font-weight: 700;
     font-size: 32px;
     line-height: 120%;
@@ -456,4 +495,202 @@ input:valid {
         line-height: 140%;
         font-size: 12px;
     }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  
+    padding:  4px 16px;
+
+   
+  
+    font-size: 14px;
+    color: #0F172A;
+
+    width: 100%;
+
+    background-color: #F1F5F9;
+  }
+  
+  .pagination__left,
+  .pagination__right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pagination__left {
+    gap: 18px;
+  }
+  
+  .pagination__right {
+    margin-left: auto;
+  }
+  
+  .pagination__per-page {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #1e293b;
+  }
+  
+  .pagination select {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: var(--second-family);
+    font-size: 14px;
+    color: #1e293b;
+
+    cursor: pointer;
+  
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+min-width: 30px;
+
+  }
+  
+  .pagination__range,
+  .pagination__pages {
+    color: #64748b;
+  }
+  
+  .pagination__page {
+    min-width: 30px;
+    margin-right: 4px;
+  }
+  
+  .pagination__pages {
+    margin-right: 20px;
+  }
+  
+  .pagination__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+  
+  
+    border: none;
+    border-left: 1px solid #cbd5e1;
+    background: transparent;
+  
+    color: #64748b;
+    cursor: pointer;
+  
+    padding: 10px ;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .pagination__btn:hover:not(:disabled) {
+    background-color: #e2e8f0;
+    color: #334155;
+  }
+  
+  .pagination__btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .order__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;font-weight: 600;
+    color: #1E293B;
+
+  }
+  .order__title-nav{
+    color: #64748B;
+    font-size: 14px;font-weight: 400;
+  }
+  .order__title-nav span{
+    color: #0F172A;
+  }
+  .order-search{
+    display: flex;
+    justify-content: space-between;
+  }
+  .order-search span{
+    width: 50%;
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 400;
+
+  }
+.order-search-box{
+    display: flex;
+    gap: 16px;
+
+}
+.order_search-input,
+.order_exp{
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #E2E8F0;
+    background-color: #F1F5F9;
+    border-radius: 8px;
+    color: #64748B;
+    font-size: 14px;font-weight: 400;
+    padding: 8px;
+    transition: all 0.2s ease;
+    
+}
+
+.order_exp:hover {
+  background-color: #E2E8F0;
+  border-color: #CBD5F5;
+  color: #475569;
+}
+
+.order_exp:active {
+  transform: scale(0.97);
+  background-color: #CBD5F5;
+}
+.searchbar.order_search-input{
+    padding-left: 40px;
+}
+.search-wrapper {
+    position: relative;
+  }
+  
+  .order_search-input {
+    padding-left: 40px;
+  }
+  
+  .search-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/order/search.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+.searchbar.order_search-input:focus{
+    background-color: #E2E8F0;
+    border-color: #CBD5F5;
+    color: #475569;
+}
+.order_exp{
+    cursor: pointer;
+}
+
+
+.order-status-link{
+    display: none;
+}
+.done .order-status-link{
+    display: block;
 }

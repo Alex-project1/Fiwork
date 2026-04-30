@@ -122,7 +122,7 @@ header{
     background: #0177ff;
     font-family: var(--font3);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     gap: 15px;
     text-decoration: none;
@@ -171,7 +171,7 @@ header{
     }
     
     .not-found-container p{
-        font-size: 16px;
+        font-size: 14px;
     }
     
         

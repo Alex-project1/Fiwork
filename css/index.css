@@ -48,12 +48,17 @@ ul{
 li{
   list-style: none;
   color: inherit;
-  font-size: 16px;
+  font-size: 14px;
   
 }
 a{
   color: inherit;
   text-decoration: none;
+}
+button{
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 header {
   width: 100%;
@@ -158,7 +163,7 @@ header {
   background: #edeff2;
   font-family: var(--font5);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   color: #a2a2a2;
   border: 0;
   padding-right: 119px;
@@ -348,7 +353,7 @@ input:valid {
 .nav-part2 a {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #62646a;
   text-decoration: none;
@@ -442,7 +447,7 @@ footer {
   text-align: left;
   font-family: var(--font3);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #191d23;
   margin-bottom: 20px;
@@ -838,7 +843,7 @@ footer {
 .ad-container h3 {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 137%;
   color: #222325;
   text-align: left;
@@ -1049,7 +1054,7 @@ footer {
 .start-earning-banner-text .become-freelancer span {
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 300%;
   letter-spacing: -0.01em;
   color: #2b56cc;
@@ -1118,7 +1123,7 @@ footer {
 .start-earning-step p {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #1d2026;
   margin: 0;
@@ -1436,7 +1441,7 @@ footer {
   justify-content: center;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #fff;
   box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
@@ -1570,7 +1575,7 @@ footer {
   justify-content: center;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #fff;
   box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
@@ -1828,7 +1833,7 @@ footer {
   background: #fff;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #414651;
   cursor: pointer;
@@ -1848,7 +1853,7 @@ footer {
   background: #04b70a;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #fff;
   cursor: pointer;
@@ -2018,7 +2023,7 @@ footer {
   background: #fff;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #414651;
   cursor: pointer;
@@ -2038,7 +2043,7 @@ footer {
   background: #04b70a;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #fff;
   cursor: pointer;
@@ -2376,7 +2381,7 @@ footer {
   }
 
   .additional-apps-text h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .additional-apps-text p {
@@ -2627,7 +2632,7 @@ footer {
     background: #fff;
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #999;
     padding-left: 40px;
   }
@@ -2940,7 +2945,7 @@ footer {
   .mobile-popular-service-description {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 137%;
     color: #222325;
     text-align: left;
@@ -2984,7 +2989,7 @@ footer {
   .mobile-popular-service-price {
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     letter-spacing: -0.02em;
     color: #04b70a;
@@ -3146,7 +3151,7 @@ footer {
 
   .mobile-categories-header a,
   .mobile-popular-services-header a {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -3174,7 +3179,7 @@ footer {
 @media (max-width: 376px) {
   .mobile-categories-header h2,
   .mobile-popular-services-header h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .mobile-categories-header a,

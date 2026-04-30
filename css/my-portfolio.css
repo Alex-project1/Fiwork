@@ -95,7 +95,7 @@ input:valid{
 .my-portfolio-nav span{
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 125%;
     color: #6b7280;
 }
@@ -195,7 +195,7 @@ input:valid{
 .aside-block .import-portfolio-block h3{
     font-family: var(--font6);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 131%;
     color: #404145;
     margin: 8px 0;
@@ -299,7 +299,7 @@ input:valid{
 .my-portfolio-block .my-portfolio-header h3{
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #95979d;
     margin: 0;
@@ -658,7 +658,7 @@ input:valid{
 .add-work-name-label-container label{
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #111;
     margin: 0;
@@ -730,7 +730,7 @@ input:valid{
 .load-works-container .load-works-header h3, .load-cover-container .load-cover-header h3{
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #111;
     margin: 0;
@@ -1157,7 +1157,7 @@ input:valid{
 .add-work-modal-block .attach-work-to-portfolio-container label{
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #111;
     margin: 0;
@@ -1211,7 +1211,7 @@ input:valid{
 .add-work-modal-block .add-work-details-header label{
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #111;
 }

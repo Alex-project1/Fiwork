@@ -151,7 +151,7 @@ input:valid{
 .aside-block .user-settings-block .user-name{
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 112%;
     color: #1f2937;
 }
@@ -233,7 +233,7 @@ input:valid{
 .aside-block .additional-settings-block h3{
     font-family: var(--third-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #1f2937;
     margin: 0;
@@ -1329,7 +1329,7 @@ textarea::-webkit-scrollbar-track{
 .form-container .input-container label{
     font-family: var(--font7);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #1d2635;
 }
@@ -1346,7 +1346,7 @@ textarea::-webkit-scrollbar-track{
     justify-content: flex-start;
     font-family: var(--font7);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 237%;
     color: #475467;
     outline: none;
@@ -1365,7 +1365,7 @@ textarea::-webkit-scrollbar-track{
     justify-content: flex-start;
     font-family: var(--font7);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #757575;
     padding-left: 10px;
 }
@@ -1746,7 +1746,7 @@ input[type='submit']:hover{
 .finances-container-wrapper .finance-elem .finance-elem-name{
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 137%;
     color: #1d2026;
 }
@@ -1910,7 +1910,7 @@ input[type='submit']:hover{
     padding: 14px 16px;
     border: 1.5px solid #ccc;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Roboto', monospace;
     outline: none;
     transition: all 0.2s;

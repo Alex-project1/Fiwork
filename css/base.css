@@ -137,7 +137,7 @@ body {
 
   border-radius: 6px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: #000;
   margin-bottom: 12px;
@@ -165,7 +165,7 @@ body {
 }
 .checkbox__box label {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 .modal__login-forgot {
@@ -183,7 +183,7 @@ body {
   border: none;
   color: #fff;
   padding: 9px 16px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   margin-top: 26px;
   border-radius: 6px;
@@ -234,7 +234,7 @@ body {
 .modal__login-regBtn {
   background-color: #fff;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
   padding: 9px 16px;
@@ -298,7 +298,7 @@ body {
 }
 
 .role-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: #0a0614;
   margin-bottom: 6px;
@@ -428,7 +428,7 @@ body {
   width: 100%;
   border-radius: 12px;
   border: 1px solid #e8ebe6 !important;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.7;
   padding: 11px 16px;
@@ -523,7 +523,7 @@ body {
   color: #fff;
   cursor: pointer;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   padding: 15px;
 }
@@ -537,11 +537,11 @@ body {
   position: absolute;
   right: 0;
   display: grid;grid-template-rows: 0fr;
-top: 73%;
-padding-top: 36px;
+  top: 50%;
+  padding-top: 83px;
 pointer-events: none;
 cursor: default;
-  font-size: 18px;
+  font-size: 14px;
 
 }
 .user__list-hide{
@@ -820,7 +820,7 @@ header {
   border-radius: 71px;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 300%;
   letter-spacing: -0.01em;
   text-transform: capitalize;
@@ -843,7 +843,7 @@ header {
   background: #2196f3;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 300%;
   letter-spacing: -0.01em;
   text-transform: capitalize;
@@ -1001,7 +1001,7 @@ input:active {
 .nav-part2 a {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #62646a;
   text-decoration: none;
@@ -1096,7 +1096,7 @@ footer {
   text-align: left;
   font-family: var(--font3);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #191d23;
   margin-bottom: 20px;
@@ -1436,7 +1436,7 @@ footer {
   justify-content: center;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #fff;
   box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
@@ -1601,7 +1601,7 @@ footer {
   justify-content: center;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #fff;
   box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
@@ -1960,7 +1960,7 @@ footer {
 .fiwork-footer .mobile-apps-container h3 {
   font-family: var(--third-family);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 100%;
   color: #323232;
   text-align: left;
@@ -2183,7 +2183,7 @@ footer {
   background: #fff;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #414651;
   cursor: pointer;
@@ -2203,7 +2203,7 @@ footer {
   background: #04b70a;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #fff;
   cursor: pointer;
@@ -2377,7 +2377,7 @@ footer {
   background: #fff;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #414651;
   cursor: pointer;
@@ -2397,7 +2397,7 @@ footer {
   background: #04b70a;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #fff;
   cursor: pointer;
@@ -2618,7 +2618,7 @@ footer {
   text-decoration: none;
   font-family: var(--second-family);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #62646a;
 }
@@ -3492,8 +3492,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .computer-header.reg .registration-and-login-block,
-.computer-header.reg .nav-part2-container,
-.computer-header.user .nav-part2-container,
 .computer-header.user .registration-and-login-block {
   display: none;
 }
@@ -3616,7 +3614,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .header__user-replenish {
   color: #0055bb;
-  font-size: 16px;
+  font-size: 14px;
   transition: color 0.3s;
 }
 
@@ -3678,7 +3676,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #3D3C3A;
   border-radius: 16px;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
   font-weight: 600;
 padding: 4px 21px 3px 8px;
@@ -3815,7 +3813,7 @@ padding: 4px 21px 3px 8px;
   }
 
   .additional-apps-text h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   FD moniPl .additional-apps-text p {
@@ -3911,7 +3909,7 @@ padding: 4px 21px 3px 8px;
     background: #fff;
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #999;
     padding-left: 40px;
     outline: none;
@@ -3944,7 +3942,7 @@ padding: 4px 21px 3px 8px;
     background: #0177ff;
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     text-align: center;
     color: #fff;

@@ -113,7 +113,7 @@ textarea:focus, input:focus, select:focus{
 .create-fiwork-nav span{
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 125%;
     color: #6b7280;
 }
@@ -979,7 +979,7 @@ textarea:focus, input:focus, select:focus{
 .fiwork-in-three-variants h3{
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     text-align: center;
     color: #111;
@@ -1841,7 +1841,7 @@ textarea:focus, input:focus, select:focus{
 .add-work-name-label-container label{
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #111;
     margin: 0;
@@ -1913,7 +1913,7 @@ textarea:focus, input:focus, select:focus{
 .load-works-container .load-works-header h3, .load-cover-container .load-cover-header h3{
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #111;
     margin: 0;

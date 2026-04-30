@@ -88,7 +88,7 @@
     }
     
     .accordion-body a{
-        font-size: 16px;
+        font-size: 14px;
     } 
 }
 
@@ -96,7 +96,7 @@
 
 @media (max-width: 375px) {
     .accordion-header {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .accordion-body a{

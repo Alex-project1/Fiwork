@@ -263,7 +263,7 @@ input:valid {
 .contact-container .contact-name-last-date h4{
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #3d3d3d;
     margin: 0;
@@ -421,7 +421,7 @@ input:valid {
 .message-content-header .contact-username h4{
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     letter-spacing: 0.03em;
     color: #333;
@@ -530,7 +530,7 @@ input:valid {
     resize: none;
     font-family: var(--third-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 100%;
     letter-spacing: 0.03em;
     color: #252525;
@@ -903,7 +903,7 @@ input:valid {
 
 @media (max-width: 400px) {
     .messenger-header {
-        font-size: 16px;
+        font-size: 14px;
         padding: 14px;
     }
     

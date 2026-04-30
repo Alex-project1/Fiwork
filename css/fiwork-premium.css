@@ -488,7 +488,7 @@ input:valid {
 .additional-advantage-elem h3{
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 140%;
     color: #14181f;
     text-align: left;
@@ -500,7 +500,7 @@ input:valid {
 .additional-advantage-elem p{
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #6f7c8e;
     margin: 0;
@@ -524,7 +524,7 @@ input:valid {
     background: #ffed9e;
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 125%;
     text-align: center;
     color: #db6e00;
@@ -623,7 +623,7 @@ input:valid {
     padding: 0;
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 137%;
     text-align: center;
     color: #1d2026;
@@ -743,7 +743,7 @@ input:valid {
 .fiwork-modal-control-buttons .close-button{
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #414651;
     border: 1px solid #d5d7da;
@@ -761,7 +761,7 @@ input:valid {
 .fiwork-modal-control-buttons .control-button{
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #fff;
     border: 1px solid #0177ff;
@@ -853,7 +853,7 @@ input:valid {
     .premium-possibilities-details .connect-now-button{
         min-height: auto;
         padding: 25px 15px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
 }

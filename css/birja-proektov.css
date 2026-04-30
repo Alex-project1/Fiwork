@@ -246,7 +246,7 @@ input:valid{
 .content-container .content-container-description{
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #95979d;
     text-align: left;
@@ -277,7 +277,7 @@ input:valid{
     justify-content: flex-start;
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     text-align: right;
     color: #62646a;
@@ -742,7 +742,7 @@ input:valid{
     justify-content: center;
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #414651;
     cursor: pointer;
@@ -761,7 +761,7 @@ input:valid{
     justify-content: center;
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #fff;
     cursor: pointer;
@@ -796,7 +796,7 @@ input:valid{
     text-align: center;
     text-decoration: none2;
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0 8px;
     transition: color 0.2s, background-color 0.2s;
     cursor: pointer;

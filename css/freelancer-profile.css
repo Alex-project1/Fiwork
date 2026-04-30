@@ -204,7 +204,7 @@ input:valid {
 .freelancer-progress p{
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 140%;
     color: #404145;
     margin: 0;
@@ -328,7 +328,7 @@ input:valid {
     gap: 5px;
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 140%;
     color: #62646a;
 }
@@ -409,7 +409,7 @@ input:valid {
 .ai-agent-text{
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     text-align: right;
     color: #111;
@@ -760,7 +760,7 @@ span.new{
     gap: 10px;
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     text-align: right;
     color: #62646a;
@@ -990,7 +990,7 @@ span.new{
     gap: 10px;
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     text-align: right;
     color: #62646a;
@@ -1147,7 +1147,7 @@ span.new{
     justify-content: center;
     font-family: var(--third-family);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     text-align: right;
     color: #04b70a;
@@ -1187,7 +1187,7 @@ span.new{
 .three-steps-to-start-block p{
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #74767e;
     text-align: left;
@@ -1456,7 +1456,7 @@ footer{
     max-width: 610px;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #95979d;
     text-align: left;
@@ -1797,7 +1797,7 @@ footer{
 .freelancer-info-content1 .freelancer-position{
     font-family: var(--font4);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #222325;
     text-align: left;
@@ -1929,7 +1929,7 @@ footer{
 .about-freelancer-container h2{
     font-family: var(--font4);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #222325;
     text-align: left;
@@ -1939,7 +1939,7 @@ footer{
 .about-freelancer-container p{
     font-family: var(--font4);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #404145;
 }
@@ -2237,7 +2237,7 @@ footer{
     justify-content: center;
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #414651;
     cursor: pointer;
@@ -2255,7 +2255,7 @@ footer{
     justify-content: center;
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #fff;
     cursor: pointer;

@@ -1,21 +1,21 @@
-<?php
-require_once "../modules/base.php";
-?>
-
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <title>Fiwork – Фриланс-услуги: Дизайн, Разработка, IT и многое другое</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="keywords" content="фриланс, веб-разработка, веб-дизайн, мобильный дизайн, логотипы, брендинг, разработка приложений, IT-услуги, SEO, переводы, блокчейн, нейросети, Таджикистан" />
-    <meta name="description" content="Fiwork – платформа для заказа фриланс-услуг: веб-разработка, дизайн, IT, переводы, блокчейн и многое другое. Найдите исполнителя или начните зарабатывать!" />
+    <meta name="keywords"
+        content="фриланс, веб-разработка, веб-дизайн, мобильный дизайн, логотипы, брендинг, разработка приложений, IT-услуги, SEO, переводы, блокчейн, нейросети, Таджикистан" />
+    <meta name="description"
+        content="Fiwork – платформа для заказа фриланс-услуг: веб-разработка, дизайн, IT, переводы, блокчейн и многое другое. Найдите исполнителя или начните зарабатывать!" />
     <meta name="author" content="Fiwork Team" />
     <meta name="robots" content="index, follow" />
     <meta name="copyright" content="© 2025 Fiwork" />
     <meta property="og:title" content="Fiwork – Фриланс-услуги: Дизайн, Разработка, IT" />
-    <meta property="og:description" content="Платформа для заказа услуг фрилансеров: веб-дизайн, разработка сайтов и приложений, SEO, переводы, блокчейн и многое другое." />
+    <meta property="og:description"
+        content="Платформа для заказа услуг фрилансеров: веб-дизайн, разработка сайтов и приложений, SEO, переводы, блокчейн и многое другое." />
     <meta property="og:image" content="https://ehyo.tj/images/m-logo-400.png" />
     <meta property="og:image:alt" content="Логотип Fiwork" />
     <meta property="og:site_name" content="Fiwork" />
@@ -33,39 +33,68 @@ require_once "../modules/base.php";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Manrope:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;500;700&family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap" 
-    rel="stylesheet"
-    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Manrope:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;500;700&family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
-    <?=$userHeader;?>
-    
+
+
     <div class="main-block">
         <div class="main-container">
             <div class="orders-block">
                 <div class="order-details-container">
-                    <div class="order-search">
+                    <div class="order__title">
                         <h2>Заказы</h2>
-                        <input type="text" placeholder="Поиск по названию заказа, покупателю" class="searchbar"/>
+                        <div class="order__title-nav">
+                            Главная / <span>Управление заказами </span>
+
+                        </div>
+                    </div>
+                    <div class="order-search">
+                        <span>Управление всеми заказами покупателей: просмотр новых заказов, отслеживание статусов,
+                            обработка, сборка, отправка и контроль выполненных заказов.</span>
+                        <div class="order-search-box">
+                            <div class="search-wrapper">
+
+                                <input type="text" placeholder="Поиск по названию заказа, покупателю" class="searchbar order_search-input" />
+                            </div>
+                            <button class="order_exp">
+                                <svg class="expIcon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10.7379 16.6269C9.96427 16.6269 9.31895 16.0357 9.2514 15.265C9.11015 13.6538 9.07441 12.0353 9.14427 10.42C9.05994 10.4143 8.97563 10.4085 8.89133 10.4023L7.40178 10.2937C6.44973 10.2243 5.91752 9.16276 6.43151 8.35837C7.5277 6.64286 9.53693 4.72281 11.1904 3.53507C11.6742 3.18753 12.3258 3.18753 12.8097 3.53507C14.4631 4.72281 16.4723 6.64286 17.5685 8.35837C18.0825 9.16276 17.5503 10.2243 16.5983 10.2937L15.1087 10.4023C15.0244 10.4084 14.9401 10.4143 14.8558 10.42C14.9256 12.0353 14.8899 13.6538 14.7486 15.265C14.6811 16.0357 14.0358 16.6269 13.2622 16.6269H10.7379ZM10.6815 9.7622C10.5678 11.5494 10.589 13.3428 10.745 15.1269H13.255C13.411 13.3427 13.4323 11.5494 13.3186 9.7622C13.3058 9.56183 13.3739 9.36471 13.5077 9.21497C13.6414 9.06523 13.8296 8.97536 14.0301 8.96548C14.3535 8.94955 14.6767 8.92982 14.9997 8.90627L16.0815 8.82742C15.1219 7.41412 13.9204 6.17987 12.5313 5.18201L12 4.80037L11.4687 5.18201C10.0796 6.17987 8.87813 7.41412 7.91858 8.82742L9.00038 8.90627C9.32337 8.92982 9.64656 8.94955 9.9699 8.96548C10.1704 8.97536 10.3586 9.06523 10.4924 9.21497C10.6261 9.36471 10.6942 9.56183 10.6815 9.7622Z"
+                                    fill="#64748B" />
+                                <path
+                                    d="M5.75 16.9997C5.75 16.5855 5.41421 16.2497 5 16.2497C4.58579 16.2497 4.25 16.5855 4.25 16.9997V18.9997C4.25 19.9662 5.0335 20.7497 6 20.7497H18C18.9665 20.7497 19.75 19.9662 19.75 18.9997V16.9997C19.75 16.5855 19.4142 16.2497 19 16.2497C18.5858 16.2497 18.25 16.5855 18.25 16.9997V18.9997C18.25 19.1377 18.1381 19.2497 18 19.2497H6C5.86193 19.2497 5.75 19.1377 5.75 18.9997V16.9997Z"
+                                    fill="#64748B" />
+                            </svg>
+                            Выгрузить
+                            </button>
+                   
+                        </div>
                     </div>
 
                     <div class="order-filter-count">
                         <div class="order-filter-option all-orders selected">
-                            Все <div class="count">22</div>
+                            Все заказы <div class="count">22</div>
                         </div>
 
                         <div class="order-filter-option orders-done">
-                            Выполнено <div class="count">19</div>
+                            Выполнен <div class="count">1</div>
                         </div>
-                    </div> 
-                    
-                    <div class="order-in-block">         
+                        <div class="order-filter-option in-process">
+                            На проверке <div class="count">1</div>
+                        </div>
+                        <div class="order-filter-option pending">
+                            Доработка <div class="count">1</div>
+                        </div>
+                    </div>
+
+                    <div class="order-in-block">
                         <div class="order-in-table-wrapper">
                             <div class="order-in-table">
                                 <div class="table-header">
@@ -76,30 +105,33 @@ require_once "../modules/base.php";
                                         <div class="header-cell">Покупатель</div>
                                     </div>
                                     <div class="order-paid selected-filter sort-asc">
-                                        <div class="header-cell"><span>Оплачено</span> <img src="/img/icons/chevron-triangle.svg" alt="chevron-triangle" class="chevron-triangle"/></div>
+                                        <div class="header-cell"><span>Дата заказа</span> <img
+                                                src="/img/icons/chevron-triangle.svg" alt="chevron-triangle"
+                                                class="chevron-triangle" /></div>
                                     </div>
-                                    
+
                                     <div class="order-cost">
+                                        <div class="header-cell">Осталось</div>
+                                    </div>
+
+                                    <div class="order-note">
                                         <div class="header-cell">Стоимость</div>
                                     </div>
-                                    
-                                    <div class="order-note">
-                                        <div class="header-cell">Заметка</div>
-                                    </div>
-                                    
+
                                     <div class="order-status">
                                         <div class="header-cell">Статус</div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="table-body">
-                                    <div class="table-row">
+
+                                    <div class="table-row done">
                                         <div class="table-cell order-name">
-                                            Разработка мобильного приложения 
-                                        </div>    
-                                        <div class="table-cell customer" >
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
                                             <div class="customer-img-container">
-                                                <img src="/img/user-avatars/user-avatar7.webp"/>
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
                                             </div>
                                             delta-diler2
                                         </div>
@@ -107,59 +139,27 @@ require_once "../modules/base.php";
                                             7 февраля, 20:15
                                         </div>
                                         <div class="table-cell order-cost">
-                                            17 760 ₽
+                                            2 д. 5 ч.
                                         </div>
                                         <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
+                                            6 480 ₽
+                                        </div>
                                         <div class="table-cell order-status">
-                                            <div class="order-status-value in-process">
-                                                В процессе
-                                            </div> 
-                                            <a href="#" class="order-status-link">
-                                                Загрузить работу
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="table-row">
-                                        <div class="table-cell order-name">
-                                            Опубликую ваше приложение в App Store,
-                                            Google Play, RuStore 
-                                        </div>    
-                                        <div class="table-cell customer">
-                                            <div class="customer-img-container">
-                                                <img src="/img/user-avatars/user-avatar5.jpg">
-                                            </div>
-                                            GamiDpC
-                                        </div>
-                                        <div class="table-cell order-paid">
-                                            15 марта, 23:44
-                                        </div>
-                                        <div class="table-cell order-cost">
-                                            10 400 ₽
-                                        </div>
-                                        <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value">
+                                            <div class="order-status-value ">
                                                 Выполнен
-                                            </div> 
+                                            </div>
                                             <a href="#" class="order-status-link">
                                                 Читать отзыв
                                             </a>
                                         </div>
                                     </div>
-
-                                    <div class="table-row">
+                                    <div class="table-row in-process">
                                         <div class="table-cell order-name">
-                                            Разработка мобильного приложения 
-                                        </div>    
-                                        <div class="table-cell customer" >
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
                                             <div class="customer-img-container">
-                                                <img src="/img/user-avatars/user-avatar7.webp"/>
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
                                             </div>
                                             delta-diler2
                                         </div>
@@ -167,265 +167,28 @@ require_once "../modules/base.php";
                                             7 февраля, 20:15
                                         </div>
                                         <div class="table-cell order-cost">
-                                            17 760 ₽
+                                            2 д. 5 ч.
                                         </div>
                                         <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value in-process">
-                                                В процессе
-                                            </div> 
-                                            <a href="#" class="order-status-link">
-                                                Загрузить работу
-                                            </a>
+                                            6 480 ₽
                                         </div>
-                                    </div>
-
-
-                                    <div class="table-row">
-                                        <div class="table-cell order-name">
-                                            Консультация по разработке приложения и
-                                            публикации  
-                                        </div>    
-                                        <div class="table-cell customer">
-                                            <div class="customer-img-container">
-                                                <img src="/img/user-avatars/user-avatar4.jpg">
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                               На проверке
                                             </div>
-                                            yandmani
-                                        </div>
-                                        <div class="table-cell order-paid">
-                                            8 марта, 16:45
-                                        </div>
-                                        <div class="table-cell order-cost">
-                                            3 200  ₽
-                                        </div>
-                                        <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value">
-                                                Выполнен
-                                            </div> 
-                                            <a href="#" class="order-status-link">
-                                                Загрузить работу
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row">
-                                        <div class="table-cell order-name">
-                                            Разработка Крипто - приложения для IOS и
-                                            Android 
-                                        </div>    
-                                        <div class="table-cell customer">
-                                            <div class="customer-img-container">
-                                                <img src="/img/user-avatars/user-avatar3.jpg">
-                                            </div>
-                                            Owersize
-                                        </div>
-                                        <div class="table-cell order-paid">
-                                            3 марта, 02:40
-                                        </div>
-                                        <div class="table-cell order-cost">
-                                            408  ₽
-                                        </div>
-                                        <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value">
-                                                Выполнен
-                                            </div> 
-                                            <a href="#" class="order-status-link">
-                                                Загрузить работу
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row">
-                                        <div class="table-cell order-name">
-                                            Публикация приложения в Google Play 
-                                        </div>    
-                                        <div class="table-cell customer">
-                                            <div class="customer-img-container">
-                                                <div class="name-initial">K</div>
-                                            </div>
-                                            kkpanda
-                                        </div>
-                                        <div class="table-cell order-paid">
-                                            15 марта, 23:44
-                                        </div>
-                                        <div class="table-cell order-cost">
-                                            10 400 ₽
-                                        </div>
-                                        <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value">
-                                                Выполнен
-                                            </div> 
                                             <a href="#" class="order-status-link">
                                                 Читать отзыв
                                             </a>
                                         </div>
                                     </div>
-
-                                    <div class="table-row">
+                      
+                                    <div class="table-row done">
                                         <div class="table-cell order-name">
-                                            Приложение для Android 
-                                        </div>    
+                                            Разработка мобильного приложения
+                                        </div>
                                         <div class="table-cell customer">
                                             <div class="customer-img-container">
-                                                <div class="name-initial">K</div>
-                                            </div>
-                                            kkpanda
-                                        </div>
-                                        <div class="table-cell order-paid">
-                                            19 февраля, 12:27
-                                        </div>
-                                        <div class="table-cell order-cost">
-                                            2 400 ₽
-                                        </div>
-                                        <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value">
-                                                Выполнен
-                                            </div> 
-                                            <a href="#" class="order-status-link">
-                                                Читать отзыв
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row">
-                                        <div class="table-cell order-name">
-                                            Опубликую ваше приложение в App Store,
-                                            Google Play, RuStore 
-                                        </div>    
-                                        <div class="table-cell customer">
-                                            <div class="customer-img-container">
-                                                <div class="name-initial">K</div>
-                                            </div>
-                                            kkpanda
-                                        </div>
-                                        <div class="table-cell order-paid">
-                                            13 февраля, 15:42
-                                        </div>
-                                        <div class="table-cell order-cost">
-                                            10 400 ₽
-                                        </div>
-                                        <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value">
-                                                Выполнен
-                                            </div> 
-                                            <a href="#" class="order-status-link">
-                                                Читать отзыв
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row">
-                                        <div class="table-cell order-name">
-                                            Разработка приложения онлайн-кинотеатра 
-                                        </div>    
-                                        <div class="table-cell customer">
-                                            <div class="customer-img-container">
-                                                <img src="/img/user-avatars/user-avatar6.webp"/>
-                                            </div>
-                                            Airat72
-                                        </div>
-                                        <div class="table-cell order-paid">
-                                            8 февраля, 23:12
-                                        </div>
-                                        <div class="table-cell order-cost">
-                                            400 ₽
-                                        </div>
-                                        <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value">
-                                                Выполнен
-                                            </div> 
-                                            <a href="#" class="order-status-link">
-                                                Загрузить работу
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row">
-                                        <div class="table-cell order-name">
-                                            Разработка и публикация мобильного
-                                            приложения 
-                                        </div>    
-                                        <div class="table-cell customer">
-                                            <div class="customer-img-container" style="background-color: #6ec9cb;">
-                                                <div class="name-initial">N</div>
-                                            </div>
-                                            nvkrasnitskiy
-                                        </div>
-                                        <div class="table-cell order-paid">
-                                            8 февраля, 21:04
-                                        </div>
-                                        <div class="table-cell order-cost">
-                                            400 ₽
-                                        </div>
-                                        <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value">
-                                                Выполнен
-                                            </div> 
-                                            <a href="#" class="order-status-link">
-                                                Загрузить работу
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row">
-                                        <div class="table-cell order-name">
-                                            Разработка приложения для Спортмастер 
-                                        </div>    
-                                        <div class="table-cell customer" >
-                                            <div class="customer-img-container"  style="background-color: #e17076;">
-                                                <div class="name-initial">D</div>
-                                            </div>
-                                            dogadink
-                                        </div>
-                                        <div class="table-cell order-paid">
-                                            8 февраля, 19:01
-                                        </div>
-                                        <div class="table-cell order-cost">
-                                            400 ₽
-                                        </div>
-                                        <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
-                                        <div class="table-cell order-status">
-                                            <div class="order-status-value">
-                                                Выполнен
-                                            </div> 
-                                            <a href="#" class="order-status-link">
-                                                Загрузить работу
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row">
-                                        <div class="table-cell order-name">
-                                            Разработка мобильного приложения 
-                                        </div>    
-                                        <div class="table-cell customer" >
-                                            <div class="customer-img-container">
-                                                <img src="/img/user-avatars/user-avatar7.webp"/>
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
                                             </div>
                                             delta-diler2
                                         </div>
@@ -433,28 +196,28 @@ require_once "../modules/base.php";
                                             7 февраля, 20:15
                                         </div>
                                         <div class="table-cell order-cost">
-                                            17 760 ₽
+                                            2 д. 5 ч.
                                         </div>
                                         <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
+                                            6 480 ₽
+                                        </div>
                                         <div class="table-cell order-status">
-                                            <div class="order-status-value">
+                                            <div class="order-status-value ">
                                                 Выполнен
-                                            </div> 
+                                            </div>
                                             <a href="#" class="order-status-link">
-                                                Загрузить работу
+                                                Читать отзыв
                                             </a>
                                         </div>
                                     </div>
-
-                                    <div class="table-row">
+                           
+                                    <div class="table-row pending">
                                         <div class="table-cell order-name">
-                                            Разработка мобильного приложения 
-                                        </div>    
-                                        <div class="table-cell customer" >
+                                       тествоая запись
+                                        </div>
+                                        <div class="table-cell customer">
                                             <div class="customer-img-container">
-                                                <img src="/img/user-avatars/user-avatar7.webp"/>
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
                                             </div>
                                             delta-diler2
                                         </div>
@@ -462,31 +225,759 @@ require_once "../modules/base.php";
                                             7 февраля, 20:15
                                         </div>
                                         <div class="table-cell order-cost">
-                                            17 760 ₽
+                                            2 д. 5 ч.
                                         </div>
                                         <div class="table-cell order-note">
-                                            <img src="/img/icons/note.svg">
-                                        </div> 
+                                            6 480 ₽
+                                        </div>
                                         <div class="table-cell order-status">
-                                            <div class="order-status-value in-process">
-                                                В процессе
-                                            </div> 
+                                            <div class="order-status-value ">
+                                                Доработка
+                                            </div>
                                             <a href="#" class="order-status-link">
-                                                Загрузить работу
+                                                Читать отзыв
                                             </a>
                                         </div>
                                     </div>
-
+                                
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="table-row in-process">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                               На проверке
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                      
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                           
+                                    <div class="table-row pending">
+                                        <div class="table-cell order-name">
+                                       тествоая запись
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Доработка
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="table-row in-process">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                               На проверке
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                      
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                           
+                                    <div class="table-row pending">
+                                        <div class="table-cell order-name">
+                                       тествоая запись
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Доработка
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="table-row in-process">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                               На проверке
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                      
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                           
+                                    <div class="table-row pending">
+                                        <div class="table-cell order-name">
+                                       тествоая запись
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Доработка
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="table-row in-process">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                               На проверке
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                      
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                           
+                                    <div class="table-row pending">
+                                        <div class="table-cell order-name">
+                                       тествоая запись
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Доработка
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="table-row in-process">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                               На проверке
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                      
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                           
+                                    <div class="table-row pending">
+                                        <div class="table-cell order-name">
+                                       тествоая запись
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Доработка
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="table-row in-process">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                               На проверке
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                      
+                                    <div class="table-row done">
+                                        <div class="table-cell order-name">
+                                            Разработка мобильного приложения
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Выполнен
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                           
+                                    <div class="table-row pending">
+                                        <div class="table-cell order-name">
+                                       тествоая запись
+                                        </div>
+                                        <div class="table-cell customer">
+                                            <div class="customer-img-container">
+                                                <img src="/img/user-avatars/user-avatar7.webp" />
+                                            </div>
+                                            delta-diler2
+                                        </div>
+                                        <div class="table-cell order-paid">
+                                            7 февраля, 20:15
+                                        </div>
+                                        <div class="table-cell order-cost">
+                                            2 д. 5 ч.
+                                        </div>
+                                        <div class="table-cell order-note">
+                                            6 480 ₽
+                                        </div>
+                                        <div class="table-cell order-status">
+                                            <div class="order-status-value ">
+                                                Доработка
+                                            </div>
+                                            <a href="#" class="order-status-link">
+                                                Читать отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                
+                            
+                     
+                        
+                                
                                 </div>
+                                <div class="pagination">
+                                    <div class="pagination__left">
+                                      <label class="pagination__per-page">
+                                        <span>Items per page:</span>
+                                  
+                                        <select class="pagination__limit">
+                                          <option value="7" selected>7</option>
+                                          <option value="15" >15</option>
+                                          <option value="25">25</option>
+                                          <option value="35">35</option>
+                                        </select>
+                                      </label>
+                                  
+                                      <span class="pagination__range">1 - 13 of 200 items</span>
+                                    </div>
+                                  
+                                    <div class="pagination__right">
+                                      <select class="pagination__page"></select>
+                                  
+                                      <span class="pagination__pages">of 15 pages</span>
+                                  
+                                      <button class="pagination__btn pagination__prev" type="button" aria-label="Previous page">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                      </button>
+                                  
+                                      <button class="pagination__btn pagination__next" type="button" aria-label="Next page">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
-    
+
     <?=$modalWindows;?>
 
 </body>
@@ -495,49 +986,189 @@ require_once "../modules/base.php";
 <script src="/js/index.js?v=<?= time(); ?>"></script>
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <script>
-$(document).ready(function () {
-
-    const $rows = $(".table-row");
-
-    // ===== ПОИСК =====
-    $(".searchbar").on("input", function () {
-        const value = $(this).val().toLowerCase();
-
-        $rows.each(function () {
-            const orderName = $(this).find(".order-name").text().toLowerCase();
-            const customer = $(this).find(".customer").text().toLowerCase();
-
-            if (orderName.includes(value) || customer.includes(value)) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
+    $(document).ready(function () {
+      const $rows = $(".table-row");
+  
+      let filteredRows = $rows.toArray();
+  
+      let rowsPerPage = Number($(".pagination__limit").val()) || 7;
+      let currentPage = 1;
+  
+      let searchValue = "";
+      let activeFilter = "all"; // all | done | in-process | pending
+  
+      // ===== ПОЛУЧЕНИЕ СТАТУСА СТРОКИ
+      function getRowStatus($row) {
+        if ($row.hasClass("done")) return "done";
+        if ($row.hasClass("in-process")) return "in-process";
+        if ($row.hasClass("pending")) return "pending";
+  
+        return "done";
+      }
+  
+      // ===== ОБНОВЛЕНИЕ СПИСКА
+      function updateFilteredRows() {
+        filteredRows = $rows.filter(function () {
+          const $row = $(this);
+  
+          const orderName = $row.find(".order-name").text().toLowerCase();
+          const customer = $row.find(".customer").text().toLowerCase();
+  
+          const matchesSearch =
+            orderName.includes(searchValue) ||
+            customer.includes(searchValue);
+  
+          const status = getRowStatus($row);
+  
+          const matchesFilter =
+            activeFilter === "all" ||
+            activeFilter === status;
+  
+          return matchesSearch && matchesFilter;
+        }).toArray();
+      }
+  
+      // ===== КОЛИЧЕСТВО СТРАНИЦ
+      function getPageCount() {
+        return Math.max(1, Math.ceil(filteredRows.length / rowsPerPage));
+      }
+  
+      // ===== ПОКАЗ СТРАНИЦЫ
+      function showPage(page) {
+        const pageCount = getPageCount();
+  
+        currentPage = Math.min(Math.max(page, 1), pageCount);
+  
+        const start = (currentPage - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+  
+        $rows.hide();
+  
+        $(filteredRows).slice(start, end).each(function () {
+          $(this).css("display", "grid");
         });
-    });
-
-
-    // ===== ФИЛЬТРЫ =====
-    $(".order-filter-option").on("click", function () {
+  
+        renderPagination();
+      }
+  
+      // ===== РЕНДЕР ПАГИНАЦИИ
+      function renderPagination() {
+        const totalItems = filteredRows.length;
+        const pageCount = getPageCount();
+  
+        const startItem = totalItems === 0
+          ? 0
+          : (currentPage - 1) * rowsPerPage + 1;
+  
+        const endItem = Math.min(currentPage * rowsPerPage, totalItems);
+  
+        $(".pagination__range").text(
+          `${startItem} - ${endItem} of ${totalItems} items`
+        );
+  
+        $(".pagination__pages").text(
+          `of ${pageCount} pages`
+        );
+  
+        const $pageSelect = $(".pagination__page");
+  
+        $pageSelect.empty();
+  
+        for (let i = 1; i <= pageCount; i++) {
+          const pageLabel = String(i).padStart(2, "0");
+  
+          $pageSelect.append(`
+            <option value="${i}" ${i === currentPage ? "selected" : ""}>
+              ${pageLabel}
+            </option>
+          `);
+        }
+  
+        $(".pagination__prev").prop("disabled", currentPage === 1);
+        $(".pagination__next").prop(
+          "disabled",
+          currentPage === pageCount || totalItems === 0
+        );
+      }
+  
+      // ===== СЧЁТЧИКИ ФИЛЬТРОВ
+      function updateCounts() {
+        const total = $rows.length;
+  
+        const done = $rows.filter(function () {
+          return $(this).hasClass("done");
+        }).length;
+  
+        const inProcess = $rows.filter(function () {
+          return $(this).hasClass("in-process");
+        }).length;
+  
+        const pending = $rows.filter(function () {
+          return $(this).hasClass("pending");
+        }).length;
+  
+        $(".all-orders .count").text(total);
+        $(".orders-done .count").text(done);
+        $(".order-filter-option.in-process .count").text(inProcess);
+  
+        // Поддержка правильного класса pending и твоей текущей опечатки pendind
+        $(".order-filter-option.pending .count, .order-filter-option.pendind .count").text(pending);
+      }
+  
+      // ===== ПОИСК
+      $(".searchbar").on("input", function () {
+        searchValue = $(this).val().toLowerCase();
+  
+        updateFilteredRows();
+        showPage(1);
+      });
+  
+      // ===== ФИЛЬТРЫ
+      $(".order-filter-option").on("click", function () {
+        const $filter = $(this);
+  
         $(".order-filter-option").removeClass("selected");
-        $(this).addClass("selected");
-
-        const isDone = $(this).hasClass("orders-done");
-
-        $rows.each(function () {
-            const status = $(this).find(".order-status-value").text().trim();
-
-            if (!isDone) {
-                $(this).show(); 
-            } else {
-                if (status === "Выполнен") {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
-            }
-        });
+        $filter.addClass("selected");
+  
+        if ($filter.hasClass("all-orders")) {
+          activeFilter = "all";
+        } else if ($filter.hasClass("orders-done")) {
+          activeFilter = "done";
+        } else if ($filter.hasClass("in-process")) {
+          activeFilter = "in-process";
+        } else if ($filter.hasClass("pending") || $filter.hasClass("pendind")) {
+          activeFilter = "pending";
+        }
+  
+        updateFilteredRows();
+        showPage(1);
+      });
+  
+      // ===== ITEMS PER PAGE
+      $(".pagination__limit").on("change", function () {
+        rowsPerPage = Number($(this).val()) || 7;
+        showPage(1);
+      });
+  
+      // ===== ВЫБОР СТРАНИЦЫ
+      $(".pagination__page").on("change", function () {
+        showPage(Number($(this).val()));
+      });
+  
+      // ===== НАЗАД
+      $(".pagination__prev").on("click", function () {
+        showPage(currentPage - 1);
+      });
+  
+      // ===== ВПЕРЁД
+      $(".pagination__next").on("click", function () {
+        showPage(currentPage + 1);
+      });
+  
+      // ===== INIT
+      updateCounts();
+      updateFilteredRows();
+      showPage(1);
     });
-
-});
-</script>
+  </script>
 </html>

@@ -423,7 +423,7 @@ input:valid{
     }
     
     .mediakit-header p{
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .mediakit-description-logo-text{
@@ -431,7 +431,7 @@ input:valid{
     }
     
     .mediakit-description-logo-text p{
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .color-palette-block,
@@ -454,7 +454,7 @@ input:valid{
     
     .color-details p,
     .color-values p {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .partner-materials-block .section-title {
@@ -462,13 +462,13 @@ input:valid{
     }
     
     .partner-materials-block .section-description {
-        font-size: 16px; 
+        font-size: 14px; 
     }
     
     
     .partner-materials-block .contact-link,
     .partner-materials-block .download-link {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -533,7 +533,7 @@ input:valid{
 @media(max-width: 520px){
     .color-details p,
     .color-values p {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .color-container .color-item .color-swatch{

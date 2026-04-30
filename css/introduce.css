@@ -152,7 +152,7 @@ input:valid{
 .description-column .col-details{
     font-family: var(--font8);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     letter-spacing: 0.01em;
     color: #000;
@@ -377,7 +377,7 @@ input:valid{
 .achievment-block p{
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #1c1c1c;
     text-align: left;
@@ -391,7 +391,7 @@ input:valid{
     justify-content: flex-start;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #8f93a1; 
     gap: 7px;
@@ -481,7 +481,7 @@ input:valid{
     border-bottom: 3px solid #dfe2ee;
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 135%;
     text-align: center;
     color: #8f93a1;
@@ -716,7 +716,7 @@ input:valid{
 .popular-services .see-all-services{
     font-family: var(--font8);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 287%;
     letter-spacing: 0.01em;
     text-align: center;
@@ -840,7 +840,7 @@ input:valid{
     text-decoration: none;
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 140%;
     text-align: center;
     color: #fff;
@@ -1176,13 +1176,13 @@ input:valid{
         
     .geographical-presence-blocks .block1 p,
     .geographical-presence-blocks .block2 p{
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .peculiarity-blocks .block1 p,
     .peculiarity-blocks .block2 p,
     .peculiarity-blocks .block3 p{
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 

@@ -379,7 +379,7 @@ input:valid {
 .ad-container h3{
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 137%;
     color: #222325;
     text-align: left;
@@ -677,7 +677,7 @@ input:valid {
     padding: 15px;
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     cursor: pointer;
     position: relative;

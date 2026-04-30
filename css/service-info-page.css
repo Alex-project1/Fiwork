@@ -444,7 +444,7 @@ footer{
     .slider-screen-wrapper.full-screen-wrapper .about-slide .slide-info{
         font-family: var(--font-family);
         font-weight: 600;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 100%;
         color: #fff;
     }
@@ -909,7 +909,7 @@ footer{
 
     font-weight: 400;
 
-    font-size: 16px;
+    font-size: 14px;
 
     line-height: 150%;
 
@@ -943,7 +943,7 @@ footer{
 
     font-weight: 400;
 
-    font-size: 16px;
+    font-size: 14px;
 
     line-height: 150%;
 
@@ -1145,7 +1145,7 @@ footer{
 
     font-weight: 600;
 
-    font-size: 16px;
+    font-size: 14px;
 
     line-height: 100%;
 
@@ -1165,7 +1165,7 @@ footer{
 
 .pricing-table .price-row td {
 
-    font-size: 16px;
+    font-size: 14px;
 
     border: 0;
 
@@ -1624,7 +1624,7 @@ footer{
 
     font-weight: 400;
 
-    font-size: 16px;
+    font-size: 14px;
 
     line-height: 150%;
 
@@ -2347,7 +2347,7 @@ footer{
 
     font-weight: 500;
 
-    font-size: 16px;
+    font-size: 14px;
 
     line-height: 150%;
 
@@ -3359,7 +3359,7 @@ footer{
     border-bottom: 1px solid #ededed;
     font-family: var(--third-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 130%;
     color: #323232;
     cursor: pointer;
@@ -3374,7 +3374,7 @@ footer{
 .reviews-about-freelancer-header .review-type-value{
     font-family: var(--third-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 130%;
     color: #323232;
 }
@@ -3431,7 +3431,7 @@ footer{
 .review-freelancer-content .review-header{
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 125%;
     color: #111;
     text-align: left;
@@ -3457,7 +3457,7 @@ footer{
 .reviewer-review .reviewer-status .reviewer-star-status-count{
     font-family: var(--third-family);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 100%;
     color: #212121;
 }
@@ -3490,7 +3490,7 @@ footer{
 .freelancer-response-container .freelancer-response-text{
     font-family: var(--third-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #323232;
 }
@@ -3548,7 +3548,7 @@ footer{
     border: none;
     font-family: var(--third-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: #908f8f;
 }
@@ -3707,7 +3707,7 @@ footer{
 .reviewer-info .reviewer-username, .freelancer-response-info .freelancer-response-username{
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 125%;
     color: #000;
     margin: 0;
