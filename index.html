@@ -343,7 +343,7 @@ require_once "./modules/base.php";
       </div>
       <div
         id="modal__changepass-saccess"
-        class="modal__changepass-saccess modal active"
+        class="modal__changepass-saccess modal "
       >
         <div class="modal__close">
           <svg
@@ -1214,14 +1214,14 @@ require_once "./modules/base.php";
                 </div>
         
                 <!-- Правая часть: Разработка и IT -->
-                <div class="mega-menu__box is-active" data-menu-content="dev">
+                <div class="mega-menu__box " data-menu-content="dev">
                   <h2 class="mega-menu__title-line">Разработка и IT</h2>
         
                   <div class="mega-menu__wrap">
                     <div class="mega-menu-column">
-                      <h4>Сайты и веб-разработка</h4>
-                      <a href="#">Сайт под ключ</a>
-                      <a href="#">Интернет-магазин</a>
+                      <h4>Доработка и настройка сайта</h4>
+                      <a href="#">Дорабокта сайта </a>
+                      <a href="#">Интернет-магазин <span class="newService">Новый</span></a>
                       <a href="#">Landing page</a>
                       <a href="#">Доработка сайта</a>
                       <a href="#">Верстка</a>
@@ -2501,56 +2501,62 @@ require_once "./modules/base.php";
         </div>
 
         <div class="introduce-logos">
-          <div class="logo-container">
-            <img
-              src="/img/introduce-page/takie-dela.svg"
-              alt="takie-dela"
-              class="takie-dela"
-            />
-          </div>
-          <div class="logo-container">
-            <img src="/img/introduce-page/tacc.svg" alt="tacc" class="tacc" />
-          </div>
-          <div class="logo-container">
-            <img
-              src="/img/introduce-page/forbes.svg"
-              alt="forbes"
-              class="forbes"
-            />
-          </div>
-          <div class="logo-container">
-            <img src="/img/introduce-page/rbk.svg" alt="rbk" class="rbk" />
-          </div>
-          <div class="logo-container">
-            <img
-              src="/img/introduce-page/kommersant.svg"
-              alt="kommersant"
-              class="kommersant"
-            />
-          </div>
-          <div class="logo-container">
-            <img
-              src="/img/introduce-page/ria-novost.svg"
-              alt="ria-novosti"
-              class="ria-novosti"
-            />
-          </div>
-          <div class="logo-container">
-            <img
-              src="/img/introduce-page/delovoy-peterburg.svg"
-              alt="delovoy-peterburg"
-              class="delovoy-peterburg"
-            />
-          </div>
-          <div class="logo-container">
-            <img
-              src="/img/introduce-page/vc-ru.svg"
-              alt="vc-ru"
-              class="vc-ru"
-            />
+          <div class="logos-track">
+        
+            <!-- ОРИГИНАЛ -->
+            <div class="logo-container">
+              <img src="/img/introduce-page/takie-dela.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/tacc.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/forbes.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/rbk.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/kommersant.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/ria-novost.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/delovoy-peterburg.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/vc-ru.svg" />
+            </div>
+        
+            <!-- ДУБЛЬ (для бесконечности) -->
+            <div class="logo-container">
+              <img src="/img/introduce-page/takie-dela.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/tacc.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/forbes.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/rbk.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/kommersant.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/ria-novost.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/delovoy-peterburg.svg" />
+            </div>
+            <div class="logo-container">
+              <img src="/img/introduce-page/vc-ru.svg" />
+            </div>
+        
           </div>
         </div>
-
         <div class="mobile-categories-block mobile">
           <div class="mobile-categories-header">
             <h2>Категории</h2>
@@ -4093,67 +4099,64 @@ require_once "./modules/base.php";
   <script src="./js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
   <script src="./js/modal.js?v=<?= time(); ?>"></script>
   <link rel="stylesheet" href="/css/swiper.css" />
+
   <script>
     $(document).ready(function () {
-      const $menuWrapper = $(".mega-menu__wrapper");
-      let closeTimer = null;
-  
-      function openMenu() {
-        clearTimeout(closeTimer);
-        $menuWrapper.addClass("is-open");
+  const $menuWrapper = $(".mega-menu__wrapper");
+  let closeTimer = null;
+
+  function openMenu() {
+    clearTimeout(closeTimer);
+    $menuWrapper.addClass("is-open");
+  }
+
+  function closeMenu() {
+    clearTimeout(closeTimer);
+
+    closeTimer = setTimeout(function () {
+      if (
+        $(".nav-part2:hover").length ||
+        $(".mega-menu__wrapper:hover").length
+      ) {
+        return;
       }
-  
-      function closeMenu() {
-        clearTimeout(closeTimer);
-  
-        closeTimer = setTimeout(function () {
-          const isNavHovered = $(".nav-part2:hover").length > 0;
-          const isMenuHovered = $(".mega-menu__wrapper:hover").length > 0;
-  
-          if (!isNavHovered && !isMenuHovered) {
-            $menuWrapper.removeClass("is-open");
-            $(".nav-menu-item").removeClass("is-active");
-          }
-        }, 180);
-      }
-  
-      function setActiveMenu(menuKey, shouldOpen = true) {
-        if (!menuKey) return;
-  
-        $(".nav-menu-item").removeClass("is-active");
-        $('.nav-menu-item[data-menu="' + menuKey + '"]').addClass("is-active");
-  
-        $(".mega-menu_line").removeClass("is-active");
-        $('.mega-menu_line[data-menu="' + menuKey + '"]').addClass("is-active");
-  
-        $(".mega-menu__box").removeClass("is-active");
-        $('.mega-menu__box[data-menu-content="' + menuKey + '"]').addClass("is-active");
-  
-        if (shouldOpen) {
-          openMenu();
-        }
-      }
-  
-      // Начальное состояние: активный дизайн, но меню закрыто
-      setActiveMenu("design", false);
-  
-      $(".nav-menu-item").on("mouseenter focusin", function () {
-        const menuKey = $(this).attr("data-menu");
-        setActiveMenu(menuKey);
-      });
-  
-      $(".mega-menu_line").on("mouseenter focusin", function () {
-        const menuKey = $(this).attr("data-menu");
-        setActiveMenu(menuKey);
-      });
-  
-      $(".nav-part2, .mega-menu__wrapper").on("mouseenter", function () {
-        clearTimeout(closeTimer);
-      });
-  
-      $(".nav-part2, .mega-menu__wrapper").on("mouseleave", function () {
-        closeMenu();
-      });
-    });
+
+      $menuWrapper.removeClass("is-open");
+      $(".nav-menu-item").removeClass("is-active");
+    }, 250);
+  }
+
+  function setActiveMenu(menuKey, shouldOpen = true) {
+    if (!menuKey) return;
+
+    $(".nav-menu-item").removeClass("is-active");
+    $('.nav-menu-item[data-menu="' + menuKey + '"]').addClass("is-active");
+
+    $(".mega-menu_line").removeClass("is-active");
+    $('.mega-menu_line[data-menu="' + menuKey + '"]').addClass("is-active");
+
+    $(".mega-menu__box").removeClass("is-active");
+    $('.mega-menu__box[data-menu-content="' + menuKey + '"]').addClass("is-active");
+
+    if (shouldOpen) openMenu();
+  }
+
+  setActiveMenu("design", false);
+
+  $(".nav-menu-item").on("mouseenter focusin", function () {
+    setActiveMenu($(this).data("menu"));
+  });
+
+  $(".mega-menu_line").on("mouseenter focusin", function () {
+    setActiveMenu($(this).data("menu"));
+  });
+
+  $(".nav-part2, .mega-menu__wrapper")
+    .on("mouseenter", function () {
+      clearTimeout(closeTimer);
+      openMenu();
+    })
+    .on("mouseleave", closeMenu);
+});
   </script>
 </html>
