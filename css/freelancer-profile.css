@@ -777,10 +777,48 @@ span.new{
 .warningText span{
     font-weight: 600;
 }
-.warningText a{
-    text-decoration: none;
-    color: #007BFB;
-    font-weight: 600;
+.warningText a {
+  position: relative;
+  text-decoration: none;
+  color: #007BFB;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.warningText a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+
+  background-color: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+}
+
+.warningText a:hover {
+  color: #005fcc;
+}
+
+.warningText a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.warningText a:focus-visible {
+  outline: 3px solid rgba(0, 123, 251, 0.25);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.warningText a:active {
+  color: #004fa8;
 }
 .my-orders-container, .my-goods-container{
     display: flex;
@@ -814,6 +852,7 @@ span.new{
     text-align: right;
     color: #62646a;
     cursor: pointer;
+    transform: color .3s;
 }
 
 .my-orders-block .see-more-container img, .my-goods-block .see-more-container img{
@@ -825,17 +864,9 @@ span.new{
     display: none;
 }
 
-.see-more-container:hover .blue-chevron-right{
-    display: inline-block;
-}
 
-.see-more-container:hover .grey-chevron-right{
-    display: none;
-}
 
-.see-more-container:hover{
-    color: #0c7bf5;
-}
+
 /*end of my-orders-block*/
 
 /*year-sellings-block*/
@@ -2672,3 +2703,13 @@ footer{
     width: 28px; 
     height: 24px;
   }
+
+  .see-more-container:hover{
+    color: #0c7bf5;
+}
+.see-more-container:hover svg >path{
+    fill: #0c7bf5;
+}
+.see-more-container:hover svg {
+   transform: translateX(2px);
+}
