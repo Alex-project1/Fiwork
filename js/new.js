@@ -1,25 +1,14 @@
-/* =========================================================
-   FIWORK MAIN JS
-   Один общий файл для всех страниц.
-   Если элемента на странице нет — код его пропускает.
-========================================================= */
+
 
 (function () {
   "use strict";
-  const headerWrapper = document.querySelector(".computer-header");
-  const userBlockMobile = document.querySelector(".userBlockMobile");
-  const regBlockMobile = document.querySelector(".regBlockMobile");
-  const mobileRegBtn = document.querySelector(".mobileRegBtn");
-  if (headerWrapper.classList.contains("user")) {
-    mobileRegBtn.classList.add('dn')
-    userBlockMobile.classList.add("active");
-  }
-  if (headerWrapper.classList.contains("reg")) {
-    regBlockMobile.classList.add("active");
-    mobileRegBtn.classList.add('dn')
-  }
- 
+
   const SELECTORS = {
+    headerWrapper: ".computer-header",
+    userBlockMobile: ".userBlockMobile",
+    regBlockMobile: ".regBlockMobile",
+    mobileRegBtn: ".mobileRegBtn",
+
     modalBtn: ".modal-btn",
     modal: ".modal",
     overlayGray: ".overlayGray",
@@ -56,43 +45,87 @@
     orderFilter: ".order-filter-option",
   };
 
-  const qs = (selector, parent = document) => parent.querySelector(selector);
-  const qsa = (selector, parent = document) =>
-    Array.from(parent.querySelectorAll(selector));
+  const qs = (selector, parent = document) => {
+    if (!selector || !parent) return null;
+    return parent.querySelector(selector);
+  };
 
-  function on(element, eventName, handler, options) {
-    if (!element) return;
+  const qsa = (selector, parent = document) => {
+    if (!selector || !parent) return [];
+    return Array.from(parent.querySelectorAll(selector));
+  };
+
+  const on = (element, eventName, handler, options) => {
+    if (!element || !eventName || typeof handler !== "function") return;
     element.addEventListener(eventName, handler, options);
-  }
+  };
 
-  function onAll(elements, eventName, handler, options) {
-    if (!elements || !elements.length) return;
+  const onAll = (elements, eventName, handler, options) => {
+    if (!Array.isArray(elements) || !elements.length) return;
     elements.forEach((element) => on(element, eventName, handler, options));
-  }
+  };
 
-  function cleanText(text) {
+  const hasClass = (element, className) => {
+    return Boolean(element && className && element.classList.contains(className));
+  };
+
+  const addClass = (element, className) => {
+    if (!element || !className) return;
+    element.classList.add(className);
+  };
+
+  const removeClass = (element, className) => {
+    if (!element || !className) return;
+    element.classList.remove(className);
+  };
+
+  const toggleClass = (element, className, force) => {
+    if (!element || !className) return;
+    element.classList.toggle(className, force);
+  };
+
+  const cleanText = (text) => {
     return String(text || "")
       .replace(/\s+/g, " ")
       .trim();
-  }
+  };
 
-  function escapeHtml(value) {
+  const escapeHtml = (value) => {
     const div = document.createElement("div");
     div.textContent = String(value || "");
     return div.innerHTML;
-  }
+  };
 
-  function escapeSelector(value) {
+  const escapeSelector = (value) => {
     if (window.CSS && typeof window.CSS.escape === "function") {
       return window.CSS.escape(value);
     }
 
     return String(value).replace(/"/g, '\\"');
+  };
+
+  function initHeaderState() {
+    const headerWrapper = qs(SELECTORS.headerWrapper);
+    const userBlockMobile = qs(SELECTORS.userBlockMobile);
+    const regBlockMobile = qs(SELECTORS.regBlockMobile);
+    const mobileRegBtn = qs(SELECTORS.mobileRegBtn);
+
+    if (!headerWrapper) return;
+
+    if (hasClass(headerWrapper, "user")) {
+      addClass(mobileRegBtn, "dn");
+      addClass(userBlockMobile, "active");
+    }
+
+    if (hasClass(headerWrapper, "reg")) {
+      addClass(regBlockMobile, "active");
+      addClass(mobileRegBtn, "dn");
+    }
   }
 
   /* =========================
        MODALS / USER HEADER
-    ========================= */
+  ========================= */
 
   function initModalsAndUserHeader() {
     const btns = qsa(SELECTORS.modalBtn);
@@ -110,27 +143,27 @@
     const userRoles = qsa(SELECTORS.userRole);
     const exitBtns = qsa(SELECTORS.exitBtn);
 
-    if (
-      !btns.length &&
-      !modals.length &&
-      !overlayGray &&
-      !loginBtn &&
-      !headerReg &&
-      !avatarInput &&
-      !userRoles.length &&
-      !exitBtns.length
-    ) {
-      return;
-    }
+    const userBlockMobile = qs(SELECTORS.userBlockMobile);
+    const regBlockMobile = qs(SELECTORS.regBlockMobile);
+    const mobileRegBtn = qs(SELECTORS.mobileRegBtn);
+
+    const hasAnyRequiredElement =
+      btns.length ||
+      modals.length ||
+      overlayGray ||
+      loginBtn ||
+      headerReg ||
+      headerBox ||
+      avatarInput ||
+      avatar ||
+      userRoles.length ||
+      exitBtns.length;
+
+    if (!hasAnyRequiredElement) return;
 
     function closeAllModals() {
-      modals.forEach((modal) => {
-        modal.classList.remove("active");
-      });
-
-      if (overlayGray) {
-        overlayGray.classList.remove("active");
-      }
+      modals.forEach((modal) => removeClass(modal, "active"));
+      removeClass(overlayGray, "active");
     }
 
     onAll(modals, "click", function (event) {
@@ -145,26 +178,19 @@
       if (!modal) return;
 
       closeAllModals();
-
-      if (overlayGray) {
-        overlayGray.classList.add("active");
-      }
-
-      modal.classList.add("active");
+      addClass(overlayGray, "active");
+      addClass(modal, "active");
     });
 
     onAll(modalCloseBtns, "click", closeAllModals);
-
     on(overlayGray, "click", closeAllModals);
 
     on(loginBtn, "click", function () {
       closeAllModals();
 
-      if (headerBox) {
-        headerBox.classList.add("reg");
-      }
-    regBlockMobile.classList.add("active");
-    mobileRegBtn.classList.add('dn')
+      addClass(headerBox, "reg");
+      addClass(regBlockMobile, "active");
+      addClass(mobileRegBtn, "dn");
     });
 
     on(headerReg, "click", function () {
@@ -193,27 +219,22 @@
     }
 
     onAll(userRoles, "click", function () {
-      userRoles.forEach((item) => {
-        item.classList.remove("active");
-      });
-
-      this.classList.add("active");
+      userRoles.forEach((item) => removeClass(item, "active"));
+      addClass(this, "active");
     });
 
     onAll(exitBtns, "click", function () {
-      if (!headerBox) return;
-
-      headerBox.classList.remove("user");
-      headerBox.classList.remove("reg");
-       userBlockMobile.classList.remove("active");
-    regBlockMobile.classList.remove("active");
-    mobileRegBtn.classList.remove('dn')
+      removeClass(headerBox, "user");
+      removeClass(headerBox, "reg");
+      removeClass(userBlockMobile, "active");
+      removeClass(regBlockMobile, "active");
+      removeClass(mobileRegBtn, "dn");
     });
   }
 
   /* =========================
        DESKTOP MEGA MENU
-    ========================= */
+  ========================= */
 
   function initDesktopMegaMenu() {
     const menuWrapper = qs(SELECTORS.megaWrapper);
@@ -225,9 +246,7 @@
 
     if (!menuWrapper || !navPart2 || !navItems.length) return;
 
-    const desktopQuery = window.matchMedia(
-      "(hover: hover) and (pointer: fine)",
-    );
+    const desktopQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
     let closeTimer = null;
 
     function isDesktop() {
@@ -236,18 +255,18 @@
 
     function openMenu() {
       clearTimeout(closeTimer);
-      menuWrapper.classList.add("is-open");
-      document.body.classList.add("mega-menu-open");
+      addClass(menuWrapper, "is-open");
+      addClass(document.body, "mega-menu-open");
     }
 
     function closeMenuNow() {
       clearTimeout(closeTimer);
-      menuWrapper.classList.remove("is-open");
-      document.body.classList.remove("mega-menu-open");
+      removeClass(menuWrapper, "is-open");
+      removeClass(document.body, "mega-menu-open");
 
-      navItems.forEach((item) => {
-        item.classList.remove("is-active");
-      });
+      navItems.forEach((item) => removeClass(item, "is-active"));
+      megaLines.forEach((line) => removeClass(line, "is-active"));
+      megaBoxes.forEach((box) => removeClass(box, "is-active"));
     }
 
     function closeMenuWithDelay() {
@@ -263,20 +282,18 @@
       if (!menuKey) return;
 
       navItems.forEach((item) => {
-        item.classList.toggle("is-active", item.dataset.menu === menuKey);
+        toggleClass(item, "is-active", item.dataset.menu === menuKey);
       });
 
       megaLines.forEach((line) => {
-        line.classList.toggle("is-active", line.dataset.menu === menuKey);
+        toggleClass(line, "is-active", line.dataset.menu === menuKey);
       });
 
       megaBoxes.forEach((box) => {
-        box.classList.toggle("is-active", box.dataset.menuContent === menuKey);
+        toggleClass(box, "is-active", box.dataset.menuContent === menuKey);
       });
 
-      if (shouldOpen) {
-        openMenu();
-      }
+      if (shouldOpen) openMenu();
     }
 
     if (navItems.some((item) => item.dataset.menu === "design")) {
@@ -327,10 +344,7 @@
       const menuKey = item.dataset.menu;
       if (!menuKey) return;
 
-      if (
-        item.classList.contains("is-active") &&
-        menuWrapper.classList.contains("is-open")
-      ) {
+      if (hasClass(item, "is-active") && hasClass(menuWrapper, "is-open")) {
         closeMenuNow();
       } else {
         setActiveMenu(menuKey, true);
@@ -338,7 +352,7 @@
     });
 
     onAll(megaLines, "click", function () {
-      if (isDesktop()) return;
+      if (!isDesktop()) return;
       setActiveMenu(this.dataset.menu, true);
     });
 
@@ -348,9 +362,7 @@
     });
 
     on(document, "keyup", function (event) {
-      if (event.key === "Escape") {
-        closeMenuNow();
-      }
+      if (event.key === "Escape") closeMenuNow();
     });
 
     on(window, "resize", function () {
@@ -364,7 +376,7 @@
 
   /* =========================
        MOBILE BURGER MENU
-    ========================= */
+  ========================= */
 
   function initMobileBurgerMenu() {
     const mobileBurgerBtn = qs(SELECTORS.mobileBurgerBtn);
@@ -373,13 +385,7 @@
     const mobileCloseBtn = qs(SELECTORS.mobileCloseBtn);
     const drawerBody = qs(SELECTORS.mobileDrawerBody);
 
-    if (
-      !mobileBurgerBtn ||
-      !mobileDrawer ||
-      !mobileOverlay ||
-      !mobileCloseBtn ||
-      !drawerBody
-    ) {
+    if (!mobileBurgerBtn || !mobileDrawer || !mobileOverlay || !mobileCloseBtn || !drawerBody) {
       return;
     }
 
@@ -388,10 +394,16 @@
 
     let historyStack = ["root"];
 
+    function showScreen(name) {
+      qsa(".mobile-menu-screen", drawerBody).forEach((screen) => {
+        toggleClass(screen, "is-active", screen.dataset.screen === name);
+      });
+    }
+
     function openDrawer() {
-      mobileDrawer.classList.add("is-open");
-      mobileOverlay.classList.add("is-open");
-      document.body.classList.add("mobile-menu-open");
+      addClass(mobileDrawer, "is-open");
+      addClass(mobileOverlay, "is-open");
+      addClass(document.body, "mobile-menu-open");
       mobileDrawer.setAttribute("aria-hidden", "false");
 
       historyStack = ["root"];
@@ -399,29 +411,22 @@
     }
 
     function closeDrawer() {
-      mobileDrawer.classList.remove("is-open");
-      mobileOverlay.classList.remove("is-open");
-      document.body.classList.remove("mobile-menu-open");
+      removeClass(mobileDrawer, "is-open");
+      removeClass(mobileOverlay, "is-open");
+      removeClass(document.body, "mobile-menu-open");
       mobileDrawer.setAttribute("aria-hidden", "true");
 
       historyStack = ["root"];
       showScreen("root");
     }
 
-    function showScreen(name) {
-      qsa(".mobile-menu-screen", drawerBody).forEach((screen) => {
-        screen.classList.toggle("is-active", screen.dataset.screen === name);
-      });
-    }
-
     function navigateTo(name) {
       if (!name) return;
 
-      const screen = drawerBody.querySelector('[data-screen="' + name + '"]');
+      const screen = qs('[data-screen="' + escapeSelector(name) + '"]', drawerBody);
       if (!screen) return;
 
       drawerBody.dataset.direction = "forward";
-
       historyStack.push(name);
       showScreen(name);
     }
@@ -435,6 +440,7 @@
 
       showScreen(historyStack[historyStack.length - 1] || "root");
     }
+
     function createTopBar(title) {
       const wrap = document.createElement("div");
       wrap.className = "mobile-submenu-top";
@@ -474,38 +480,36 @@
 
         const sections = [];
 
-        qsa(".mega-menu__wrap .mega-menu-column", contentBox).forEach(
-          (column) => {
-            let currentSection = null;
+        qsa(".mega-menu__wrap .mega-menu-column", contentBox).forEach((column) => {
+          let currentSection = null;
 
-            Array.from(column.children).forEach((element) => {
-              const tag = element.tagName.toLowerCase();
+          Array.from(column.children).forEach((element) => {
+            const tag = element.tagName.toLowerCase();
 
-              if (tag === "h4") {
-                const sectionTitle = cleanText(element.textContent);
-                if (!sectionTitle) return;
+            if (tag === "h4") {
+              const sectionTitle = cleanText(element.textContent);
+              if (!sectionTitle) return;
 
-                currentSection = {
-                  title: sectionTitle,
-                  links: [],
-                };
+              currentSection = {
+                title: sectionTitle,
+                links: [],
+              };
 
-                sections.push(currentSection);
-                return;
-              }
+              sections.push(currentSection);
+              return;
+            }
 
-              if (tag === "a" && currentSection) {
-                const linkTitle = cleanText(element.textContent);
-                if (!linkTitle) return;
+            if (tag === "a" && currentSection) {
+              const linkTitle = cleanText(element.textContent);
+              if (!linkTitle) return;
 
-                currentSection.links.push({
-                  title: linkTitle,
-                  href: element.getAttribute("href") || "#",
-                });
-              }
-            });
-          },
-        );
+              currentSection.links.push({
+                title: linkTitle,
+                href: element.getAttribute("href") || "#",
+              });
+            }
+          });
+        });
 
         categories.push({
           key,
@@ -521,11 +525,9 @@
     }
 
     function removeGeneratedScreens() {
-      qsa(".mobile-menu-screen[data-generated='true']", drawerBody).forEach(
-        (screen) => {
-          screen.remove();
-        },
-      );
+      qsa(".mobile-menu-screen[data-generated='true']", drawerBody).forEach((screen) => {
+        screen.remove();
+      });
     }
 
     function buildMobileMenu() {
@@ -579,8 +581,7 @@
         sectionList.className = "mobile-list";
 
         category.sections.forEach((section, sectionIndex) => {
-          const sectionScreenName =
-            categoryScreenName + "-section-" + sectionIndex;
+          const sectionScreenName = categoryScreenName + "-section-" + sectionIndex;
 
           const sectionBtn = document.createElement("button");
           sectionBtn.type = "button";
@@ -651,75 +652,62 @@
     });
 
     on(document, "keydown", function (event) {
-      if (event.key === "Escape") {
-        closeDrawer();
-      }
+      if (event.key === "Escape") closeDrawer();
     });
   }
 
   /* =========================
-       ORDERS PAGINATION
-    ========================= */
+       ORDERS PAGINATION / FILTERS / SEARCH
+  ========================= */
 
   function initOrdersPagination() {
-    if (typeof window.jQuery === "undefined") return;
+    const rows = qsa(SELECTORS.tableRow);
 
-    const $ = window.jQuery;
-    const $rows = $(SELECTORS.tableRow);
+    if (!rows.length) return;
 
-    if (!$rows.length) return;
+    const limit = qs(SELECTORS.paginationLimit);
+    const range = qs(SELECTORS.paginationRange);
+    const pages = qs(SELECTORS.paginationPages);
+    const pageSelect = qs(SELECTORS.paginationPage);
+    const prev = qs(SELECTORS.paginationPrev);
+    const next = qs(SELECTORS.paginationNext);
+    const searchbar = qs(SELECTORS.searchbar);
+    const filters = qsa(SELECTORS.orderFilter);
 
-    const $limit = $(SELECTORS.paginationLimit);
-    const $range = $(SELECTORS.paginationRange);
-    const $pages = $(SELECTORS.paginationPages);
-    const $pageSelect = $(SELECTORS.paginationPage);
-    const $prev = $(SELECTORS.paginationPrev);
-    const $next = $(SELECTORS.paginationNext);
-    const $searchbar = $(SELECTORS.searchbar);
-    const $filters = $(SELECTORS.orderFilter);
+    const hasPaginationControls = limit || range || pages || pageSelect || prev || next;
+    const hasFilteringControls = searchbar || filters.length;
 
-    if (
-      !$limit.length &&
-      !$range.length &&
-      !$pages.length &&
-      !$pageSelect.length
-    ) {
-      return;
-    }
+    if (!hasPaginationControls && !hasFilteringControls) return;
 
-    let filteredRows = $rows.toArray();
-    let rowsPerPage = Number($limit.val()) || 7;
+    let filteredRows = [...rows];
+    let rowsPerPage = Number(limit?.value) || 7;
     let currentPage = 1;
 
     let searchValue = "";
     let activeFilter = "all";
 
-    function getRowStatus($row) {
-      if ($row.hasClass("done")) return "done";
-      if ($row.hasClass("in-process")) return "in-process";
-      if ($row.hasClass("pending")) return "pending";
+    function getRowStatus(row) {
+      if (hasClass(row, "done")) return "done";
+      if (hasClass(row, "in-process")) return "in-process";
+      if (hasClass(row, "pending")) return "pending";
 
       return "done";
     }
 
+    function getRowSearchText(row) {
+      const orderName = qs(".order-name", row)?.textContent || "";
+      const customer = qs(".customer", row)?.textContent || "";
+      return (orderName + " " + customer).toLowerCase();
+    }
+
     function updateFilteredRows() {
-      filteredRows = $rows
-        .filter(function () {
-          const $row = $(this);
+      filteredRows = rows.filter((row) => {
+        const matchesSearch = getRowSearchText(row).includes(searchValue);
+        const status = getRowStatus(row);
+        const matchesFilter = activeFilter === "all" || activeFilter === status;
 
-          const orderName = $row.find(".order-name").text().toLowerCase();
-          const customer = $row.find(".customer").text().toLowerCase();
-
-          const matchesSearch =
-            orderName.includes(searchValue) || customer.includes(searchValue);
-
-          const status = getRowStatus($row);
-          const matchesFilter =
-            activeFilter === "all" || activeFilter === status;
-
-          return matchesSearch && matchesFilter;
-        })
-        .toArray();
+        return matchesSearch && matchesFilter;
+      });
     }
 
     function getPageCount() {
@@ -730,130 +718,119 @@
       const totalItems = filteredRows.length;
       const pageCount = getPageCount();
 
-      const startItem =
-        totalItems === 0 ? 0 : (currentPage - 1) * rowsPerPage + 1;
-
+      const startItem = totalItems === 0 ? 0 : (currentPage - 1) * rowsPerPage + 1;
       const endItem = Math.min(currentPage * rowsPerPage, totalItems);
 
-      if ($range.length) {
-        $range.text(
-          startItem + " - " + endItem + " of " + totalItems + " items",
-        );
+      if (range) {
+        range.textContent = startItem + " - " + endItem + " of " + totalItems + " items";
       }
 
-      if ($pages.length) {
-        $pages.text("of " + pageCount + " pages");
+      if (pages) {
+        pages.textContent = "of " + pageCount + " pages";
       }
 
-      if ($pageSelect.length) {
-        $pageSelect.empty();
+      if (pageSelect) {
+        pageSelect.innerHTML = "";
 
         for (let i = 1; i <= pageCount; i += 1) {
           const pageLabel = String(i).padStart(2, "0");
-          const option = new Option(
-            pageLabel,
-            String(i),
-            i === currentPage,
-            i === currentPage,
-          );
-
-          $pageSelect.append(option);
+          const option = new Option(pageLabel, String(i), i === currentPage, i === currentPage);
+          pageSelect.appendChild(option);
         }
       }
 
-      if ($prev.length) {
-        $prev.prop("disabled", currentPage === 1);
+      if (prev) {
+        prev.disabled = currentPage === 1;
       }
 
-      if ($next.length) {
-        $next.prop("disabled", currentPage === pageCount || totalItems === 0);
+      if (next) {
+        next.disabled = currentPage === pageCount || totalItems === 0;
       }
     }
 
     function showPage(page) {
       const pageCount = getPageCount();
 
-      currentPage = Math.min(Math.max(page, 1), pageCount);
+      currentPage = Math.min(Math.max(Number(page) || 1, 1), pageCount);
 
       const start = (currentPage - 1) * rowsPerPage;
       const end = start + rowsPerPage;
 
-      $rows.hide();
+      rows.forEach((row) => {
+        row.style.display = "none";
+      });
 
-      $(filteredRows)
-        .slice(start, end)
-        .each(function () {
-          $(this).css("display", "grid");
-        });
+      filteredRows.slice(start, end).forEach((row) => {
+        row.style.display = "grid";
+      });
 
       renderPagination();
     }
 
-    function updateOrderCounts() {
-      const total = $rows.length;
-
-      const done = $rows.filter(function () {
-        return $(this).hasClass("done");
-      }).length;
-
-      const inProcess = $rows.filter(function () {
-        return $(this).hasClass("in-process");
-      }).length;
-
-      const pending = $rows.filter(function () {
-        return $(this).hasClass("pending");
-      }).length;
-
-      $(".all-orders .ordercount").text(total);
-      $(".orders-done .ordercount").text(done);
-      $(".order-filter-option.in-process .ordercount").text(inProcess);
-
-      $(
-        ".order-filter-option.pending .ordercount, .order-filter-option.pendind .ordercount",
-      ).text(pending);
+    function setText(selector, value) {
+      const element = qs(selector);
+      if (!element) return;
+      element.textContent = value;
     }
 
-    $searchbar.on("input", function () {
-      searchValue = String($(this).val() || "").toLowerCase();
+    function updateOrderCounts() {
+      const total = rows.length;
+      const done = rows.filter((row) => hasClass(row, "done")).length;
+      const inProcess = rows.filter((row) => hasClass(row, "in-process")).length;
+      const pending = rows.filter((row) => hasClass(row, "pending")).length;
 
-      updateFilteredRows();
-      showPage(1);
-    });
+      setText(".all-orders .ordercount", total);
+      setText(".orders-done .ordercount", done);
+      setText(".order-filter-option.in-process .ordercount", inProcess);
+      setText(".order-filter-option.pending .ordercount", pending);
+      setText(".order-filter-option.pendind .ordercount", pending);
+    }
 
-    $filters.on("click", function () {
-      const $filter = $(this);
+    function setActiveFilter(filterElement) {
+      if (!filterElement) return;
 
-      $filters.removeClass("selected");
-      $filter.addClass("selected");
+      filters.forEach((filter) => removeClass(filter, "selected"));
+      addClass(filterElement, "selected");
 
-      if ($filter.hasClass("all-orders")) {
+      if (hasClass(filterElement, "all-orders")) {
         activeFilter = "all";
-      } else if ($filter.hasClass("orders-done")) {
+      } else if (hasClass(filterElement, "orders-done")) {
         activeFilter = "done";
-      } else if ($filter.hasClass("in-process")) {
+      } else if (hasClass(filterElement, "in-process")) {
         activeFilter = "in-process";
-      } else if ($filter.hasClass("pending") || $filter.hasClass("pendind")) {
+      } else if (hasClass(filterElement, "pending") || hasClass(filterElement, "pendind")) {
         activeFilter = "pending";
       }
 
       updateFilteredRows();
       showPage(1);
-    });
+    }
 
-    $limit.on("change", function () {
-      rowsPerPage = Number($(this).val()) || 7;
+    on(searchbar, "input", function () {
+      searchValue = String(this.value || "").toLowerCase();
+
+      updateFilteredRows();
       showPage(1);
     });
 
-    $pageSelect.on("change", function () {
-      showPage(Number($(this).val()) || 1);
+    onAll(filters, "click", function () {
+      setActiveFilter(this);
     });
 
-    $prev.on("click", function () {
+    on(limit, "change", function () {
+      rowsPerPage = Number(this.value) || 7;
+      showPage(1);
+    });
+
+    on(pageSelect, "change", function () {
+      showPage(Number(this.value) || 1);
+    });
+
+    on(prev, "click", function () {
       showPage(currentPage - 1);
     });
 
-    $next.on("click", function () {
+    on(next, "click", function () {
       showPage(currentPage + 1);
     });
 
@@ -864,9 +841,10 @@
 
   /* =========================
        INIT
-    ========================= */
+  ========================= */
 
   document.addEventListener("DOMContentLoaded", function () {
+    initHeaderState();
     initModalsAndUserHeader();
     initDesktopMegaMenu();
     initMobileBurgerMenu();
