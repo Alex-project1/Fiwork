@@ -959,11 +959,14 @@ header {
   line-height: 150%;
   color: #62646a;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-part2 li:hover > a,
 .nav-menu-item.is-active > a {
   color: #177de5;
+  font-weight: 500;
+  border-bottom: 2px solid #177de5;
 }
 
 /* =========================
