@@ -52,7 +52,7 @@ input:active,
 input:valid {
   border: none;
   outline: none;
-  box-shadow: none;fr
+  box-shadow: none;
 }
 
 .main-block{ 
@@ -100,27 +100,27 @@ input:valid {
 
 .freelancer-avatar-stars-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     border-bottom: 1px solid #efeff0;
 }
 
 .freelancer-avatar-name-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 12px;
 }
 
 .freelancer-avatar-name-container .freelancer-name{
-    font-family: var(--font8);
+    font-family: var( --third-family);
     font-weight: 600;
-    font-size: 17px;
-    line-height: 100%;
+    font-size: 18px;
+    line-height: 24px;
     text-align: left;
     color: #000;
     margin: 0;
@@ -129,7 +129,7 @@ input:valid {
 
 
 .freelancer-avatar-name-container .freelancer-username{
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     line-height: 217%;
@@ -143,6 +143,8 @@ input:valid {
     align-items: center;
     justify-content: space-between;
     gap: 3px;
+    margin-top: 5px;
+    font-size: 12px;font-weight: 400;
 }
 
 .freelancer-stars-container .yellow-star-icon{
@@ -150,13 +152,13 @@ input:valid {
 }
 
 .freelancer-stars-container p{
-    font-family: var(--second-family);
-    font-weight: 700;
+    font-weight: 500;
     font-size: 12px;
-    line-height: 175%;
-    color: #ffbe5b;
+    color: #FE7A32;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .freelancer-stars-container p .reviews-count{
@@ -165,7 +167,7 @@ input:valid {
 }
 
 .freelancer-avatar-name-container .img-container{
-    width: 60px;
+    width: 90px;
     aspect-ratio: 1/1;
     border-radius: 100%;
     overflow: hidden;
@@ -202,7 +204,7 @@ input:valid {
 }
 
 .freelancer-progress p{
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
@@ -218,10 +220,9 @@ input:valid {
 }
 
 .freelancer-progress .progress-bar {
-  width: 60px;
+  width: 76px;
   max-width: 100%;
-  height: 10px;
-  background-color: #e0e0e0;
+  height: 8px;
   border-radius: 10px;
   overflow: hidden;
   margin-right: 8px;
@@ -239,11 +240,11 @@ input:valid {
 }
 
 .freelancer-progress .progress-fill.orange{
-    background-color: orange;
+    background-color: #FE7A32;
 }
 
 .freelancer-progress .progress-fill.red{
-    background: #e45865;
+    background: #FE7A32;
 }
 
 .freelancer-progress .progress-text {
@@ -251,7 +252,7 @@ input:valid {
     color: #4b5563; /* серый цвет */
     width: 40px;
     max-width: 100%;
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 500;
     font-size: 13px;
     line-height: 185%;
@@ -266,11 +267,15 @@ input:valid {
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
+    width: 100%;
+    padding-bottom: 16px;
 }
 
 .tooltip-container {
     position: relative; /* Создаем контекст для абсолютного позиционирования подсказки */
     cursor: help; /* Меняем курсор на знак вопроса */
+    display: flex;
+    align-items: center;
 }
 
 .tooltip-text {
@@ -325,23 +330,23 @@ input:valid {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
-    font-family: var(--second-family);
-    font-weight: 400;
+    gap: 9px;
+    font-weight: 600;
     font-size: 14px;
-    line-height: 140%;
-    color: #62646a;
+    line-height: 22px;
+    font-family: var( --third-family);
+    color: #333333;
 }
 
 .receive-orders-text img{
-    width: 12px;
+    width: 16px;
 }
 
 .receive-orders-container .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 28px;
+  width: 40px;
+  height: 24px;
 }
 
 .receive-orders-container .switch input {
@@ -367,8 +372,8 @@ input:valid {
   content: "";
   height: 20px;
   width: 20px;
-  left: 4px;
-  bottom: 4px;
+  left: 2px;
+  bottom: 2px;
   background-color: white;
   transition: .4s;
   border-radius: 50%;
@@ -379,7 +384,7 @@ input:valid {
 }
 
 .receive-orders-container input:checked + .slider:before {
-  transform: translateX(32px);
+  transform: translateX(16px);
 }
 
 /*end of progressbar-container*/
@@ -407,7 +412,7 @@ input:valid {
 
 
 .ai-agent-text{
-    font-family: var(--font-family);
+    font-family: var( --third-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
@@ -479,7 +484,7 @@ span.new{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font6);
+    font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
@@ -507,7 +512,7 @@ span.new{
 }
 
 .freelancer-activities-container figcaption{
-    font-family: var(--font8);
+    font-family: var( --third-family);
     font-weight: 400;
     font-size: 11px;
     line-height: 200%;
@@ -535,7 +540,7 @@ span.new{
 }
 
 .freelancer-messages-header h3{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 18px;
     line-height: 133%;
@@ -545,7 +550,7 @@ span.new{
 }
 
 .freelancer-messages-header a{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
@@ -646,7 +651,7 @@ span.new{
 }
 
 .user-messaging-username-and-date h4{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 143%;
@@ -659,7 +664,7 @@ span.new{
 }
 
 .user-messaging-username-and-date span{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     line-height: 133%;
@@ -677,7 +682,7 @@ span.new{
 }
 
 .user-message-and-num .message{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     line-height: 133%;
@@ -704,7 +709,7 @@ span.new{
     border-radius: 100%;
     margin: 0;
     padding: 0;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 11px;
     line-height: 109%;
@@ -733,23 +738,38 @@ span.new{
     margin-bottom: 20px;
     width: 100%;
     overflow: hidden;
+    width: 100%;
 }
-
-
+.my-orders-block--top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+}
+.my-orders-block--sec{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
 .my-orders-container, .my-goods-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 600;
-    font-size: 17px;
-    line-height: 247%;
+    font-size: 18px;
+    line-height: 24px;
     color: #222325;
 }
 
 .my-orders-container .sum-overview, .my-goods-container .active-overview{
     color: #95979d;    
+    font-weight: 400;
+    font-style: 18px;line-height: 24px;
+
 }
 
 .my-orders-block .see-more-container, .my-goods-block .see-more-container{
@@ -758,7 +778,7 @@ span.new{
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
@@ -805,7 +825,7 @@ span.new{
 }
 
 .year-sellings-header h2{
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 700;
     font-size: 14px;
     line-height: 171%;
@@ -969,7 +989,7 @@ span.new{
 }
 
 .new-in-stock-header h2{
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 600;
     font-size: 17px;
     line-height: 150%;
@@ -988,7 +1008,7 @@ span.new{
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
@@ -1028,7 +1048,7 @@ span.new{
 }
 
 .new-in-stock-table .table-header div{
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 700;
     font-size: 14px;
     line-height: 171%;
@@ -1068,7 +1088,7 @@ span.new{
 }
 
 .new-in-stock-table .project-name{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
@@ -1077,7 +1097,7 @@ span.new{
 }
 
 .new-in-stock-table .project-nav{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     line-height: 133%;
@@ -1104,7 +1124,7 @@ span.new{
     align-items: center;
     justify-content: flex-start;
     gap: 3px;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
@@ -1132,7 +1152,7 @@ span.new{
 }
 
 .new-in-stock-table .suggestion-nums{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     line-height: 133%;
@@ -1173,7 +1193,7 @@ span.new{
 }
 
 .three-steps-to-start-block h2{
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 700;
     font-size: 24px;
     line-height: 130%;
@@ -1185,7 +1205,7 @@ span.new{
 }
 
 .three-steps-to-start-block p{
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
@@ -1242,7 +1262,7 @@ span.new{
 }
 
 .step-details-container .step-details .description{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 18px;
     line-height: 133%;
@@ -1279,7 +1299,7 @@ span.new{
     font-size: 14px;
     color: #4b5563; /* серый цвет */
     max-width: 100%;
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 500;
     font-size: 13px;
     line-height: 185%;
@@ -1303,7 +1323,7 @@ span.new{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 114%;
@@ -1312,7 +1332,7 @@ span.new{
 }
 
 .step-to-start-container .active-services{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
@@ -1342,7 +1362,7 @@ span.new{
 }
 
 .message-modal-fixed p{
-    font-family: var(--font4);
+        font-family: var( --third-family);
     font-weight: 600;
     font-size: 18px;
     line-height: 133%;
@@ -1360,7 +1380,7 @@ span.new{
     padding: 3px 5px;
     border-radius: 100%;
     background: #ff6163;
-    font-family: var(--font4);
+        font-family: var( --third-family);
     font-weight: 500;
     font-size: 11px;
     line-height: 150%;
@@ -1426,7 +1446,7 @@ footer{
     text-align: left;
     margin: 0;
     padding: 0;
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 600;
     font-size: 22px;
     line-height: 118%;
@@ -1454,7 +1474,7 @@ footer{
 
 .fast-executor-search-container p{
     max-width: 610px;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
@@ -1476,7 +1496,7 @@ footer{
     padding: 19px;
     min-width: 200px;
     min-height: 48px;
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 71%;
@@ -1521,7 +1541,7 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 15px;
     line-height: 133%;
@@ -1529,7 +1549,7 @@ footer{
 }
 
 .search-fiwork-step-stage .step-stage-name .error-description{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
@@ -1560,7 +1580,7 @@ footer{
 }
 
 .search-fiwork-step-stage .add-own-variant{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
@@ -1594,7 +1614,7 @@ footer{
     min-height: 30px;
     background: #fff;
     resize: none;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-style: italic;
     font-weight: 400;
     font-size: 32px;
@@ -1612,7 +1632,7 @@ footer{
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     line-height: 133%;
@@ -1627,7 +1647,7 @@ footer{
     width: 100%;
     height: 40px;
     max-width: 100%;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
@@ -1661,7 +1681,7 @@ footer{
 
 
 .search-fiwork-step-select-section .step-stage-form .similar-to-selection label{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
@@ -1671,7 +1691,7 @@ footer{
 }
 
 .search-fiwork-step-select-section .step-stage-form .similar-to-selection-row{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
@@ -1769,7 +1789,7 @@ footer{
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
-    font-family: var(--font4);
+        font-family: var( --third-family);
     font-weight: 700;
     font-size: 23px;
     line-height: 134%;
@@ -1783,7 +1803,7 @@ footer{
 }
 
 .freelancer-info-content1 .freelancer-username{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 15px;
     line-height: 173%;
@@ -1795,7 +1815,7 @@ footer{
 }
 
 .freelancer-info-content1 .freelancer-position{
-    font-family: var(--font4);
+        font-family: var( --third-family);
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
@@ -1877,7 +1897,7 @@ footer{
 .about-verified-description h3{
     margin: 0;
     padding: 0;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 12px;
     line-height: 115%;
@@ -1886,7 +1906,7 @@ footer{
 }
 
 .about-verified-description p{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     line-height: 115%;
@@ -1896,7 +1916,7 @@ footer{
 }
 
 .about-verified-description p.special-color{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     color: #2a5885;
@@ -1905,14 +1925,14 @@ footer{
 }
 
 .about-trophy-header{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 12px;
     color: #484848;
 }
 
 .about-trophy-description{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     color: #333;
@@ -1927,7 +1947,7 @@ footer{
 }
 
 .about-freelancer-container h2{
-    font-family: var(--font4);
+        font-family: var( --third-family);
     font-weight: 700;
     font-size: 14px;
     line-height: 150%;
@@ -1937,7 +1957,7 @@ footer{
 }
 
 .about-freelancer-container p{
-    font-family: var(--font4);
+        font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
@@ -1949,7 +1969,7 @@ footer{
 }
 
 .freelancer-skills span{
-    font-family: var(--font4);
+        font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 143%;
@@ -1974,7 +1994,7 @@ footer{
 .freelancer-rating-wrapper h3{
     margin: 0;
     padding: 0;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 700;
     font-size: 10px;
     line-height: 200%;
@@ -1996,7 +2016,7 @@ footer{
 }
 
 .freelancer-rating-content p{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 12px;
     line-height: 175%;
@@ -2094,7 +2114,7 @@ footer{
 }
 
 .services-price h3{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 700;
     font-size: 10px;
     line-height: 200%;
@@ -2106,7 +2126,7 @@ footer{
 }
 
 .services-price p{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 17px;
     line-height: 118%;
@@ -2130,7 +2150,7 @@ footer{
     min-width: 200px;
     min-height: 48px;
     background: #04b70a;
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 71%;
@@ -2151,7 +2171,7 @@ footer{
     min-width: 200px;
     min-height: 50px;
     background: #fff;
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 71%;
@@ -2195,7 +2215,7 @@ footer{
 }
 
 .banned-modal-block h3{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 18px;
     line-height: 156%;
@@ -2205,7 +2225,7 @@ footer{
 }
 
 .banned-modal-block p{
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 143%;
@@ -2230,12 +2250,12 @@ footer{
     border: 1px solid #d5d7da;
     border-radius: 8px;
     padding: 10px 18px;
-    width: 100%
+    width: 100%;
     min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
@@ -2253,7 +2273,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
@@ -2349,7 +2369,7 @@ footer{
 
 .stories-container .story-block .text-container p{ 
     text-align: left;
-    font-family: var(--font-family);
+      font-family: var( --third-family);
     font-weight: 500;
     font-size: 13px;
     line-height: 123%;
@@ -2386,7 +2406,7 @@ footer{
 }
 
 .card-offer-description h2{
-    font-family: var(--second-family);
+    font-family: var( --third-family);
     font-weight: 700;
     font-size: 20px;
     line-height: 140%;
@@ -2571,4 +2591,54 @@ footer{
         justify-content: center;
     }
 } 
+.progress-container {
+    position: relative;
+  }
+  
+  .progress-bar {
+    position: relative;
+    height: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+  }
+  
+  .progress-bar::before {
+    position: absolute;
+    content: "";
+    width: var(--progress, 0%);
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--progress-color, #e34444);
+    transition:
+      width 0.45s ease,
+      background-color 0.45s ease;
+  }
+  
+  .progress-text {
+    margin-top: 5px;
+    color: var(--progress-color, #e34444);
+    transition: color 0.45s ease;
+  }
+.coutryFlag-box{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 15px;
 
+}
+  .coutryFlag{
+        padding: 1px 3px ;   
+        background-color: #EBF4FF;   
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        height: 28px;
+  }
+  .coutryFlag img{
+    width: 28px; 
+    height: 24px;
+  }
