@@ -1384,6 +1384,7 @@ span.new{
     bottom: 0px;
     cursor: pointer;
     background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
 }
 
 .message-modal-fixed img{
