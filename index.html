@@ -983,11 +983,10 @@
               </li>
             </ul>
         
-            <!-- Общий mega-menu для всех пунктов -->
             <div class="mega-menu__wrapper">
               <div class="mega-menu">
         
-                <!-- Левая колонка категорий -->
+              
                 <div class="mega-menu-column mega-menu-column--categories">
         
                   <div class="mega-menu_line is-active" data-menu="design">
@@ -1121,7 +1120,6 @@
                   </div>
                 </div>
         
-                <!-- Правая часть: Дизайн и графика -->
                 <div class="mega-menu__box is-active" data-menu-content="design">
                   <h2 class="mega-menu__title-line">Дизайн и графика</h2>
         
@@ -1211,7 +1209,6 @@
                   </div>
                 </div>
         
-                <!-- Правая часть: Разработка и IT -->
                 <div class="mega-menu__box " data-menu-content="dev">
                   <h2 class="mega-menu__title-line">Разработка и IT</h2>
         
@@ -1261,7 +1258,6 @@
                   </div>
                 </div>
         
-                <!-- Правая часть: Тексты и переводы -->
                 <div class="mega-menu__box" data-menu-content="texts">
                   <h2 class="mega-menu__title-line">Тексты и переводы</h2>
         
@@ -1292,7 +1288,6 @@
                   </div>
                 </div>
         
-                <!-- Правая часть: SEO и трафик -->
                 <div class="mega-menu__box" data-menu-content="seo">
                   <h2 class="mega-menu__title-line">Трафик, SMM и SEO</h2>
         
@@ -1323,7 +1318,6 @@
                   </div>
                 </div>
         
-                <!-- Правая часть: Аудио и видео -->
                 <div class="mega-menu__box" data-menu-content="audio">
                   <h2 class="mega-menu__title-line">Аудио &amp; Видео</h2>
         
@@ -1354,7 +1348,6 @@
                   </div>
                 </div>
         
-                <!-- Правая часть: Бизнес и жизнь -->
                 <div class="mega-menu__box" data-menu-content="business">
                   <h2 class="mega-menu__title-line">Бизнес и жизнь</h2>
         
@@ -1385,7 +1378,6 @@
                   </div>
                 </div>
         
-                <!-- Правая часть: Блокчейн и крипто -->
                 <div class="mega-menu__box" data-menu-content="crypto">
                   <h2 class="mega-menu__title-line">Блокчейн и крипто</h2>
         
@@ -1416,7 +1408,6 @@
                   </div>
                 </div>
         
-                <!-- Правая часть: Нейросети -->
                 <div class="mega-menu__box" data-menu-content="ai">
                   <h2 class="mega-menu__title-line">Нейросети</h2>
         
@@ -1447,7 +1438,6 @@
                   </div>
                 </div>
         
-                <!-- Правая часть: Создать свою задачу -->
                 <div class="mega-menu__box" data-menu-content="custom-task">
                   <h2 class="mega-menu__title-line">Создать свою задачу</h2>
         
@@ -1481,389 +1471,46 @@
         </div>
       </div>
     </header>
-
     <header class="phone-header">
-      <div class="logo-burger-login-block">
-        <a href="#" class="mobile-logo-link">
-          <img src="./img/logo.svg" alt="burger" class="mobile-logo-icon" />
+      <div class="mobile-topbar">
+        <a href="#" class="mobile-topbar__logo">
+          <img src="./img/logo.svg" alt="Fiwork" />
         </a>
-
-        <div class="burger-container">
-          <img
-            src="./img/new-mobile-menu/burger-icon.svg"
-            alt="burger"
-            class="burger-icon"
-          />
-          <img
-            src="./img/new-mobile-menu/close-icon.svg"
-            alt="close-menu"
-            class="close-menu-icon"
-          />
-        </div>
+    
+        <button class="mobile-burger-btn" type="button" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-
-      <div class="mobile-navigation-menu">
-        <!-- Главное меню -->
-        <div class="menu" id="menu-main">
-          <div class="main-menu-search-and-login">
-            <div class="main-menu-login-container">
-              <img
-                src="./img/new-mobile-menu/person-icon.svg"
-                alt="login-icon"
-                class="login-icon"
-              />
-              <span class="login-text">Вход / Регистрация</span>
-            </div>
-
-            <div class="main-menu-search-container">
-              <img
-                src="./img/new-mobile-menu/search-icon.svg"
-                alt="search-icon"
-                class="search-icon"
-              />
-              <input
-                type="text"
-                placeholder="Поиск..."
-                class="main-menu-search-text"
-                name="main-menu-search-text"
-              />
-            </div>
-          </div>
-          <div class="main-menu-links">
-            <a href="#" class="mobile-menu-nav-link"
-              ><img
-                src="./img/new-mobile-menu/home.svg"
-                alt="menu-icon"
-                class="menu-icon"
-              />На главную</a
-            >
-            <button onclick="openMenu('menu-categories')">
-              <img
-                src="./img/new-mobile-menu/windows-icon.svg"
-                alt="menu-icon"
-                class="menu-icon"
-              />Каталог услуг
-            </button>
-            <a href="#" class="mobile-menu-nav-link"
-              ><img
-                src="./img/new-mobile-menu/currency-coin-dollar.svg"
-                alt="menu-icon"
-                class="menu-icon"
-              />Начать зарабатывать</a
-            >
-            <a href="#" class="mobile-menu-nav-link"
-              ><img
-                src="./img/new-mobile-menu/favourite.svg"
-                alt="menu-icon"
-                class="menu-icon"
-              />Полезное</a
-            >
-            <a href="#" class="mobile-menu-nav-link"
-              ><img
-                src="./img/new-mobile-menu/information-circle.svg"
-                alt="information-circle"
-                class="information-cirlce-icon"
-              />Политика и правила</a
-            >
-          </div>
-          <div class="need-help-container">
-            <div class="need-help-question">
-              <img
-                src="./img/new-mobile-menu/question-icon.svg"
-                alt="question-icon"
-                class="question-icon"
-              />
-              Нужна помощь?
-            </div>
-            <input
-              type="button"
-              class="need-help-button"
-              value="Написать нам"
-            />
-          </div>
-        </div>
-
-        <!-- Категории -->
-        <div class="menu hidden" id="menu-categories">
-          <div class="header">
-            <img
-              src="./img/icons/mobile-menu-icons/back-icon.svg"
-              alt="menu-icon"
-              class="menu-icon back"
-              onclick="openMenu('menu-main')"
-            />
-            <h3>Каталог услуг</h3>
-          </div>
-          <button onclick="openMenu('menu-design')">
-            <div class="catalog-elem">
-              <div class="catalog-elem-img-container">
-                <img
-                  src="./img/new-mobile-menu/menu-icons/design.svg"
-                  alt="design"
-                  class="design-icon"
-                />
-              </div>
-              <div class="catalog-elem-name">
-                <h4>Дизайн и графика</h4>
-                <p>Все ваши мечты о дизайне станут реальностью</p>
-              </div>
-              <div class="catalog-elem-next-container">
-                <img
-                  src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-                  alt="menu-icon"
-                  class="menu-icon"
-                />
-              </div>
-            </div>
-          </button>
-          <button>
-            <div class="catalog-elem">
-              <div class="catalog-elem-img-container">
-                <img
-                  src="./img/new-mobile-menu/menu-icons/advertisement.svg"
-                  alt="advertisement"
-                  class="advertisement-icon"
-                />
-              </div>
-              <div class="catalog-elem-name">
-                <h4>Соцсети и реклама</h4>
-                <p>Пусть о вашем бизнесе узнают новые клиенты</p>
-              </div>
-              <div class="catalog-elem-next-container">
-                <img
-                  src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-                  alt="menu-icon"
-                  class="menu-icon"
-                />
-              </div>
-            </div>
-          </button>
-          <button>
-            <div class="catalog-elem">
-              <div class="catalog-elem-img-container">
-                <img
-                  src="./img/new-mobile-menu/menu-icons/video.svg"
-                  alt="video"
-                  class="video-icon"
-                />
-              </div>
-              <div class="catalog-elem-name">
-                <h4>Видео и анимация</h4>
-                <p>Ваш Голливуд в пару щелчков мыши</p>
-              </div>
-              <div class="catalog-elem-next-container">
-                <img
-                  src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-                  alt="menu-icon"
-                  class="menu-icon"
-                />
-              </div>
-            </div>
-          </button>
-
-          <button>
-            <div class="catalog-elem">
-              <div class="catalog-elem-img-container">
-                <img
-                  src="./img/new-mobile-menu/menu-icons/music.svg"
-                  alt="music"
-                  class="music-icon"
-                />
-              </div>
-              <div class="catalog-elem-name">
-                <h4>Музыка и аудио</h4>
-                <p>Producers & Composers</p>
-              </div>
-              <div class="catalog-elem-next-container">
-                <img
-                  src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-                  alt="menu-icon"
-                  class="menu-icon"
-                />
-              </div>
-            </div>
-          </button>
-
-          <button>
-            <div class="catalog-elem">
-              <div class="catalog-elem-img-container">
-                <img
-                  src="./img/new-mobile-menu/menu-icons/it-development.svg"
-                  alt="it-development"
-                  class="it-development-icon"
-                />
-              </div>
-              <div class="catalog-elem-name">
-                <h4>Разработка и IT</h4>
-                <p>Эти программисты помогут создать даже новый Фейсбук</p>
-              </div>
-              <div class="catalog-elem-next-container">
-                <img
-                  src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-                  alt="menu-icon"
-                  class="menu-icon"
-                />
-              </div>
-            </div>
-          </button>
-
-          <button>
-            <div class="catalog-elem">
-              <div class="catalog-elem-img-container">
-                <img
-                  src="./img/new-mobile-menu/menu-icons/photo.svg"
-                  alt="photo"
-                  class="photo-icon"
-                />
-              </div>
-              <div class="catalog-elem-name">
-                <h4>Фото и обработка</h4>
-                <p>Product photographers</p>
-              </div>
-              <div class="catalog-elem-next-container">
-                <img
-                  src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-                  alt="menu-icon"
-                  class="menu-icon"
-                />
-              </div>
-            </div>
-          </button>
-        </div>
-
-        <!-- Подкатегория: Дизайн -->
-        <div class="menu hidden" id="menu-design">
-          <div class="header">
-            <img
-              src="./img/icons/mobile-menu-icons/back-icon.svg"
-              alt="menu-icon"
-              class="menu-icon back"
-              onclick="openMenu('menu-categories')"
-            />
-            <h3>Дизайн</h3>
-          </div>
-          <button onclick="openMenu('menu-branding')">
-            Логотипы и брендинг
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <button>
-            Презентации и инфографика
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <button>
-            Арт и иллюстрации
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <button>
-            Веб и мобильный дизайн
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <button>
-            Интерьер и экстерьер
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <button>
-            Обработка и редактирование
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <button>
-            Полиграфия
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <button>
-            Промышленный дизайн
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <button>
-            Наружная реклама
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <button>
-            ИИ-генерация изображений
-            <img
-              src="./img/icons/mobile-menu-icons/open-submenu-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-        </div>
-
-        <!-- Подкатегория: Логотипы и брендинг -->
-        <div class="menu hidden" id="menu-branding">
-          <div class="header">
-            <img
-              src="./img/icons/mobile-menu-icons/back-icon.svg"
-              alt="menu-icon"
-              class="menu-icon back"
-              onclick="openMenu('menu-design')"
-            />
-            <h3>Логотипы и брендинг</h3>
-          </div>
-          <button>
-            Логотипы
-            <img
-              src="./img/icons/mobile-menu-icons/fire-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-          </button>
-          <a href="#" class="mobile-menu-nav-link">Фирменный стиль</a>
-          <a href="#" class="mobile-menu-nav-link">Визитки</a>
-          <a href="#" class="mobile-menu-nav-link">Брендирование и сувенирка</a>
-        </div>
-      </div>
-
-      <form class="mobile-search-block">
-        <div class="mobile-search-input-container">
-          <img
-            src="./img/new-mobile-menu/blue-search-icon.svg"
-            alt="mobile-search-icon"
-            class="mobile-search-icon"
-          />
-          <input
-            type="text"
-            placeholder="Создать сайт на wix"
-            class="mobile-search-input"
-          />
-        </div>
-      </form>
     </header>
+    
+    <div class="mobile-drawer-overlay"></div>
+    
+    <aside class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer__header">
+        <a href="#" class="mobile-drawer__logo">
+          <img src="./img/logo.svg" alt="Fiwork" />
+        </a>
+    
+        <button class="mobile-drawer__close" type="button" aria-label="Закрыть меню">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    
+      <div class="mobile-drawer__body">
+        <div class="mobile-menu-screen is-active" data-screen="root">
+          <input type="text" placeholder="Искать услуги..." class="search-service-input" name="search-service">
+          <button class="mobile-main-action" type="button" data-target="catalog">
+            Каталог услуг
+          </button>
+        </div>
+    
+        <div class="mobile-menu-screen" data-screen="catalog"></div>
+        <!-- сюда JS сам подставит категории / разделы / ссылки -->
+      </div>
+    </aside>
     <div class="main-block">
       <div class="main-container">
         <div class="services-nav-wrapper">
@@ -4094,66 +3741,8 @@
   <script src="./js/swiper.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/mobile-navigation-menu.js"></script>
-  <script src="./js/modal.js"></script>
+  <script src="./js/new.js"></script>
   <link rel="stylesheet" href="./css/swiper.css" />
 
-  <script>
-    $(document).ready(function () {
-  const $menuWrapper = $(".mega-menu__wrapper");
-  let closeTimer = null;
 
-  function openMenu() {
-    clearTimeout(closeTimer);
-    $menuWrapper.addClass("is-open");
-  }
-
-  function closeMenu() {
-    clearTimeout(closeTimer);
-
-    closeTimer = setTimeout(function () {
-      if (
-        $(".nav-part2:hover").length ||
-        $(".mega-menu__wrapper:hover").length
-      ) {
-        return;
-      }
-
-      $menuWrapper.removeClass("is-open");
-      $(".nav-menu-item").removeClass("is-active");
-    }, 250);
-  }
-
-  function setActiveMenu(menuKey, shouldOpen = true) {
-    if (!menuKey) return;
-
-    $(".nav-menu-item").removeClass("is-active");
-    $('.nav-menu-item[data-menu="' + menuKey + '"]').addClass("is-active");
-
-    $(".mega-menu_line").removeClass("is-active");
-    $('.mega-menu_line[data-menu="' + menuKey + '"]').addClass("is-active");
-
-    $(".mega-menu__box").removeClass("is-active");
-    $('.mega-menu__box[data-menu-content="' + menuKey + '"]').addClass("is-active");
-
-    if (shouldOpen) openMenu();
-  }
-
-  setActiveMenu("design", false);
-
-  $(".nav-menu-item").on("mouseenter focusin", function () {
-    setActiveMenu($(this).data("menu"));
-  });
-
-  $(".mega-menu_line").on("mouseenter focusin", function () {
-    setActiveMenu($(this).data("menu"));
-  });
-
-  $(".nav-part2, .mega-menu__wrapper")
-    .on("mouseenter", function () {
-      clearTimeout(closeTimer);
-      openMenu();
-    })
-    .on("mouseleave", closeMenu);
-});
-  </script>
 </html>
