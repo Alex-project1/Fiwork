@@ -296,9 +296,9 @@
       if (shouldOpen) openMenu();
     }
 
-    if (navItems.some((item) => item.dataset.menu === "design")) {
-      setActiveMenu("design", false);
-    }
+    // if (navItems.some((item) => item.dataset.menu === "design")) {
+    //   setActiveMenu("design", false);
+    // }
 
     onAll(navItems, "mouseenter", function () {
       if (!isDesktop()) return;
@@ -368,9 +368,9 @@
     on(window, "resize", function () {
       closeMenuNow();
 
-      if (navItems.some((item) => item.dataset.menu === "design")) {
-        setActiveMenu("design", false);
-      }
+      // if (navItems.some((item) => item.dataset.menu === "design")) {
+      //   setActiveMenu("design", false);
+      // }
     });
   }
 

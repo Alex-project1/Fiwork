@@ -1,4 +1,79 @@
-<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="fireSvg" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+.fireSvg {
+  display: inline-block;
+  overflow: visible;
+  transform-origin: 50% 100%;
+  animation: fireFloat 2.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 0 rgba(255, 118, 0, 0.0));
+}
+
+.fireSvg path {
+  transform-origin: 50% 100%;
+  fill: #FF7600;
+  animation:
+    fireFlicker 1.15s ease-in-out infinite alternate,
+    fireGlow 1.8s ease-in-out infinite;
+}
+
+@keyframes fireFlicker {
+  0% {
+    transform: scale(1) rotate(-1deg);
+    fill: #ff7600;
+  }
+  25% {
+    transform: scale(1.04, 0.98) rotate(1deg);
+    fill: #ff8a1f;
+  }
+  50% {
+    transform: scale(0.98, 1.03) rotate(-0.8deg);
+    fill: #ff6a00;
+  }
+  75% {
+    transform: scale(1.03, 0.99) rotate(0.8deg);
+    fill: #ff9a2f;
+  }
+  100% {
+    transform: scale(1, 1.02) rotate(-0.5deg);
+    fill: #ff7600;
+  }
+}
+
+@keyframes fireGlow {
+  0% {
+    filter: drop-shadow(0 0 0px rgba(255, 118, 0, 0.15))
+            drop-shadow(0 0 0px rgba(255, 170, 0, 0.08));
+  }
+  50% {
+    filter: drop-shadow(0 0 6px rgba(255, 118, 0, 0.35))
+            drop-shadow(0 0 14px rgba(255, 170, 0, 0.18));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgba(255, 118, 0, 0.2))
+            drop-shadow(0 0 8px rgba(255, 170, 0, 0.1));
+  }
+}
+
+@keyframes fireFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-1px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fireSvg,
+  .fireSvg path {
+    animation: none;
+  }
+}
+
+</style>
 <g clip-path="url(#clip0_1_1806)">
 <g clip-path="url(#clip1_1_1806)">
 <g clip-path="url(#clip2_1_1806)">
