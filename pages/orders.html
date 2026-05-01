@@ -112,7 +112,7 @@
             <div class="bottomBox__title">Нет аккаунта на Fiwork?</div>
             <div class="btnBox">
               <button
-                class="modal__login-regBtn modal-btn"
+                class="modal__login-headerReg modal-btn"
                 data-modalname="modal__reg"
               >
                 Зарегистрироваться
@@ -383,20 +383,8 @@
               </div>
   
               <div class="registration-and-login-block">
-                <input
-                  type="button"
-                  value="Зарегистрироваться"
-                  id="headerReg"
-                  class="register-button modal-btn"
-                  data-modalName="modal__reg"
-                />
-                <input
-                  id="login"
-                  type="button"
-                  value="Войти"
-                  class="login-button modal-btn"
-                  data-modalName="modal__login"
-                />
+                <input type="button" value="Зарегистрироваться"  class="headerReg register-button modal-btn" data-modalname="modal__reg">
+                <input  type="button" value="Войти" class="loginBtn login-button modal-btn" data-modalname="modal__login">
               </div>
               <div class="header__user-block regBlock">
                 <ul class="header__user-menu">
@@ -1454,10 +1442,31 @@
       
         <div class="mobile-drawer__body">
           <div class="mobile-menu-screen is-active" data-screen="root">
+            <div class="registration-and-login-block">
+              <input type="button" value="Зарегистрироваться" class="headerReg register-button modal-btn" data-modalname="modal__reg">
+              <input type="button" value="Войти" class="loginBtn login-button modal-btn" data-modalname="modal__login">
+            </div>
             <input type="text" placeholder="Искать услуги..." class="search-service-input" name="search-service">
+            <a href="#" class="mobile-main-action">
+              <img src="/img/new-mobile-menu/home.svg" alt="menu-icon" class="menu-icon">
+              На главную
+            </a>
             <button class="mobile-main-action" type="button" data-target="catalog">
+              <img src="/img/new-mobile-menu/windows-icon.svg" alt="menu-icon" class="menu-icon">
               Каталог услуг
             </button>
+            <a href="#" class="mobile-main-action">
+              <img src="/img/new-mobile-menu/currency-coin-dollar.svg" alt="menu-icon" class="menu-icon">
+              Начать зарабатывать
+            </a>
+            <a href="#" class="mobile-main-action">
+              <img src="/img/new-mobile-menu/favourite.svg" alt="menu-icon" class="menu-icon">
+              Полезное
+            </a>
+            <a href="#" class="mobile-main-action">
+              <img src="/img/new-mobile-menu/information-circle.svg" alt="information-circle" class="information-cirlce-icon">
+              Политика и правила
+            </a>
           </div>
       
           <div class="mobile-menu-screen" data-screen="catalog"></div>

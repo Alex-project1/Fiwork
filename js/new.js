@@ -13,7 +13,7 @@
       overlayGray: ".overlayGray",
       modalClose: ".modal__close",
       loginBtn: "#loginBtn",
-      headerReg: "#headerReg",
+      headerReg: ".headerReg",
       headerBox: ".computer-header",
       avatarInput: "#avatarInput",
       avatar: ".avatar",
@@ -394,22 +394,25 @@
   
       function navigateTo(name) {
         if (!name) return;
-  
-        const screen = qs('[data-screen="' + escapeSelector(name) + '"]', drawerBody);
+      
+        const screen = drawerBody.querySelector('[data-screen="' + name + '"]');
         if (!screen) return;
-  
+      
+        drawerBody.dataset.direction = "forward";
+      
         historyStack.push(name);
         showScreen(name);
       }
-  
+      
       function goBack() {
+        drawerBody.dataset.direction = "back";
+      
         if (historyStack.length > 1) {
           historyStack.pop();
         }
-  
+      
         showScreen(historyStack[historyStack.length - 1] || "root");
       }
-  
       function createTopBar(title) {
         const wrap = document.createElement("div");
         wrap.className = "mobile-submenu-top";
