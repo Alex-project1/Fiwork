@@ -4147,11 +4147,12 @@ require_once "../modules/base.php";
 
         if (!progressBar || !progressText) return;
 
-        const percent = parseInt(progressText.textContent, 10);
+        const percent = parseInt(progressText.textContent, 10) ;
 
         if (Number.isNaN(percent)) return;
 
         const safePercent = Math.max(0, Math.min(percent, 100));
+        
         const progressColor = getProgressColor(safePercent);
 
         progressBar.style.setProperty("--progress", safePercent + "%");

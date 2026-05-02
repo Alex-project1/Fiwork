@@ -220,14 +220,7 @@ input:valid {
   align-items: center;
 }
 
-.freelancer-progress .progress-bar {
-  width: 76px;
-  max-width: 100%;
-  height: 8px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-right: 8px;
-}
+
 
 .freelancer-progress .progress-fill {
   height: 100%;
@@ -2658,20 +2651,23 @@ footer{
   
   .progress-bar {
     position: relative;
-    height: 10px;
-    border: 1px solid gray;
+    height: 8px;
+    width: 76px;
+    border: 1px solid #DEDFE4;
     border-radius: 20px;
-    background: #fff;
-    overflow: hidden;
+    background: #F6F6F6;
+    box-sizing: border-box;
   }
   
   .progress-bar::before {
     position: absolute;
     content: "";
-    width: var(--progress, 0%);
-    height: 100%;
-    left: 0;
-    top: 0;
+    top: -1px;
+    left: -1px;
+    height: calc(100% + 2px);
+    width: calc(var(--progress, 0%) + 2px);
+  
+    border-radius: inherit;
     background-color: var(--progress-color, #e34444);
     transition:
       width 0.45s ease,
