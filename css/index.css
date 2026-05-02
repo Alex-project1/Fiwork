@@ -3281,11 +3281,14 @@ footer {
 
 .computer-header {
   width: 100%;
+  padding: 20px;
+  padding-bottom: 0;
 }
 
 .computer-header .container {
   width: 100%;
   max-width: 1240px;
+  padding: 20px;
 }
 
 /* =========================
@@ -3348,9 +3351,9 @@ footer {
 @media (max-width: 1024px) {
   .computer-header .container {
     margin-top: 0;
-    border-radius: 0;
+    /* border-radius: 0;
     border-left: 0;
-    border-right: 0;
+    border-right: 0; */
   }
 
   .nav-part1-container {

@@ -3728,7 +3728,7 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
   background: #fff;
   border-radius: 30px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   border: 1px solid #f2f1f0;
   position: relative;
   z-index: 133;
