@@ -183,7 +183,25 @@
     });
 
     onAll(modalCloseBtns, "click", closeAllModals);
-    on(overlayGray, "click", closeAllModals);
+  let isOverlayMouseDown = false;
+
+on(overlayGray, "mousedown", function (event) {
+  isOverlayMouseDown = event.target === overlayGray;
+});
+
+on(overlayGray, "mouseup", function (event) {
+  const isOverlayMouseUp = event.target === overlayGray;
+
+  if (isOverlayMouseDown && isOverlayMouseUp) {
+    closeAllModals();
+  }
+
+  isOverlayMouseDown = false;
+});
+
+on(document, "mouseup", function () {
+  isOverlayMouseDown = false;
+});
 
     on(loginBtn, "click", function () {
       closeAllModals();
@@ -838,16 +856,314 @@
     updateFilteredRows();
     showPage(1);
   }
+/* =========================
+   ADD TASK MODAL / TASK CREATE
+========================= */
 
+function initAddTaskModal() {
+  const orderTopBtns = qsa(".order__top-btn");
+  const menuWrappers = qsa(".menuWrapper");
+  const addOrderTask = qs("#addOrderTask");
+  const overlayGray = qs(".overlayGray");
+  const modals = qsa(".modal");
+  const addTaskModal = qs("#addTaskModal");
+
+  const addTaskForm = qs(".addTaskModal__form");
+  const taskTextarea = qs(".addTaskModal__textarea");
+  const taskCategory = qs(".addTaskModal__select");
+
+  if (!orderTopBtns.length && !addTaskForm) return;
+
+  onAll(orderTopBtns, "click", function () {
+    orderTopBtns.forEach((b) => removeClass(b, "active"));
+    addClass(this, "active");
+
+    menuWrappers.forEach((block) => removeClass(block, "active"));
+
+    const target = this.dataset.togle;
+
+    if (target) {
+      const activeBlock = document.getElementById(target);
+      if (activeBlock) addClass(activeBlock, "active");
+    }
+
+    if (target === "task") {
+      addClass(addOrderTask, "active");
+    } else {
+      removeClass(addOrderTask, "active");
+    }
+  });
+
+
+  on(addOrderTask, "click", function () {
+    if (!hasClass(addOrderTask, "active")) return;
+
+    addClass(overlayGray, "active");
+
+    modals.forEach((modal) => removeClass(modal, "active"));
+
+    if (addTaskModal) addClass(addTaskModal, "active");
+  });
+
+  function closeModal() {
+    removeClass(overlayGray, "active");
+    modals.forEach((modal) => removeClass(modal, "active"));
+  }
+
+  onAll(qsa(".modal__close"), "click", closeModal);
+
+
+  function getTodoColumn() {
+    const columns = qsa("#task .task__column");
+
+    return columns.find((column) => {
+      const title = qs(".task__column-title", column)?.textContent.trim();
+      return title && title.includes("Сделать");
+    });
+  }
+
+  function getPriorityData() {
+    const checkedPriority = qs('input[name="priority"]:checked');
+
+    const priorityText = checkedPriority
+      ?.closest(".addTaskModal__priorityItem")
+      ?.querySelector("span")
+      ?.textContent.trim();
+
+    const map = {
+      "Низкий": { className: "low", text: "Low" },
+      "Средний": { className: "medium", text: "Medium" },
+      "Высокий": { className: "hight", text: "Hight" },
+      "Срочный": { className: "urgent", text: "Очень срочно" },
+    };
+
+    return map[priorityText] || map["Низкий"];
+  }
+
+  function getCurrentDate() {
+    return new Date().toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+  }
+
+  function createTaskItem(category, description, priority) {
+    const taskItem = document.createElement("div");
+    taskItem.className = "task__item";
+
+    taskItem.innerHTML = `
+      <svg class="border-svg">
+        <rect x="0" y="0" width="100%" height="100%" rx="4" ry="4"/>
+      </svg>
+
+      <div class="task__item-info">
+        <div class="task__item-title">
+          ${escapeHtml(category)}
+        </div>
+
+        <div class="task__item-subtitle">
+          ${escapeHtml(description)}
+        </div>
+
+        <div class="task__item-quality">
+          <div class="task__item-quality--level ${priority.className}">
+            ${priority.text}
+          </div>
+          <div class="task__item-quality--users">
+                            <div class="task__item-quality--user">
+                              <img src="../img/user-avatars/user-avatar5.jpg" alt="user">
+                            </div>
+                            <div class="task__item-quality--user">
+                              <img src="../img/user-avatars/user-avatar5.jpg" alt="user">
+                            </div>
+                            <div class="task__item-quality--user">
+                              <img src="../img/user-avatars/user-avatar5.jpg" alt="user">
+                            </div>
+                          </div>
+        </div>
+      </div>
+
+      <div class="task__item-stats">
+        <div class="task__item-data">${getCurrentDate()}</div>
+      </div>
+    `;
+
+    return taskItem;
+  }
+
+  // =====================
+  // SUBMIT FORM
+  // =====================
+  on(addTaskForm, "submit", function (event) {
+    event.preventDefault();
+
+    const descriptionValue = taskTextarea?.value.trim();
+    const categoryValue = taskCategory?.value.trim();
+
+    if (!descriptionValue) {
+      taskTextarea?.focus();
+      return;
+    }
+
+    const todoColumn = getTodoColumn();
+    if (!todoColumn) return;
+
+    const taskItems = qs(".task__items", todoColumn);
+    if (!taskItems) return;
+
+    const priority = getPriorityData();
+
+    const newTask = createTaskItem(
+      categoryValue || "Без категории",
+      descriptionValue,
+      priority
+    );
+
+    taskItems.prepend(newTask);
+
+    // подключаем drag
+    if (typeof initTaskCardDrag === "function") {
+      initTaskCardDrag(newTask);
+    }
+
+    if (typeof updateTaskColumnCounts === "function") {
+      updateTaskColumnCounts();
+    }
+
+    this.reset();
+    closeModal();
+  });
+}
   /* =========================
        INIT
   ========================= */
+let draggedCard = null;
 
+function updateTaskColumnCounts() {
+  document.querySelectorAll(".task__column").forEach((column) => {
+    const items = column.querySelectorAll(".task__item");
+    const countElement = column.querySelector(
+      ".task__column-title span:last-child span"
+    );
+
+    if (countElement) {
+      countElement.textContent = items.length;
+    }
+  });
+}
+
+function getCardAfterElement(container, mouseY) {
+  const draggableCards = [
+    ...container.querySelectorAll(".task__item:not(.is-dragging)")
+  ];
+
+  return draggableCards.reduce(
+    (closest, card) => {
+      const box = card.getBoundingClientRect();
+      const offset = mouseY - box.top - box.height / 2;
+
+      if (offset < 0 && offset > closest.offset) {
+        return {
+          offset,
+          element: card,
+        };
+      }
+
+      return closest;
+    },
+    {
+      offset: Number.NEGATIVE_INFINITY,
+      element: null,
+    }
+  ).element;
+}
+
+function initTaskCardDrag(card) {
+  if (!card) return;
+
+  // чтобы не навешивать события повторно
+  if (card.dataset.dragInit === "true") return;
+
+  card.dataset.dragInit = "true";
+  card.setAttribute("draggable", "true");
+
+  card.addEventListener("dragstart", function () {
+    draggedCard = this;
+
+    this.classList.add("is-dragging");
+
+    requestAnimationFrame(() => {
+      this.classList.add("is-hidden-during-drag");
+    });
+  });
+
+  card.addEventListener("dragend", function () {
+    this.classList.remove("is-dragging");
+    this.classList.remove("is-hidden-during-drag");
+
+    document.querySelectorAll(".task__items").forEach((column) => {
+      column.classList.remove("is-drag-over");
+    });
+
+    draggedCard = null;
+    updateTaskColumnCounts();
+  });
+}
+
+function initTaskColumnDrop(column) {
+  if (!column) return;
+
+  // чтобы не навешивать события повторно
+  if (column.dataset.dropInit === "true") return;
+
+  column.dataset.dropInit = "true";
+
+  column.addEventListener("dragover", function (event) {
+    event.preventDefault();
+
+    if (!draggedCard) return;
+
+    this.classList.add("is-drag-over");
+
+    const afterElement = getCardAfterElement(this, event.clientY);
+
+    if (!afterElement) {
+      this.appendChild(draggedCard);
+    } else {
+      this.insertBefore(draggedCard, afterElement);
+    }
+  });
+
+  column.addEventListener("dragleave", function () {
+    this.classList.remove("is-drag-over");
+  });
+
+  column.addEventListener("drop", function () {
+    this.classList.remove("is-drag-over");
+    updateTaskColumnCounts();
+  });
+}
+
+function initTaskDragAndDrop() {
+  const board = document.querySelector(".task__box");
+  const columns = document.querySelectorAll(".task__items");
+  const cards = document.querySelectorAll(".task__item");
+
+  if (!board || !columns.length) return;
+
+  columns.forEach(initTaskColumnDrop);
+  cards.forEach(initTaskCardDrag);
+
+  updateTaskColumnCounts();
+}
   document.addEventListener("DOMContentLoaded", function () {
     initHeaderState();
     initModalsAndUserHeader();
     initDesktopMegaMenu();
     initMobileBurgerMenu();
     initOrdersPagination();
+      initTaskDragAndDrop();
+      initAddTaskModal()
   });
 })();
