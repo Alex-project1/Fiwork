@@ -102,1455 +102,755 @@ require_once "../modules/base.php";
       href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/base.css" />
-  </head>
+  <link rel="stylesheet" href="https://alex-project1.github.io/access/index.css">
+  <link rel="stylesheet" href="https://alex-project1.github.io/access/orders.css">
+  <link rel="stylesheet" href="https://alex-project1.github.io/access/base.css">
+  <link rel="stylesheet" href="https://alex-project1.github.io/access/order-track.css">
+ 
+</head>
 
-  <body>
-    <div class="overlayGray">
-      <div id="modal__login" class="modal__login modal">
-        <div class="modal__close">
-          <svg
-            class="closeSvg"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
-              fill="#818C99"
-            />
-          </svg>
-        </div>
-        <div class="modal__box">
-          <form action="" class="modal__form">
-            <div class="modal__form-title">Вход</div>
-            <input
-              placeholder="Телефон, почта или логин"
-              type="text"
-              class="modal__form-input"
-            />
-            <input
-              placeholder="Пароль"
-              type="password"
-              class="modal__form-input"
-            />
-            <div class="modal__form-box">
-              <div class="checkbox__box">
-                <input
-                  type="checkbox"
-                  id="remember"
-                  class="modal__form-checkbox"
-                />
-                <label for="remember">Запомнить пароль</label>
-              </div>
-              <a class="modal__login-forgot" href="#">Забыли пароль?</a>
-            </div>
-            <button type="button" class="modal__blue-btn" id="loginBtn">
-              Войти
-            </button>
-          </form>
-        </div>
-        <div class="modal__box bottomBox">
-          <div class="bottomBox__title">Или продолжить через</div>
-          <div class="bottomBox__social">
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc1.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc2.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc3.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc4.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc5.svg" alt="socialIcon" />
-            </div>
-          </div>
-          <div class="bottomBox__title">Нет аккаунта на Fiwork?</div>
-          <div class="btnBox">
-            <button
-              class="modal__login-headerReg modal-btn"
-              data-modalname="modal__reg"
-            >
-              Зарегистрироваться
-            </button>
-            <a href="#" class="modal__privacy"
-              >Регистрируясь, вы принимаете Условия использования.
-              Политика конфиденциальности.</a
-            >
-          </div>
-        </div>
+<body>
+  <div class="overlayGray active">
+    <div id="modal__login" class="modal__login modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
       </div>
-      <div id="modal__reg" class="modal__reg modal">
-        <div class="modal__close">
-          <svg
-            class="closeSvg"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
-              fill="#818C99"
-            />
-          </svg>
-        </div>
-        <div class="modal__box">
-          <form action="" class="modal__form">
-            <div class="modal__form-title">Создать аккаунт</div>
-            <div class="modal__form-subTitle">
-              это займет не более 5 минут, обещаем 😉
+      <div class="modal__box">
+        <form action="" class="modal__form">
+          <div class="modal__form-title">Вход</div>
+          <input placeholder="Телефон, почта или логин" type="text" class="modal__form-input" />
+          <input placeholder="Пароль" type="password" class="modal__form-input" />
+          <div class="modal__form-box">
+            <div class="checkbox__box">
+              <input type="checkbox" id="remember" class="modal__form-checkbox" />
+              <label for="remember">Запомнить пароль</label>
             </div>
-            <div class="role-select">
-              <input
-                type="radio"
-                name="role"
-                id="customer"
-                class="role-radio"
-              />
-              <label for="customer" class="role-card">
-                <span class="role-circle"></span>
-                <div class="role-content">
-                  <div class="role-title">Заказать услуги</div>
-                  <div class="role-subtitle">Нужна помощь с проектом</div>
-                </div>
-              </label>
-
-              <input
-                type="radio"
-                name="role"
-                id="worker"
-                class="role-radio"
-                checked
-              />
-              <label for="worker" class="role-card">
-                <span class="role-circle"></span>
-                <div class="role-content">
-                  <div class="role-title">Начать зарабатывать</div>
-                  <div class="role-subtitle">Ищу новые проекты для работы</div>
-                </div>
-              </label>
-            </div>
-
-            <input
-              placeholder="Телефон, почта или логин"
-              type="text"
-              class="modal__form-input"
-            />
-            <input
-              placeholder="Пароль"
-              type="password"
-              class="modal__form-input"
-            />
-
-            <button
-              type="button"
-              class="modal__blue-btn modal-btn"
-              data-modalname="modal__about"
-            >
-              Продолжить
-            </button>
-          </form>
-        </div>
-        <div class="modal__box bottomBox">
-          <div class="bottomBox__title">Или продолжить через</div>
-          <div class="bottomBox__social">
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc1.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc2.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc3.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc4.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc5.svg" alt="socialIcon" />
-            </div>
+            <a class="modal__login-forgot" href="#">Забыли пароль?</a>
           </div>
-
-          <div class="btnBox">
-            <a href="#" class="modal__privacy"
-              >Регистрируясь, вы принимаете Условия использования.
-              Политика конфиденциальности.</a
-            >
-          </div>
-        </div>
-      </div>
-      <div id="modal__about" class="modal__about modal">
-        <div class="modal__close">
-          <svg
-            class="closeSvg"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
-              fill="#818C99"
-            />
-          </svg>
-        </div>
-        <div class="modal__box">
-          <div class="modal__form-title">Расскажите о себе</div>
-          <div class="modal__form-subTitle">Немного о себе, и погнали 🚀</div>
-          <div class="profile-setup">
-            <label class="avatar-box">
-              <input
-                type="file"
-                id="avatarInput"
-                class="avatar-file-input"
-                accept="image/*"
-              />
-
-              <div class="avatar">A</div>
-
-              <div class="avatar-upload-box">
-                <div class="avatar-upload">
-                  <img src="../img/userMenu/photo.svg" alt="icon" />
-                </div>
-              </div>
-            </label>
-            <form class="profile-form">
-              <input
-                type="text"
-                placeholder="Имя"
-                value="Амир"
-                class="profile-input"
-              />
-
-              <input
-                type="text"
-                placeholder="Username"
-                value="amkrsk"
-                class="profile-input"
-              />
-              <div class="select-wrapper">
-                <select class="profile-select">
-                  <option value="individual">Физическое лицо</option>
-                  <option value="company">Компания</option>
-                  <option value="freelancer">Фрилансер</option>
-                </select>
-              </div>
-
-              <div class="profile-buttons">
-                <button type="button" class="skip-btn">Пропустить</button>
-
-                <button type="submit" class="start-btn">Начать</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div
-        id="modal__changepass-saccess"
-        class="modal__changepass-saccess modal"
-      >
-        <div class="modal__close">
-          <svg
-            class="closeSvg"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
-              fill="#818C99"
-            />
-          </svg>
-        </div>
-        <div class="modal__box changepass-saccess">
-          <div class="changepass-saccess-logo"></div>
-          <div class="modal__form-title">
-            Готово! <br />
-            Пароль обновлён
-          </div>
-          <div class="modal__form-subTitle">
-            Давайте войдём снова и продолжим работу
-          </div>
-          <div
-            class="changepass-saccess-btn modal-btn"
-            data-modalname="modal__login"
-          >
+          <button type="button" class="modal__blue-btn" id="loginBtn">
             Войти
+          </button>
+        </form>
+      </div>
+      <div class="modal__box bottomBox">
+        <div class="bottomBox__title">Или продолжить через</div>
+        <div class="bottomBox__social">
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc1.svg" alt="socialIcon" />
           </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc2.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc3.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc4.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc5.svg" alt="socialIcon" />
+          </div>
+        </div>
+        <div class="bottomBox__title">Нет аккаунта на Fiwork?</div>
+        <div class="btnBox">
+          <button class="modal__login-headerReg modal-btn" data-modalname="modal__reg">
+            Зарегистрироваться
+          </button>
+          <a href="#" class="modal__privacy">Регистрируясь, вы принимаете Условия использования.
+            Политика конфиденциальности.</a>
         </div>
       </div>
     </div>
+    <div id="modal__reg" class="modal__reg modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="modal__box">
+        <form action="" class="modal__form">
+          <div class="modal__form-title">Создать аккаунт</div>
+          <div class="modal__form-subTitle">
+            это займет не более 5 минут, обещаем 😉
+          </div>
+          <div class="role-select">
+            <input type="radio" name="role" id="customer" class="role-radio" />
+            <label for="customer" class="role-card">
+              <span class="role-circle"></span>
+              <div class="role-content">
+                <div class="role-title">Заказать услуги</div>
+                <div class="role-subtitle">Нужна помощь с проектом</div>
+              </div>
+            </label>
 
-    <header class="computer-header reg">
-      <div class="container">
-        <div class="nav-part1-container">
-          <div class="nav-part1">
-            <div class="logo-and-search-block">
-              <a href="#" class="logo-container">
-                <img src="../img/logo.svg" alt="logo" class="header-logo" />
-              </a>
-              <div class="search-container">
-                <hr class="search-button-stick" />
-                <input
-                  type="text"
-                  placeholder="Искать услуги..."
-                  class="search-service-input"
-                  name="search-service"
-                />
-                <svg
-                  class="searcIcon"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1606_63090)">
-                    <path
-                      d="M6.99996 1.33301C8.06369 1.33333 9.10588 1.63293 10.0074 2.19757C10.9089 2.7622 11.6334 3.56909 12.098 4.52601C12.5624 5.48341 12.7479 6.5522 12.6333 7.61009C12.5187 8.66799 12.1086 9.67226 11.45 10.508L13.885 12.942C14.0101 13.0671 14.0805 13.2367 14.0806 13.4137C14.0807 13.5906 14.0105 13.7603 13.8855 13.8855C13.7604 14.0107 13.5908 14.0811 13.4138 14.0812C13.2369 14.0813 13.0671 14.0111 12.942 13.886L10.507 11.45C9.79727 12.0096 8.96402 12.3914 8.07677 12.5634C7.18951 12.7354 6.27398 12.6928 5.40657 12.4389C4.53916 12.1851 3.74504 11.7275 3.09047 11.1044C2.4359 10.4812 1.93988 9.71047 1.6438 8.85656C1.34771 8.00266 1.26015 7.09032 1.38842 6.19569C1.5167 5.30106 1.85708 4.45008 2.38118 3.71378C2.90527 2.97747 3.59787 2.37719 4.40117 1.96304C5.20447 1.54888 6.09618 1.33286 6.99996 1.33301ZM6.99996 2.66701C5.85051 2.66674 4.74803 3.1231 3.93506 3.9357C3.12209 4.7483 2.66522 5.85056 2.66496 7.00001C2.66469 8.14946 3.12105 9.25193 3.93365 10.0649C4.74624 10.8779 5.84851 11.3347 6.99796 11.335C8.14741 11.3351 9.24983 10.8787 10.0627 10.066C10.8756 9.25327 11.3323 8.15096 11.3325 7.00151C11.3326 5.85206 10.8761 4.74964 10.0634 3.93676C9.25072 3.12388 8.14941 2.66714 6.99996 2.66701Z"
-                      fill="#2196F3"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1606_63090">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
+            <input type="radio" name="role" id="worker" class="role-radio" checked />
+            <label for="worker" class="role-card">
+              <span class="role-circle"></span>
+              <div class="role-content">
+                <div class="role-title">Начать зарабатывать</div>
+                <div class="role-subtitle">Ищу новые проекты для работы</div>
+              </div>
+            </label>
+          </div>
 
-                <div class="search-button-container hidden">
-                  <img
-                    src="../img/icons/bold-x-close.svg"
-                    alt="x-close"
-                    class="clear-search-icon"
-                  />
-                  <input
-                    type="button"
-                    value="Найти"
-                    class="search-content-button"
-                  />
-                </div>
+          <input placeholder="Телефон, почта или логин" type="text" class="modal__form-input" />
+          <input placeholder="Пароль" type="password" class="modal__form-input" />
+
+          <button type="button" class="modal__blue-btn modal-btn" data-modalname="modal__about">
+            Продолжить
+          </button>
+        </form>
+      </div>
+      <div class="modal__box bottomBox">
+        <div class="bottomBox__title">Или продолжить через</div>
+        <div class="bottomBox__social">
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc1.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc2.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc3.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc4.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc5.svg" alt="socialIcon" />
+          </div>
+        </div>
+
+        <div class="btnBox">
+          <a href="#" class="modal__privacy">Регистрируясь, вы принимаете Условия использования.
+            Политика конфиденциальности.</a>
+        </div>
+      </div>
+    </div>
+    <div id="modal__about" class="modal__about modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="modal__box">
+        <div class="modal__form-title">Расскажите о себе</div>
+        <div class="modal__form-subTitle">Немного о себе, и погнали 🚀</div>
+        <div class="profile-setup">
+          <label class="avatar-box">
+            <input type="file" id="avatarInput" class="avatar-file-input" accept="image/*" />
+
+            <div class="avatar">A</div>
+
+            <div class="avatar-upload-box">
+              <div class="avatar-upload">
+                <img src="../img/userMenu/photo.svg" alt="icon" />
               </div>
             </div>
+          </label>
+          <form class="profile-form">
+            <input type="text" placeholder="Имя" value="Амир" class="profile-input" />
 
-            <div class="registration-and-login-block">
-              <input
-                type="button"
-                value="Зарегистрироваться"
-                class="headerReg register-button modal-btn"
-                data-modalname="modal__reg"
-              />
-              <input
-                type="button"
-                value="Войти"
-                class="loginBtn login-button modal-btn"
-                data-modalname="modal__login"
-              />
+            <input type="text" placeholder="Username" value="amkrsk" class="profile-input" />
+            <div class="select-wrapper">
+              <select class="profile-select">
+                <option value="individual">Физическое лицо</option>
+                <option value="company">Компания</option>
+                <option value="freelancer">Фрилансер</option>
+              </select>
             </div>
-            <div class="header__user-block regBlock">
-              <ul class="header__user-menu">
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <svg
-                      class="header__user-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="header__user-path"
-                        d="M4 11H10C10.2652 11 10.5196 10.8946 10.7071 10.7071C10.8946 10.5196 11 10.2652 11 10V4C11 3.73478 10.8946 3.48043 10.7071 3.29289C10.5196 3.10536 10.2652 3 10 3H4C3.73478 3 3.48043 3.10536 3.29289 3.29289C3.10536 3.48043 3 3.73478 3 4V10C3 10.2652 3.10536 10.5196 3.29289 10.7071C3.48043 10.8946 3.73478 11 4 11ZM14 11H20C20.2652 11 20.5196 10.8946 20.7071 10.7071C20.8946 10.5196 21 10.2652 21 10V4C21 3.73478 20.8946 3.48043 20.7071 3.29289C20.5196 3.10536 20.2652 3 20 3H14C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4V10C13 10.2652 13.1054 10.5196 13.2929 10.7071C13.4804 10.8946 13.7348 11 14 11ZM4 21H10C10.2652 21 10.5196 20.8946 10.7071 20.7071C10.8946 20.5196 11 20.2652 11 20V14C11 13.7348 10.8946 13.4804 10.7071 13.2929C10.5196 13.1054 10.2652 13 10 13H4C3.73478 13 3.48043 13.1054 3.29289 13.2929C3.10536 13.4804 3 13.7348 3 14V20C3 20.2652 3.10536 20.5196 3.29289 20.7071C3.48043 20.8946 3.73478 21 4 21ZM17 21C19.206 21 21 19.206 21 17C21 14.794 19.206 13 17 13C14.794 13 13 14.794 13 17C13 19.206 14.794 21 17 21Z"
-                        fill="#8C8A87"
-                      />
-                    </svg>
 
-                    <span> Услуги </span>
-                  </a>
-                </li>
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <svg
-                      class="header__user-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="header__user-path"
-                        d="M5.41101 3.933L7.17101 12.21C7.22618 12.4695 7.38218 12.6965 7.60469 12.841C7.71486 12.9125 7.83805 12.9617 7.96722 12.9856C8.09639 13.0096 8.22901 13.0078 8.35751 12.9805C8.48601 12.9532 8.60787 12.9008 8.71614 12.8264C8.8244 12.752 8.91695 12.657 8.9885 12.5468C9.06004 12.4366 9.10919 12.3135 9.13313 12.1843C9.15707 12.0551 9.15533 11.9225 9.12801 11.794L7.47001 4H13.925L14.988 9H17.033L15.814 3.267C15.718 2.815 15.67 2.59 15.55 2.421C15.4443 2.27193 15.2997 2.15468 15.132 2.082C14.943 2 14.713 2 14.25 2H6.97601C6.30001 2 5.96101 2 5.72601 2.14C5.51956 2.26188 5.36376 2.45387 5.28701 2.681C5.20001 2.941 5.27001 3.271 5.41101 3.933Z"
-                        fill="#8C8A87"
-                      />
-                      <path
-                        class="header__user-path"
-                        d="M5.9 12.48L5.371 10H1L2.8 18.466C2.993 19.369 3.09 19.821 3.33 20.159C3.54134 20.4566 3.8301 20.6908 4.165 20.836C4.545 21 5.007 21 5.931 21H17.681C18.568 21 19.011 21 19.381 20.846C19.7073 20.7096 19.9917 20.4891 20.205 20.207C20.447 19.887 20.558 19.459 20.78 18.6L23 10H10.075L10.399 11.523C10.5259 12.1197 10.4106 12.7424 10.0783 13.2541C9.74612 13.7658 9.22424 14.1246 8.6275 14.2515C8.03076 14.3784 7.40805 14.2631 6.89636 13.9308C6.38467 13.5986 6.02691 13.0767 5.9 12.48Z"
-                        fill="#8C8A87"
-                      />
-                    </svg>
+            <div class="profile-buttons">
+              <button type="button" class="skip-btn">Пропустить</button>
 
-                    <span> Заказы </span>
-                  </a>
-                </li>
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <svg
-                      class="header__user-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="header__user-path"
-                        d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM13 16.915V18H11V16.92C8.661 16.553 8 14.918 8 14H10C10.011 14.143 10.159 15 12 15C13.38 15 14 14.415 14 14C14 13.676 14 13 12 13C8.52 13 8 11.12 8 10C8 8.712 9.029 7.416 11 7.085V6.012H13V7.121C14.734 7.531 15.4 8.974 15.4 10H14.4L13.4 10.018C13.386 9.638 13.185 9 12 9C10.701 9 10 9.516 10 10C10 10.374 10 11 12 11C15.48 11 16 12.88 16 14C16 15.288 14.971 16.584 13 16.915Z"
-                        fill="#8C8A87"
-                      />
-                    </svg>
-
-                    <span> Биржа </span>
-                  </a>
-                </li>
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <svg
-                      class="header__user-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="header__user-path"
-                        d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM13 16.915V18H11V16.92C8.661 16.553 8 14.918 8 14H10C10.011 14.143 10.159 15 12 15C13.38 15 14 14.415 14 14C14 13.676 14 13 12 13C8.52 13 8 11.12 8 10C8 8.712 9.029 7.416 11 7.085V6.012H13V7.121C14.734 7.531 15.4 8.974 15.4 10H14.4L13.4 10.018C13.386 9.638 13.185 9 12 9C10.701 9 10 9.516 10 10C10 10.374 10 11 12 11C15.48 11 16 12.88 16 14C16 15.288 14.971 16.584 13 16.915Z"
-                        fill="#8C8A87"
-                      />
-                    </svg>
-
-                    <span> Портфолио </span>
-                  </a>
-                </li>
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <div class="message-count newMessage">
-                      <svg
-                        class="header__user-icon"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 128 128"
-                        xmlns="http://www.w3.org/2000/svg"
-                        role="../img"
-                        aria-label="Chat icon"
-                      >
-                        <path
-                          class="header__user-path"
-                          d="M64 20C37.5 20 16 37.1 16 58.2c0 14.3 9.9 26.8 24.5 33.3v18.5l19.4-13.9c1.4.1 2.7.2 4.1.2 26.5 0 48-17.1 48-38.2S90.5 20 64 20z"
-                          fill="#8e8e8e"
-                        />
-                        <rect
-                          class="messageLine"
-                          x="43"
-                          y="48"
-                          width="42"
-                          height="6"
-                          fill="#ffffff"
-                        />
-                        <rect
-                          class="messageLine"
-                          x="43"
-                          y="64"
-                          width="28"
-                          height="6"
-                          fill="#ffffff"
-                        />
-                      </svg>
-                      <span class="count">1</span>
-                    </div>
-                    <span> Чаты </span>
-                  </a>
-                </li>
-              </ul>
-              <div class="header__user-balance">
-                <div class="header__user-summ"><span>143 000</span> ₽</div>
-                <a href="#" class="header__user-replenish"> Пополнить </a>
-              </div>
-              <div class="header__user-logo">
-                <div class="header__user-img">
-                  <img src="../img/userMenu/userlogo.png" alt="logo" />
-                </div>
-                <svg
-                  class="header__user-icon"
-                  class="arrow"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1606_63149)">
-                    <path
-                      d="M7.92113 4.00004C7.67651 3.99788 7.441 4.09272 7.26613 4.26379C7.13838 4.39121 7.05176 4.55399 7.01745 4.73113C6.98313 4.90827 7.0027 5.09163 7.07363 5.25754C7.12191 5.36729 7.1916 5.46631 7.27863 5.54879L11.7961 10.0113L7.27863 14.4738C7.11325 14.643 7.0216 14.8708 7.02371 15.1074C7.02582 15.3439 7.12152 15.5701 7.28988 15.7363C7.45966 15.9042 7.6882 15.9993 7.92697 16.0014C8.16574 16.0035 8.39593 15.9124 8.56863 15.7475L13.7324 10.6475C13.8165 10.5642 13.8834 10.465 13.929 10.3557C13.9746 10.2464 13.998 10.1291 13.998 10.0107C13.998 9.89222 13.9746 9.77495 13.929 9.66563C13.8834 9.55632 13.8165 9.45712 13.7324 9.37379L8.56988 4.27504C8.48518 4.18839 8.38409 4.11946 8.2725 4.07225C8.16091 4.02503 8.0423 4.00049 7.92113 4.00004Z"
-                      fill="#000"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1606_63149">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <div class="user__list">
-                  <div class="user__list-hide">
-                    <div class="user__list-box">
-                      <div class="user__list-roles">
-                        <div class="user__list-role user__list-buyer active">
-                          Я покупатель
-                        </div>
-                        <div class="user__list-role user__list-seller">
-                          Я продавец
-                        </div>
-                      </div>
-                      <div class="user__list-checkbox underlineBorder">
-                        <span>
-                          Принимаю заказы
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_1611_73135)">
-                              <g clip-path="url(#clip1_1611_73135)">
-                                <mask
-                                  id="mask0_1611_73135"
-                                  style="mask-type: luminance"
-                                  maskUnits="userSpaceOnUse"
-                                  x="0"
-                                  y="0"
-                                  width="16"
-                                  height="16"
-                                >
-                                  <path d="M0 0H16V16H0V0Z" fill="white" />
-                                </mask>
-                                <g mask="url(#mask0_1611_73135)">
-                                  <path
-                                    d="M7.96 11.286V11.264M15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1C6.14348 1 4.36301 1.7375 3.05025 3.05025C1.7375 4.36301 1 6.14348 1 8C1 9.85652 1.7375 11.637 3.05025 12.9497C4.36301 14.2625 6.14348 15 8 15C9.85652 15 11.637 14.2625 12.9497 12.9497C14.2625 11.637 15 9.85652 15 8Z"
-                                    stroke="#8A8A8A"
-                                    stroke-width="1.4"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                  <path
-                                    d="M7.95698 9.35982C7.94798 8.66782 8.57798 8.37382 9.04698 8.10682C9.61798 7.79182 10.005 7.28982 10.005 6.59482C10.005 5.56482 9.17198 4.73682 8.14798 4.73682C7.11798 4.73682 6.28998 5.56382 6.28998 6.59482"
-                                    stroke="#8A8A8A"
-                                    stroke-width="1.4"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                </g>
-                              </g>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_1611_73135">
-                                <rect width="16" height="16" fill="white" />
-                              </clipPath>
-                              <clipPath id="clip1_1611_73135">
-                                <rect width="16" height="16" fill="white" />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <label class="switch">
-                          <input type="checkbox" checked />
-                          <span class="slider"></span>
-                        </label>
-                      </div>
-                      <ul class="user__list-items">
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Профиль </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Настройки </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Помощь </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link">
-                            Язык интерфейса
-                            <span
-                              >RU <img src="../img/userMenu/ru.png" alt=""
-                            /></span>
-                          </a>
-                        </li>
-                        <li class="user__list-item underlineBorder">
-                          <a href="#" class="user__list-link upEmp">
-                            <img src="../img/userMenu/employedUp.svg" alt="" />
-                            Увеличьте доход на 47%
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="exit">Выйти</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <button type="submit" class="start-btn">Начать</button>
             </div>
-            <div class="header__user-block userBlock">
-              <ul class="header__user-menu">
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <div class="header__user-menu--prize">
-                      Призы
-                      <img src="../img/userMenu/coin.svg" alt="" />
-                    </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal__changepass-saccess" class="modal__changepass-saccess modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="modal__box changepass-saccess">
+        <div class="changepass-saccess-logo"></div>
+        <div class="modal__form-title">
+          Готово! <br />
+          Пароль обновлён
+        </div>
+        <div class="modal__form-subTitle">
+          Давайте войдём снова и продолжим работу
+        </div>
+        <div class="changepass-saccess-btn modal-btn" data-modalname="modal__login">
+          Войти
+        </div>
+      </div>
+    </div>
+    <div id="addTaskModal" class="modal__addTaskModal modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
 
-                    <span> Колесо призов </span>
-                  </a>
-                </li>
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <svg
-                      class="header__user-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="header__user-path"
-                        d="M5.41101 3.933L7.17101 12.21C7.22618 12.4695 7.38218 12.6965 7.60469 12.841C7.71486 12.9125 7.83805 12.9617 7.96722 12.9856C8.09639 13.0096 8.22901 13.0078 8.35751 12.9805C8.48601 12.9532 8.60787 12.9008 8.71614 12.8264C8.8244 12.752 8.91695 12.657 8.9885 12.5468C9.06004 12.4366 9.10919 12.3135 9.13313 12.1843C9.15707 12.0551 9.15533 11.9225 9.12801 11.794L7.47001 4H13.925L14.988 9H17.033L15.814 3.267C15.718 2.815 15.67 2.59 15.55 2.421C15.4443 2.27193 15.2997 2.15468 15.132 2.082C14.943 2 14.713 2 14.25 2H6.97601C6.30001 2 5.96101 2 5.72601 2.14C5.51956 2.26188 5.36376 2.45387 5.28701 2.681C5.20001 2.941 5.27001 3.271 5.41101 3.933Z"
-                        fill="#8C8A87"
-                      />
-                      <path
-                        class="header__user-path"
-                        d="M5.9 12.48L5.371 10H1L2.8 18.466C2.993 19.369 3.09 19.821 3.33 20.159C3.54134 20.4566 3.8301 20.6908 4.165 20.836C4.545 21 5.007 21 5.931 21H17.681C18.568 21 19.011 21 19.381 20.846C19.7073 20.7096 19.9917 20.4891 20.205 20.207C20.447 19.887 20.558 19.459 20.78 18.6L23 10H10.075L10.399 11.523C10.5259 12.1197 10.4106 12.7424 10.0783 13.2541C9.74612 13.7658 9.22424 14.1246 8.6275 14.2515C8.03076 14.3784 7.40805 14.2631 6.89636 13.9308C6.38467 13.5986 6.02691 13.0767 5.9 12.48Z"
-                        fill="#8C8A87"
-                      />
-                    </svg>
+      <div class="addTaskModal__title">Новая задача</div>
 
-                    <span> Заказы </span>
-                  </a>
-                </li>
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <svg
-                      class="header__user-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="header__user-path"
-                        d="M4 11H10C10.2652 11 10.5196 10.8946 10.7071 10.7071C10.8946 10.5196 11 10.2652 11 10V4C11 3.73478 10.8946 3.48043 10.7071 3.29289C10.5196 3.10536 10.2652 3 10 3H4C3.73478 3 3.48043 3.10536 3.29289 3.29289C3.10536 3.48043 3 3.73478 3 4V10C3 10.2652 3.10536 10.5196 3.29289 10.7071C3.48043 10.8946 3.73478 11 4 11ZM14 11H20C20.2652 11 20.5196 10.8946 20.7071 10.7071C20.8946 10.5196 21 10.2652 21 10V4C21 3.73478 20.8946 3.48043 20.7071 3.29289C20.5196 3.10536 20.2652 3 20 3H14C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4V10C13 10.2652 13.1054 10.5196 13.2929 10.7071C13.4804 10.8946 13.7348 11 14 11ZM4 21H10C10.2652 21 10.5196 20.8946 10.7071 20.7071C10.8946 20.5196 11 20.2652 11 20V14C11 13.7348 10.8946 13.4804 10.7071 13.2929C10.5196 13.1054 10.2652 13 10 13H4C3.73478 13 3.48043 13.1054 3.29289 13.2929C3.10536 13.4804 3 13.7348 3 14V20C3 20.2652 3.10536 20.5196 3.29289 20.7071C3.48043 20.8946 3.73478 21 4 21ZM17 21C19.206 21 21 19.206 21 17C21 14.794 19.206 13 17 13C14.794 13 13 14.794 13 17C13 19.206 14.794 21 17 21Z"
-                        fill="#8C8A87"
-                      />
-                    </svg>
+      <form class="addTaskModal__form">
+        <label class="addTaskModal__label">
+          <span class="addTaskModal__labelText">
+            <span class="addTaskModal__required">*</span>
+            Описание задачи
+          </span>
 
-                    <span> Проекты </span>
-                  </a>
-                </li>
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <svg
-                      class="header__user-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="header__user-path"
-                        d="M2.93289 5.21495C5.23589 2.99095 8.80489 3.71795 11.9999 6.49995C15.1949 3.71795 18.7639 3.08495 21.0669 5.30995C23.6489 7.80295 22.5839 12.6299 19.1309 16.2049C16.9309 18.4829 14.2929 20.3249 11.9999 21.0949V21C9.70689 20.2299 7.06889 18.3879 4.86889 16.11C1.41589 12.535 0.349893 7.70895 2.93289 5.21495Z"
-                        fill="#8C8A87"
-                      />
-                    </svg>
+          <textarea class="addTaskModal__textarea"></textarea>
+        </label>
 
-                    <span> Избранное </span>
-                  </a>
-                </li>
+        <label class="addTaskModal__label">
+          <span class="addTaskModal__labelText">
+            <span class="addTaskModal__required">*</span>
+            Категория
+          </span>
 
-                <li class="header__user-menu-item">
-                  <a class="header__user-menu-link" href="#">
-                    <div class="message-count newMessage">
-                      <svg
-                        class="header__user-icon"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 128 128"
-                        xmlns="http://www.w3.org/2000/svg"
-                        role="../img"
-                        aria-label="Chat icon"
-                      >
-                        <path
-                          class="header__user-path"
-                          d="M64 20C37.5 20 16 37.1 16 58.2c0 14.3 9.9 26.8 24.5 33.3v18.5l19.4-13.9c1.4.1 2.7.2 4.1.2 26.5 0 48-17.1 48-38.2S90.5 20 64 20z"
-                          fill="#8e8e8e"
-                        />
-                        <rect
-                          class="messageLine"
-                          x="43"
-                          y="48"
-                          width="42"
-                          height="6"
-                          fill="#ffffff"
-                        />
-                        <rect
-                          class="messageLine"
-                          x="43"
-                          y="64"
-                          width="28"
-                          height="6"
-                          fill="#ffffff"
-                        />
-                      </svg>
-                      <span class="count">1</span>
-                    </div>
-                    <span> Чаты </span>
-                  </a>
-                </li>
-              </ul>
-              <div class="header__user-balance">
-                <div class="header__user-summ"><span>143 000</span> ₽</div>
-                <a href="#" class="header__user-replenish"> Пополнить </a>
+          <div class="addTaskModal__category">
+            <select class="addTaskModal__select">
+              <option>Дизайн</option>
+              <option>Разработка</option>
+              <option>Тестирование</option>
+            </select>
+
+            <button class="addTaskModal__categoryBtn" type="button">+</button>
+          </div>
+        </label>
+
+        <div class="addTaskModal__priority">
+          <div class="addTaskModal__priorityTitle">Приоритет</div>
+
+          <label class="addTaskModal__priorityItem addTaskModal__priorityItem--low">
+            <input type="radio" name="priority" checked />
+            <span>Низкий</span>
+          </label>
+
+          <label class="addTaskModal__priorityItem addTaskModal__priorityItem--medium">
+            <input type="radio" name="priority" />
+            <span>Средний</span>
+          </label>
+
+          <label class="addTaskModal__priorityItem addTaskModal__priorityItem--high">
+            <input type="radio" name="priority" />
+            <span>Высокий</span>
+          </label>
+
+          <label class="addTaskModal__priorityItem addTaskModal__priorityItem--urgent">
+            <input type="radio" name="priority" />
+            <span>Срочный</span>
+          </label>
+        </div>
+
+        <button class="addTaskModal__submit" type="submit">Добавить</button>
+      </form>
+    </div>
+
+    <div id="sendNda" class="ndaModal modal ">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="ndaModa__title">Отправка NDA фрилансеру</div>
+      <div class="ndaModal__box">
+        <div class="ndaModal__subTitle">
+          NDA — соглашение о неразглашении конфиденциальной информации. После
+          подписания фрилансер получит доступ к проекту.
+        </div>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">1. Фрилансер</div>
+          <div class="ndaModal__item-box">
+            <div class="ndaModal__item-line">
+              <div class="ndaModal__item-user">
+                <div class="ndaModal__item-user--logo">
+                  <img src="../img/order/logoNda.png" alt="avatar" />
+                </div>
+                <div class="ndaModal__item-user--info">
+                  <div class="ndaModal__item-user--name">Алексей Смирнов</div>
+                  <div class="ndaModal__item-user--job">Веб-разработчик</div>
+                </div>
               </div>
-              <div class="header__user-logo">
-                <div class="header__user-img">
-                  <img src="../img/userMenu/userlogo.png" alt="logo" />
-                </div>
-                <svg
-                  class="header__user-icon"
-                  class="arrow"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1606_63149)">
-                    <path
-                      d="M7.92113 4.00004C7.67651 3.99788 7.441 4.09272 7.26613 4.26379C7.13838 4.39121 7.05176 4.55399 7.01745 4.73113C6.98313 4.90827 7.0027 5.09163 7.07363 5.25754C7.12191 5.36729 7.1916 5.46631 7.27863 5.54879L11.7961 10.0113L7.27863 14.4738C7.11325 14.643 7.0216 14.8708 7.02371 15.1074C7.02582 15.3439 7.12152 15.5701 7.28988 15.7363C7.45966 15.9042 7.6882 15.9993 7.92697 16.0014C8.16574 16.0035 8.39593 15.9124 8.56863 15.7475L13.7324 10.6475C13.8165 10.5642 13.8834 10.465 13.929 10.3557C13.9746 10.2464 13.998 10.1291 13.998 10.0107C13.998 9.89222 13.9746 9.77495 13.929 9.66563C13.8834 9.55632 13.8165 9.45712 13.7324 9.37379L8.56988 4.27504C8.48518 4.18839 8.38409 4.11946 8.2725 4.07225C8.16091 4.02503 8.0423 4.00049 7.92113 4.00004Z"
-                      fill="#000"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1606_63149">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <div class="user__list">
-                  <div class="user__list-hide">
-                    <div class="user__list-box">
-                      <div class="user__list-roles">
-                        <div class="user__list-role user__list-buyer active">
-                          Я покупатель
-                        </div>
-                        <div class="user__list-role user__list-seller">
-                          Я продавец
-                        </div>
-                      </div>
-                      <div class="user__list-checkbox underlineBorder">
-                        <span>
-                          Принимаю заказы
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_1611_73135)">
-                              <g clip-path="url(#clip1_1611_73135)">
-                                <mask
-                                  id="mask0_1611_73135"
-                                  style="mask-type: luminance"
-                                  maskUnits="userSpaceOnUse"
-                                  x="0"
-                                  y="0"
-                                  width="16"
-                                  height="16"
-                                >
-                                  <path d="M0 0H16V16H0V0Z" fill="white" />
-                                </mask>
-                                <g mask="url(#mask0_1611_73135)">
-                                  <path
-                                    d="M7.96 11.286V11.264M15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1C6.14348 1 4.36301 1.7375 3.05025 3.05025C1.7375 4.36301 1 6.14348 1 8C1 9.85652 1.7375 11.637 3.05025 12.9497C4.36301 14.2625 6.14348 15 8 15C9.85652 15 11.637 14.2625 12.9497 12.9497C14.2625 11.637 15 9.85652 15 8Z"
-                                    stroke="#8A8A8A"
-                                    stroke-width="1.4"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                  <path
-                                    d="M7.95698 9.35982C7.94798 8.66782 8.57798 8.37382 9.04698 8.10682C9.61798 7.79182 10.005 7.28982 10.005 6.59482C10.005 5.56482 9.17198 4.73682 8.14798 4.73682C7.11798 4.73682 6.28998 5.56382 6.28998 6.59482"
-                                    stroke="#8A8A8A"
-                                    stroke-width="1.4"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                </g>
-                              </g>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_1611_73135">
-                                <rect width="16" height="16" fill="white" />
-                              </clipPath>
-                              <clipPath id="clip1_1611_73135">
-                                <rect width="16" height="16" fill="white" />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <label class="switch">
-                          <input type="checkbox" checked />
-                          <span class="slider"></span>
-                        </label>
-                      </div>
-                      <ul class="user__list-items">
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Профиль </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Настройки </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Помощь </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link">
-                            Язык интерфейса
-                            <span
-                              >RU <img src="../img/userMenu/ru.png" alt=""
-                            /></span>
-                          </a>
-                        </li>
-                        <li class="user__list-item underlineBorder">
-                          <a href="#" class="user__list-link upEmp">
-                            <img src="../img/userMenu/employedUp.svg" alt="" />
-                            Увеличьте доход на 47%
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="exit">Выйти</div>
-                    </div>
-                  </div>
-                </div>
+              <div class="ndaModal__item--btn borderBtn">
+                Есть право подписи
               </div>
             </div>
           </div>
         </div>
 
-        <div class="nav-part2-container">
-          <div class="nav-part2">
-            <ul class="nav-part2__list">
-              <li class="nav-menu-item" data-menu="design">
-                <a href="#">Дизайн &amp; Графика</a>
-              </li>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">2. Документ NDA</div>
+          <div class="ndaModal__item-box">
+            <div class="ndaModal__item-line">
+              <div class="ndaModal__item-user">
+                <div class="ndaModal__item-user--img">
+                  <img src="../img/order/nda.png" alt="img" />
+                </div>
+                <div class="ndaModal__item-user--info">
+                  <div class="ndaModal__item-user--name">
+                    NDA стандартный договор.pdf
+                  </div>
+                  <div class="ndaModal__item-user--job">PDF • 128 КБ</div>
+                </div>
+              </div>
+              <button type="button" class="ndaModal__item--btn changeDoc">
+                Заменить документ
+              </button>
+            </div>
+            <div class="ndaModal__doc-ready">
+              <img src="../img/order/ready.svg" alt="ready" />
+              Документ готов к отправке
+            </div>
+            <div class="ndaModal__doc-warning">
+              <img src="../img/order/warn.svg" alt="warn" />
+              Фрилансер сможет скачать документ перед подписанием
+            </div>
+          </div>
+        </div>
 
-              <li class="nav-menu-item" data-menu="dev">
-                <a href="#">Разработка и IT</a>
-              </li>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">
+            3. Сопроводительное сообщение <span>(необязательно)</span>
+          </div>
+          <div class="ndaModal__item-box borderNone">
+            <div class="ndaModal__item-line borderNone">
+              <div class="textareaBox">
+                <textarea class="messageTextarea" maxlength="500" placeholder="Введите сообщение"></textarea>
 
-              <li class="nav-menu-item" data-menu="texts">
-                <a href="#">Тексты и переводы</a>
-              </li>
+                <div class="textareaCounter">
+                  <span class="textareaCounter__current">0</span>/<span>500</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <li class="nav-menu-item" data-menu="seo">
-                <a href="#">SEO и трафик</a>
-              </li>
+        </div>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">
+            4. Настройки
 
-              <li class="nav-menu-item" data-menu="audio">
-                <a href="#">Аудио, видео, съемка</a>
-              </li>
+          </div>
+          <div class="ndaModal__item-box ">
+            <div class="ndaModal__item-line df  ">
+              <div class="ndaModal__item-line--img">
+                <img src="../img/order/shield.svg" alt="icon">
+              </div>
+              <div class="ndaModal__item-line--info">
+                <div class="ndaModal__item-line--title">
+                  Требовать обязательное подписание
+                </div>
+                <div class="ndaModal__item-line--text">
+                  Фрилансер не сможет получить доступ к проекту без подписания NDA
+                </div>
 
-              <li class="nav-menu-item" data-menu="business">
-                <a href="#">Бизнес и жизнь</a>
-              </li>
 
-              <li class="nav-menu-item" data-menu="crypto">
-                <a href="#">Блокчейн и крипто</a>
-              </li>
 
-              <li class="nav-menu-item" data-menu="ai">
-                <a href="#">Нейросети</a>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked="">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="ndaModal__item-line df  ndaModal__item-line--bottom">
+              <div class="ndaModal__item-line--img">
+                <img src="../img/order/clock.svg" alt="icon">
+              </div>
+              <div class="ndaModal__item-line--info">
+                <div class="ndaModal__item-line--title">
+                  Срок действия NDA
+                </div>
+                <div class="ndaModal__item-line--text">
+                  Документ будет действовать в течение выбранного периода
+                </div>
+
+
+
+              </div>
+              <div class="custom-select">
+                <select>
+                  <option selected>2 года</option>
+                  <option>1 год</option>
+                  <option>5 лет</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="ndaModal__btn-line df mt ndaModal__btn-info--btn-box ">
+            <div class="ndaModal__btn-info df">
+              <img class="ndaModalBtn-img" src="../img/order/lock.svg" alt="lock">
+              Документ будет отправлен через защищённый канал.
+              Подписание происходит с юридической силой.
+            </div>
+            <div class="ndaModal__btn-btn df">
+              <svg class="sendSvg" width="17" height="18" viewBox="0 0 17 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 8.27941L15.75 0.75L11.0625 16.75L7.3125 10.1618L0.75 8.27941Z" stroke="white"
+                  stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+
+              Отправить NDA
+            </div>
+          </div>
+        </div>
+
+        
+        
+      </div>
+      <div class="ndaModal__create">
+        Создать <a href="#">индивидуальный документ</a> для продавца
+      </div>
+    </div>
+    <div id="acceptNda" class="ndaModal modal active">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="ndaModa__title">Принять NDA</div>
+      <div class="ndaModal__box">
+        <div class="ndaModal__subTitle">
+          Заказчик просит подписать соглашение о неразглашении перед доступом к проекту.
+        </div>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">1. Проект и заказчик</div>
+          <div class="ndaModal__item-box">
+            <div class="ndaModal__item-line">
+              <div class="ndaModal__item-user">
+                <div class="ndaModal__item-user--logo">
+                  <img src="../img/order/logoNda.png" alt="avatar" />
+                </div>
+                <div class="ndaModal__item-user--info">
+                  <div class="ndaModal__item-user--name">Алексей Смирнов</div>
+                  <div class="ndaModal__item-user--job">SaaS Dashboard · фиксированный бюджет $1 200</div>
+                </div>
+              </div>
+              <div class="ndaModal__item--btn borderBtn accept">
+                NDA
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">2. Документ для подписания</div>
+          <div class="ndaModal__item-box">
+            <div class="ndaModal__item-line">
+              <div class="ndaModal__item-user">
+                <div class="ndaModal__item-user--img">
+                  <img src="../img/order/nda.png" alt="img" />
+                </div>
+                <div class="ndaModal__item-user--info">
+                  <div class="ndaModal__item-user--name">
+                    NDA стандартный договор.pdf
+                  </div>
+                  <div class="ndaModal__item-user--job">PDF • 128 КБ</div>
+                </div>
+              </div>
+              <button type="button" class="ndaModal__item--btn changeDoc">
+                Открыть PDF
+              </button>
+            </div>
+            <div class="ndaModal__doc-ready">
+              <img src="../img/order/ready.svg" alt="ready" />
+              Документ готов к отправке
+            </div>
+            <div class="ndaModal__doc-warning">
+              <img src="../img/order/warn.svg" alt="warn" />
+              После принятия заказчик сможет открыть вам доступ к материалам проекта
+            </div>
+          </div>
+        </div>
+
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">
+            3. Сообщение от заказчика <span>(необязательно)</span>
+          </div>
+          <div class="ndaModal__item-box borderNone">
+            <div class="ndaModal__item-line borderNone">
+              <div class="textareaBox">
+                <textarea class="messageTextarea" maxlength="500" placeholder="Введите сообщение"></textarea>
+
+                <div class="textareaCounter">
+                  <span class="textareaCounter__current">0</span>/<span>500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">
+            4. Подтверждение
+
+          </div>
+          <div class="ndaModal__item-box ">
+            <div class="ndaModal__item-line df  ">
+              <label class="agree">
+                <input type="checkbox" class="agree__checkbox">
+              
+                <span class="agree__custom"></span>
+              
+                <div class="agree__info">
+                  <div class="agree__title">
+                    Я прочитал(а) NDA и принимаю условия соглашения
+                  </div>
+                  <div class="agree__text">
+                    Подписывая данный документ и подтверждая действие кодом из SMS, вы подписываете его простой электронной подписью (ПЭП) в соответствии с условиями Соглашения об использовании электронной подписи и правилами Платформы. Такая подпись признаётся аналогом собственноручной подписи Стороны.
+                  </div>
+                </div>
+              </label>
+            </div>
+        
+          </div>
+          <div class="ndaModal__btn-line df mt ndaModal__btn-info--btn-box ndaModal__btn-info--acceptBox">
+            <div class="ndaModal__btn-info df" class="ndaModalBtn-img">
+              <img src="../img/order/lock.svg" alt="lock">
+            <div class="ndaModal__btn-info--accept">
+              Вы принимаете NDA с юридической фиксацией
+              <span>Копия будет доступна в разделе <a href="#">«Документы»</a> .</span>
+            </div>
+            </div>
+            <div class="ndaModal__btn-btn ndaModal__btn-btn--accept df">
+              Принять и подписать
+            </div>
+          </div>
+        </div>
+
+        
+        
+      </div>
+ 
+    </div>
+  </div>
+
+  <header class="computer-header reg">
+    <div class="container">
+      <div class="nav-part1-container">
+        <div class="nav-part1">
+          <div class="logo-and-search-block">
+            <a href="#" class="logo-container">
+              <img src="../img/logo.svg" alt="logo" class="header-logo" />
+            </a>
+            <div class="search-container">
+              <hr class="search-button-stick" />
+              <input type="text" placeholder="Искать услуги..." class="search-service-input" name="search-service" />
+              <svg class="searcIcon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1606_63090)">
+                  <path
+                    d="M6.99996 1.33301C8.06369 1.33333 9.10588 1.63293 10.0074 2.19757C10.9089 2.7622 11.6334 3.56909 12.098 4.52601C12.5624 5.48341 12.7479 6.5522 12.6333 7.61009C12.5187 8.66799 12.1086 9.67226 11.45 10.508L13.885 12.942C14.0101 13.0671 14.0805 13.2367 14.0806 13.4137C14.0807 13.5906 14.0105 13.7603 13.8855 13.8855C13.7604 14.0107 13.5908 14.0811 13.4138 14.0812C13.2369 14.0813 13.0671 14.0111 12.942 13.886L10.507 11.45C9.79727 12.0096 8.96402 12.3914 8.07677 12.5634C7.18951 12.7354 6.27398 12.6928 5.40657 12.4389C4.53916 12.1851 3.74504 11.7275 3.09047 11.1044C2.4359 10.4812 1.93988 9.71047 1.6438 8.85656C1.34771 8.00266 1.26015 7.09032 1.38842 6.19569C1.5167 5.30106 1.85708 4.45008 2.38118 3.71378C2.90527 2.97747 3.59787 2.37719 4.40117 1.96304C5.20447 1.54888 6.09618 1.33286 6.99996 1.33301ZM6.99996 2.66701C5.85051 2.66674 4.74803 3.1231 3.93506 3.9357C3.12209 4.7483 2.66522 5.85056 2.66496 7.00001C2.66469 8.14946 3.12105 9.25193 3.93365 10.0649C4.74624 10.8779 5.84851 11.3347 6.99796 11.335C8.14741 11.3351 9.24983 10.8787 10.0627 10.066C10.8756 9.25327 11.3323 8.15096 11.3325 7.00151C11.3326 5.85206 10.8761 4.74964 10.0634 3.93676C9.25072 3.12388 8.14941 2.66714 6.99996 2.66701Z"
+                    fill="#2196F3" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1606_63090">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <div class="search-button-container hidden">
+                <img src="../img/icons/bold-x-close.svg" alt="x-close" class="clear-search-icon" />
+                <input type="button" value="Найти" class="search-content-button" />
+              </div>
+            </div>
+          </div>
+
+          <div class="registration-and-login-block">
+            <input type="button" value="Зарегистрироваться" class="headerReg register-button modal-btn"
+              data-modalname="modal__reg" />
+            <input type="button" value="Войти" class="loginBtn login-button modal-btn" data-modalname="modal__login" />
+          </div>
+          <div class="header__user-block regBlock">
+            <ul class="header__user-menu">
+              <li class="header__user-menu-item">
+                <a class="header__user-menu-link" href="#">
+                  <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="header__user-path"
+                      d="M4 11H10C10.2652 11 10.5196 10.8946 10.7071 10.7071C10.8946 10.5196 11 10.2652 11 10V4C11 3.73478 10.8946 3.48043 10.7071 3.29289C10.5196 3.10536 10.2652 3 10 3H4C3.73478 3 3.48043 3.10536 3.29289 3.29289C3.10536 3.48043 3 3.73478 3 4V10C3 10.2652 3.10536 10.5196 3.29289 10.7071C3.48043 10.8946 3.73478 11 4 11ZM14 11H20C20.2652 11 20.5196 10.8946 20.7071 10.7071C20.8946 10.5196 21 10.2652 21 10V4C21 3.73478 20.8946 3.48043 20.7071 3.29289C20.5196 3.10536 20.2652 3 20 3H14C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4V10C13 10.2652 13.1054 10.5196 13.2929 10.7071C13.4804 10.8946 13.7348 11 14 11ZM4 21H10C10.2652 21 10.5196 20.8946 10.7071 20.7071C10.8946 20.5196 11 20.2652 11 20V14C11 13.7348 10.8946 13.4804 10.7071 13.2929C10.5196 13.1054 10.2652 13 10 13H4C3.73478 13 3.48043 13.1054 3.29289 13.2929C3.10536 13.4804 3 13.7348 3 14V20C3 20.2652 3.10536 20.5196 3.29289 20.7071C3.48043 20.8946 3.73478 21 4 21ZM17 21C19.206 21 21 19.206 21 17C21 14.794 19.206 13 17 13C14.794 13 13 14.794 13 17C13 19.206 14.794 21 17 21Z"
+                      fill="#8C8A87" />
+                  </svg>
+
+                  <span> Услуги </span>
+                </a>
+              </li>
+              <li class="header__user-menu-item">
+                <a class="header__user-menu-link" href="#">
+                  <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="header__user-path"
+                      d="M5.41101 3.933L7.17101 12.21C7.22618 12.4695 7.38218 12.6965 7.60469 12.841C7.71486 12.9125 7.83805 12.9617 7.96722 12.9856C8.09639 13.0096 8.22901 13.0078 8.35751 12.9805C8.48601 12.9532 8.60787 12.9008 8.71614 12.8264C8.8244 12.752 8.91695 12.657 8.9885 12.5468C9.06004 12.4366 9.10919 12.3135 9.13313 12.1843C9.15707 12.0551 9.15533 11.9225 9.12801 11.794L7.47001 4H13.925L14.988 9H17.033L15.814 3.267C15.718 2.815 15.67 2.59 15.55 2.421C15.4443 2.27193 15.2997 2.15468 15.132 2.082C14.943 2 14.713 2 14.25 2H6.97601C6.30001 2 5.96101 2 5.72601 2.14C5.51956 2.26188 5.36376 2.45387 5.28701 2.681C5.20001 2.941 5.27001 3.271 5.41101 3.933Z"
+                      fill="#8C8A87" />
+                    <path class="header__user-path"
+                      d="M5.9 12.48L5.371 10H1L2.8 18.466C2.993 19.369 3.09 19.821 3.33 20.159C3.54134 20.4566 3.8301 20.6908 4.165 20.836C4.545 21 5.007 21 5.931 21H17.681C18.568 21 19.011 21 19.381 20.846C19.7073 20.7096 19.9917 20.4891 20.205 20.207C20.447 19.887 20.558 19.459 20.78 18.6L23 10H10.075L10.399 11.523C10.5259 12.1197 10.4106 12.7424 10.0783 13.2541C9.74612 13.7658 9.22424 14.1246 8.6275 14.2515C8.03076 14.3784 7.40805 14.2631 6.89636 13.9308C6.38467 13.5986 6.02691 13.0767 5.9 12.48Z"
+                      fill="#8C8A87" />
+                  </svg>
+
+                  <span> Заказы </span>
+                </a>
+              </li>
+              <li class="header__user-menu-item">
+                <a class="header__user-menu-link" href="#">
+                  <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="header__user-path"
+                      d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM13 16.915V18H11V16.92C8.661 16.553 8 14.918 8 14H10C10.011 14.143 10.159 15 12 15C13.38 15 14 14.415 14 14C14 13.676 14 13 12 13C8.52 13 8 11.12 8 10C8 8.712 9.029 7.416 11 7.085V6.012H13V7.121C14.734 7.531 15.4 8.974 15.4 10H14.4L13.4 10.018C13.386 9.638 13.185 9 12 9C10.701 9 10 9.516 10 10C10 10.374 10 11 12 11C15.48 11 16 12.88 16 14C16 15.288 14.971 16.584 13 16.915Z"
+                      fill="#8C8A87" />
+                  </svg>
+
+                  <span> Биржа </span>
+                </a>
+              </li>
+              <li class="header__user-menu-item">
+                <a class="header__user-menu-link" href="#">
+                  <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="header__user-path"
+                      d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM13 16.915V18H11V16.92C8.661 16.553 8 14.918 8 14H10C10.011 14.143 10.159 15 12 15C13.38 15 14 14.415 14 14C14 13.676 14 13 12 13C8.52 13 8 11.12 8 10C8 8.712 9.029 7.416 11 7.085V6.012H13V7.121C14.734 7.531 15.4 8.974 15.4 10H14.4L13.4 10.018C13.386 9.638 13.185 9 12 9C10.701 9 10 9.516 10 10C10 10.374 10 11 12 11C15.48 11 16 12.88 16 14C16 15.288 14.971 16.584 13 16.915Z"
+                      fill="#8C8A87" />
+                  </svg>
+
+                  <span> Портфолио </span>
+                </a>
+              </li>
+              <li class="header__user-menu-item">
+                <a class="header__user-menu-link" href="#">
+                  <div class="message-count newMessage">
+                    <svg class="header__user-icon" width="24" height="24" viewBox="0 0 128 128"
+                      xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chat icon">
+                      <path class="header__user-path"
+                        d="M64 20C37.5 20 16 37.1 16 58.2c0 14.3 9.9 26.8 24.5 33.3v18.5l19.4-13.9c1.4.1 2.7.2 4.1.2 26.5 0 48-17.1 48-38.2S90.5 20 64 20z"
+                        fill="#8e8e8e" />
+                      <rect class="messageLine" x="43" y="48" width="42" height="6" fill="#ffffff" />
+                      <rect class="messageLine" x="43" y="64" width="28" height="6" fill="#ffffff" />
+                    </svg>
+                    <span class="count">1</span>
+                  </div>
+                  <span> Чаты </span>
+                </a>
               </li>
             </ul>
-
-            <div class="mega-menu__wrapper ">
-              <div class="mega-menu">
-                <div class="mega-menu-column mega-menu-column--categories">
-                  <div class="mega-menu_line is-active" data-menu="design">
-                    <div class="mega-menu__img">
-                      <img src="../img/userMenu/logo.png" alt="icon" />
+            <div class="header__user-balance">
+              <div class="header__user-summ"><span>143 000</span> ₽</div>
+              <a href="#" class="header__user-replenish"> Пополнить </a>
+            </div>
+            <div class="header__user-logo">
+              <div class="header__user-img">
+                <img src="../img/userMenu/userlogo.png" alt="logo" />
+              </div>
+              <svg class="header__user-icon" class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1606_63149)">
+                  <path
+                    d="M7.92113 4.00004C7.67651 3.99788 7.441 4.09272 7.26613 4.26379C7.13838 4.39121 7.05176 4.55399 7.01745 4.73113C6.98313 4.90827 7.0027 5.09163 7.07363 5.25754C7.12191 5.36729 7.1916 5.46631 7.27863 5.54879L11.7961 10.0113L7.27863 14.4738C7.11325 14.643 7.0216 14.8708 7.02371 15.1074C7.02582 15.3439 7.12152 15.5701 7.28988 15.7363C7.45966 15.9042 7.6882 15.9993 7.92697 16.0014C8.16574 16.0035 8.39593 15.9124 8.56863 15.7475L13.7324 10.6475C13.8165 10.5642 13.8834 10.465 13.929 10.3557C13.9746 10.2464 13.998 10.1291 13.998 10.0107C13.998 9.89222 13.9746 9.77495 13.929 9.66563C13.8834 9.55632 13.8165 9.45712 13.7324 9.37379L8.56988 4.27504C8.48518 4.18839 8.38409 4.11946 8.2725 4.07225C8.16091 4.02503 8.0423 4.00049 7.92113 4.00004Z"
+                    fill="#000" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1606_63149">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="user__list">
+                <div class="user__list-hide">
+                  <div class="user__list-box">
+                    <div class="user__list-roles">
+                      <div class="user__list-role user__list-buyer active">
+                        Я покупатель
+                      </div>
+                      <div class="user__list-role user__list-seller">
+                        Я продавец
+                      </div>
                     </div>
-
-                    <div class="mega-menu__desc">
-                      <div class="mega-menu__count">6498 товаров</div>
-                      <div class="mega-menu__title">Дизайн и графика</div>
+                    <div class="user__list-checkbox underlineBorder">
+                      <span>
+                        Принимаю заказы
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1611_73135)">
+                            <g clip-path="url(#clip1_1611_73135)">
+                              <mask id="mask0_1611_73135" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0"
+                                y="0" width="16" height="16">
+                                <path d="M0 0H16V16H0V0Z" fill="white" />
+                              </mask>
+                              <g mask="url(#mask0_1611_73135)">
+                                <path
+                                  d="M7.96 11.286V11.264M15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1C6.14348 1 4.36301 1.7375 3.05025 3.05025C1.7375 4.36301 1 6.14348 1 8C1 9.85652 1.7375 11.637 3.05025 12.9497C4.36301 14.2625 6.14348 15 8 15C9.85652 15 11.637 14.2625 12.9497 12.9497C14.2625 11.637 15 9.85652 15 8Z"
+                                  stroke="#8A8A8A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M7.95698 9.35982C7.94798 8.66782 8.57798 8.37382 9.04698 8.10682C9.61798 7.79182 10.005 7.28982 10.005 6.59482C10.005 5.56482 9.17198 4.73682 8.14798 4.73682C7.11798 4.73682 6.28998 5.56382 6.28998 6.59482"
+                                  stroke="#8A8A8A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                              </g>
+                            </g>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1611_73135">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                            <clipPath id="clip1_1611_73135">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider"></span>
+                      </label>
                     </div>
-
-                    <div class="mega-menu__icon">
-                      <img src="../img/userMenu/arrow.svg" alt="" />
-                    </div>
-                  </div>
-
-                  <div class="mega-menu_line" data-menu="dev">
-                    <div class="mega-menu__img">
-                      <img src="../img/userMenu/logo2.png" alt="icon" />
-                    </div>
-
-                    <div class="mega-menu__desc">
-                      <div class="mega-menu__count">33562 товара</div>
-                      <div class="mega-menu__title">Разработка и IT</div>
-                    </div>
-
-                    <div class="mega-menu__icon">
-                      <img src="../img/userMenu/arrow.svg" alt="" />
-                    </div>
-                  </div>
-
-                  <div class="mega-menu_line" data-menu="texts">
-                    <div class="mega-menu__img">
-                      <img src="../img/userMenu/logo3.png" alt="icon" />
-                    </div>
-
-                    <div class="mega-menu__desc">
-                      <div class="mega-menu__count">257 товаров</div>
-                      <div class="mega-menu__title">Тексты и переводы</div>
-                    </div>
-
-                    <div class="mega-menu__icon">
-                      <img src="../img/userMenu/arrow.svg" alt="" />
-                    </div>
-                  </div>
-
-                  <div class="mega-menu_line" data-menu="seo">
-                    <div class="mega-menu__img">
-                      <img src="../img/userMenu/logo4.png" alt="icon" />
-                    </div>
-
-                    <div class="mega-menu__desc">
-                      <div class="mega-menu__count">114 товаров</div>
-                      <div class="mega-menu__title">Трафик, SMM и SEO</div>
-                    </div>
-
-                    <div class="mega-menu__icon">
-                      <img src="../img/userMenu/arrow.svg" alt="" />
-                    </div>
-                  </div>
-
-                  <div class="mega-menu_line" data-menu="audio">
-                    <div class="mega-menu__img">
-                      <img src="../img/userMenu/logo5.png" alt="icon" />
-                    </div>
-
-                    <div class="mega-menu__desc">
-                      <div class="mega-menu__count">221 товар</div>
-                      <div class="mega-menu__title">Аудио &amp; Видео</div>
-                    </div>
-
-                    <div class="mega-menu__icon">
-                      <img src="../img/userMenu/arrow.svg" alt="" />
-                    </div>
-                  </div>
-
-                  <div class="mega-menu_line" data-menu="business">
-                    <div class="mega-menu__img">
-                      <img src="../img/userMenu/logo6.png" alt="icon" />
-                    </div>
-
-                    <div class="mega-menu__desc">
-                      <div class="mega-menu__count">893 товара</div>
-                      <div class="mega-menu__title">Бизнес и жизнь</div>
-                    </div>
-
-                    <div class="mega-menu__icon">
-                      <img src="../img/userMenu/arrow.svg" alt="" />
-                    </div>
-                  </div>
-
-                  <div class="mega-menu_line" data-menu="crypto">
-                    <div class="mega-menu__img">
-                      <img src="../img/userMenu/logo7.png" alt="icon" />
-                    </div>
-
-                    <div class="mega-menu__desc">
-                      <div class="mega-menu__count">3310 товаров</div>
-                      <div class="mega-menu__title">Блокчейн и крипто</div>
-                    </div>
-
-                    <div class="mega-menu__icon">
-                      <img src="../img/userMenu/arrow.svg" alt="" />
-                    </div>
-                  </div>
-
-                  <div class="mega-menu_line" data-menu="ai">
-                    <div class="mega-menu__img">
-                      <img src="../img/userMenu/logo8.png" alt="icon" />
-                    </div>
-
-                    <div class="mega-menu__desc">
-                      <div class="mega-menu__count">3310 товаров</div>
-                      <div class="mega-menu__title">Нейросети</div>
-                    </div>
-
-                    <div class="mega-menu__icon">
-                      <img src="../img/userMenu/arrow.svg" alt="" />
-                    </div>
-                  </div>
-
-                  <div class="mega-menu_line" data-menu="custom-task">
-                    <div class="mega-menu__img">
-                      <img src="../img/userMenu/add.png" alt="icon" />
-                    </div>
-
-                    <div class="mega-menu__desc">
-                      <div class="mega-menu__title">Создать свою задачу</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="mega-menu__box is-active"
-                  data-menu-content="design"
-                >
-                  <h2 class="mega-menu__title-line">Дизайн и графика</h2>
-
-                  <div class="mega-menu__wrap">
-                    <div class="mega-menu-column">
-                      <h4>Логотип и брендинг</h4>
-                      <a href="#">
-                        Логотипы
-                        <img
-                          src="../img/icons/fire.svg"
-                          alt="fire icon"
-                          class="fire-icon"
-                        />
-                      </a>
-                      <a href="#">Фирменный стиль</a>
-                      <a href="#">Визитки</a>
-                      <a href="#">Брендирование и сувенирка</a>
-
-                      <h4>Презентации и инфографика</h4>
-                      <a href="#">Презентации</a>
-                      <a href="#">Инфографика</a>
-                      <a href="#">Карта и схема</a>
-
-                      <h4>Арт и иллюстрации</h4>
-                      <a href="#">Портрет, шарж, карикатура</a>
-                      <a href="#">Иллюстрации и рисунки</a>
-                      <a href="#">Дизайн игр</a>
-                      <a href="#">Тату, принты</a>
-                      <a href="#">Стикеры</a>
-                      <a href="#">NFT арт</a>
-                      <a href="#">Готовые шаблоны и рисунки</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Веб и мобильный дизайн</h4>
-                      <a href="#">
-                        Веб-дизайн
-                        <img
-                          src="../img/icons/fire.svg"
-                          alt="fire icon"
-                          class="fire-icon"
-                        />
-                      </a>
-                      <a href="#">Мобильный дизайн</a>
-                      <a href="#">Email-дизайн</a>
-                      <a href="#">
-                        Баннеры и иконки
-                        <img
-                          src="../img/icons/fire.svg"
-                          alt="fire icon"
-                          class="fire-icon"
-                        />
-                      </a>
-                      <a href="#">Юзабилити-аудит</a>
-
-                      <h4>Маркетплейсы и соцсети</h4>
-                      <a href="#">
-                        Дизайн в соцсетях
-                        <img
-                          src="../img/icons/fire.svg"
-                          alt="fire icon"
-                          class="fire-icon"
-                        />
-                      </a>
-                      <a href="#">Дизайн для маркетплейсов</a>
-
-                      <h4>Интерьер и экстерьер</h4>
-                      <a href="#">Интерьер</a>
-                      <a href="#">Дизайн домов и сооружений</a>
-                      <a href="#">Ландшафтный дизайн</a>
-                      <a href="#">Дизайн мебели</a>
-
-                      <h4>Обработка и редактирование</h4>
-                      <a href="#">Отрисовка в векторе</a>
-                      <a href="#">
-                        Фотомонтаж и обработка
-                        <img
-                          src="../img/icons/fire.svg"
-                          alt="fire icon"
-                          class="fire-icon"
-                        />
-                      </a>
-                      <a href="#">
-                        3D-графика
-                        <img
-                          src="../img/icons/fire.svg"
-                          alt="fire icon"
-                          class="fire-icon"
-                        />
-                      </a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Полиграфия</h4>
-                      <a href="#">Брошюра и буклет</a>
-                      <a href="#">Листовки и флаер</a>
-                      <a href="#">Плакат и афиша</a>
-                      <a href="#">Календарь и открытка</a>
-                      <a href="#">Каталог, меню, книга</a>
-                      <a href="#">Грамота и сертификат</a>
-
-                      <h4>Промышленный дизайн</h4>
-                      <a href="#">Электроника и устройства</a>
-                      <a href="#">Предметы и аксессуары</a>
-                      <a href="#">Упаковка и этикетка</a>
-
-                      <h4>Наружная реклама</h4>
-                      <a href="#">Билборды и стенды</a>
-                      <a href="#">Витрины и вывески</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mega-menu__box" data-menu-content="dev">
-                  <h2 class="mega-menu__title-line">Разработка и IT</h2>
-
-                  <div class="mega-menu__wrap">
-                    <div class="mega-menu-column">
-                      <h4>Доработка и настройка сайта</h4>
-                      <a href="#">Дорабокта сайта </a>
-                      <a href="#"
-                        >Интернет-магазин
-                        <span class="newService pulseAnime">Новый</span></a
-                      >
-                      <a href="#">Landing page</a>
-                      <a href="#">Доработка сайта</a>
-                      <a href="#">Верстка</a>
-
-                      <h4>CMS и конструкторы</h4>
-                      <a href="#">WordPress</a>
-                      <a href="#">Tilda</a>
-                      <a href="#">Bitrix</a>
-                      <a href="#">Webflow</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Программирование</h4>
-                      <a href="#">Frontend</a>
-                      <a href="#">Backend</a>
-                      <a href="#">JavaScript</a>
-                      <a href="#">PHP</a>
-                      <a href="#">Python</a>
-
-                      <h4>Интеграции</h4>
-                      <a href="#">API</a>
-                      <a href="#">CRM</a>
-                      <a href="#">Платежные системы</a>
-                      <a href="#">Боты</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Мобильные приложения</h4>
-                      <a href="#">iOS</a>
-                      <a href="#">Android</a>
-                      <a href="#">Flutter</a>
-                      <a href="#">React Native</a>
-
-                      <h4>Поддержка и администрирование</h4>
-                      <a href="#">Исправление ошибок</a>
-                      <a href="#">Настройка сервера</a>
-                      <a href="#">Техническая поддержка</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mega-menu__box" data-menu-content="texts">
-                  <h2 class="mega-menu__title-line">Тексты и переводы</h2>
-
-                  <div class="mega-menu__wrap">
-                    <div class="mega-menu-column">
-                      <h4>Копирайтинг</h4>
-                      <a href="#">Статьи</a>
-                      <a href="#">SEO-тексты</a>
-                      <a href="#">Продающие тексты</a>
-                      <a href="#">Описание товаров</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Редактура</h4>
-                      <a href="#">Корректура</a>
-                      <a href="#">Редактирование</a>
-                      <a href="#">Рерайтинг</a>
-                      <a href="#">Нейминг</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Переводы</h4>
-                      <a href="#">Английский</a>
-                      <a href="#">Немецкий</a>
-                      <a href="#">Французский</a>
-                      <a href="#">Другие языки</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mega-menu__box" data-menu-content="seo">
-                  <h2 class="mega-menu__title-line">Трафик, SMM и SEO</h2>
-
-                  <div class="mega-menu__wrap">
-                    <div class="mega-menu-column">
-                      <h4>SEO</h4>
-                      <a href="#">SEO-аудит</a>
-                      <a href="#">Семантическое ядро</a>
-                      <a href="#">Внутренняя оптимизация</a>
-                      <a href="#">Ссылочное продвижение</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>SMM</h4>
-                      <a href="#">Ведение соцсетей</a>
-                      <a href="#">Контент-план</a>
-                      <a href="#">Оформление профиля</a>
-                      <a href="#">Продвижение</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Реклама</h4>
-                      <a href="#">Контекстная реклама</a>
-                      <a href="#">Таргетированная реклама</a>
-                      <a href="#">Настройка аналитики</a>
-                      <a href="#">Email-маркетинг</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mega-menu__box" data-menu-content="audio">
-                  <h2 class="mega-menu__title-line">Аудио &amp; Видео</h2>
-
-                  <div class="mega-menu__wrap">
-                    <div class="mega-menu-column">
-                      <h4>Видео</h4>
-                      <a href="#">Монтаж видео</a>
-                      <a href="#">Анимация</a>
-                      <a href="#">Интро и заставки</a>
-                      <a href="#">Цветокоррекция</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Аудио</h4>
-                      <a href="#">Озвучка</a>
-                      <a href="#">Сведение звука</a>
-                      <a href="#">Музыка</a>
-                      <a href="#">Подкасты</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Съемка</h4>
-                      <a href="#">Видеосъемка</a>
-                      <a href="#">Фотосъемка</a>
-                      <a href="#">Обработка фото</a>
-                      <a href="#">Ретушь</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mega-menu__box" data-menu-content="business">
-                  <h2 class="mega-menu__title-line">Бизнес и жизнь</h2>
-
-                  <div class="mega-menu__wrap">
-                    <div class="mega-menu-column">
-                      <h4>Бизнес</h4>
-                      <a href="#">Бизнес-план</a>
-                      <a href="#">Финансовая модель</a>
-                      <a href="#">Консультации</a>
-                      <a href="#">Документы</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Обучение</h4>
-                      <a href="#">Репетиторы</a>
-                      <a href="#">Курсовые и дипломы</a>
-                      <a href="#">Презентации</a>
-                      <a href="#">Помощь с учебой</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Личное</h4>
-                      <a href="#">Психология</a>
-                      <a href="#">Планирование</a>
-                      <a href="#">Карьера</a>
-                      <a href="#">Разное</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mega-menu__box" data-menu-content="crypto">
-                  <h2 class="mega-menu__title-line">Блокчейн и крипто</h2>
-
-                  <div class="mega-menu__wrap">
-                    <div class="mega-menu-column">
-                      <h4>Blockchain</h4>
-                      <a href="#">Smart contracts</a>
-                      <a href="#">Web3</a>
-                      <a href="#">NFT</a>
-                      <a href="#">DeFi</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Крипто-проекты</h4>
-                      <a href="#">Токеномика</a>
-                      <a href="#">Whitepaper</a>
-                      <a href="#">Аудит проекта</a>
-                      <a href="#">Маркетинг</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Разработка</h4>
-                      <a href="#">Solidity</a>
-                      <a href="#">DApp</a>
-                      <a href="#">Wallet integration</a>
-                      <a href="#">Crypto API</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mega-menu__box" data-menu-content="ai">
-                  <h2 class="mega-menu__title-line">Нейросети</h2>
-
-                  <div class="mega-menu__wrap">
-                    <div class="mega-menu-column">
-                      <h4>Генерация контента</h4>
-                      <a href="#">Генерация изображений</a>
-                      <a href="#">Генерация текстов</a>
-                      <a href="#">Промпты</a>
-                      <a href="#">AI-видео</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Автоматизация</h4>
-                      <a href="#">ChatGPT</a>
-                      <a href="#">AI-боты</a>
-                      <a href="#">Автоматизация процессов</a>
-                      <a href="#">Интеграции AI</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>AI для бизнеса</h4>
-                      <a href="#">AI-консультации</a>
-                      <a href="#">Анализ данных</a>
-                      <a href="#">AI-презентации</a>
-                      <a href="#">AI-дизайн</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mega-menu__box" data-menu-content="custom-task">
-                  <h2 class="mega-menu__title-line">Создать свою задачу</h2>
-
-                  <div class="mega-menu__wrap">
-                    <div class="mega-menu-column">
-                      <h4>Не нашли нужную услугу?</h4>
-                      <a href="#">Опишите задачу</a>
-                      <a href="#">Укажите бюджет</a>
-                      <a href="#">Получите предложения</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Популярные форматы</h4>
-                      <a href="#">Разовая задача</a>
-                      <a href="#">Долгосрочный проект</a>
-                      <a href="#">Консультация</a>
-                    </div>
-
-                    <div class="mega-menu-column">
-                      <h4>Помощь</h4>
-                      <a href="#">Как создать задачу</a>
-                      <a href="#">Как выбрать исполнителя</a>
-                      <a href="#">Безопасная сделка</a>
-                    </div>
+                    <ul class="user__list-items">
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Профиль </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Настройки </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Помощь </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link">
+                          Язык интерфейса
+                          <span>RU <img src="../img/userMenu/ru.png" alt="" /></span>
+                        </a>
+                      </li>
+                      <li class="user__list-item underlineBorder">
+                        <a href="#" class="user__list-link upEmp">
+                          <img src="../img/userMenu/employedUp.svg" alt="" />
+                          Увеличьте доход на 47%
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="exit">Выйти</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </header>
-    <header class="phone-header">
-      <div class="mobile-topbar">
-        <a href="#" class="mobile-topbar__logo">
-          <img src="../img/logo.svg" alt="Fiwork" />
-        </a>
-
-        <button
-          class="mobile-burger-btn"
-          type="button"
-          aria-label="Открыть меню"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-
-    <div class="mobile-drawer-overlay"></div>
-
-    <aside class="mobile-drawer" aria-hidden="true">
-      <div class="mobile-drawer__header">
-        <a href="#" class="mobile-drawer__logo">
-          <img src="../img/logo.svg" alt="Fiwork" />
-        </a>
-
-        <button
-          class="mobile-drawer__close"
-          type="button"
-          aria-label="Закрыть меню"
-        >
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-
-      <div class="mobile-drawer__body">
-        <div class="mobile-menu-screen is-active" data-screen="root">
-          <div class="userBlockMobile regMenuMobile">
-            <ul class="header__user-menu userMenuMobileUl">
+          <div class="header__user-block userBlock">
+            <ul class="header__user-menu">
               <li class="header__user-menu-item">
                 <a class="header__user-menu-link" href="#">
                   <div class="header__user-menu--prize">
@@ -1563,24 +863,14 @@ require_once "../modules/base.php";
               </li>
               <li class="header__user-menu-item">
                 <a class="header__user-menu-link" href="#">
-                  <svg
-                    class="header__user-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="header__user-path"
+                  <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="header__user-path"
                       d="M5.41101 3.933L7.17101 12.21C7.22618 12.4695 7.38218 12.6965 7.60469 12.841C7.71486 12.9125 7.83805 12.9617 7.96722 12.9856C8.09639 13.0096 8.22901 13.0078 8.35751 12.9805C8.48601 12.9532 8.60787 12.9008 8.71614 12.8264C8.8244 12.752 8.91695 12.657 8.9885 12.5468C9.06004 12.4366 9.10919 12.3135 9.13313 12.1843C9.15707 12.0551 9.15533 11.9225 9.12801 11.794L7.47001 4H13.925L14.988 9H17.033L15.814 3.267C15.718 2.815 15.67 2.59 15.55 2.421C15.4443 2.27193 15.2997 2.15468 15.132 2.082C14.943 2 14.713 2 14.25 2H6.97601C6.30001 2 5.96101 2 5.72601 2.14C5.51956 2.26188 5.36376 2.45387 5.28701 2.681C5.20001 2.941 5.27001 3.271 5.41101 3.933Z"
-                      fill="#8C8A87"
-                    />
-                    <path
-                      class="header__user-path"
+                      fill="#8C8A87" />
+                    <path class="header__user-path"
                       d="M5.9 12.48L5.371 10H1L2.8 18.466C2.993 19.369 3.09 19.821 3.33 20.159C3.54134 20.4566 3.8301 20.6908 4.165 20.836C4.545 21 5.007 21 5.931 21H17.681C18.568 21 19.011 21 19.381 20.846C19.7073 20.7096 19.9917 20.4891 20.205 20.207C20.447 19.887 20.558 19.459 20.78 18.6L23 10H10.075L10.399 11.523C10.5259 12.1197 10.4106 12.7424 10.0783 13.2541C9.74612 13.7658 9.22424 14.1246 8.6275 14.2515C8.03076 14.3784 7.40805 14.2631 6.89636 13.9308C6.38467 13.5986 6.02691 13.0767 5.9 12.48Z"
-                      fill="#8C8A87"
-                    />
+                      fill="#8C8A87" />
                   </svg>
 
                   <span> Заказы </span>
@@ -1588,19 +878,11 @@ require_once "../modules/base.php";
               </li>
               <li class="header__user-menu-item">
                 <a class="header__user-menu-link" href="#">
-                  <svg
-                    class="header__user-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="header__user-path"
+                  <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="header__user-path"
                       d="M4 11H10C10.2652 11 10.5196 10.8946 10.7071 10.7071C10.8946 10.5196 11 10.2652 11 10V4C11 3.73478 10.8946 3.48043 10.7071 3.29289C10.5196 3.10536 10.2652 3 10 3H4C3.73478 3 3.48043 3.10536 3.29289 3.29289C3.10536 3.48043 3 3.73478 3 4V10C3 10.2652 3.10536 10.5196 3.29289 10.7071C3.48043 10.8946 3.73478 11 4 11ZM14 11H20C20.2652 11 20.5196 10.8946 20.7071 10.7071C20.8946 10.5196 21 10.2652 21 10V4C21 3.73478 20.8946 3.48043 20.7071 3.29289C20.5196 3.10536 20.2652 3 20 3H14C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4V10C13 10.2652 13.1054 10.5196 13.2929 10.7071C13.4804 10.8946 13.7348 11 14 11ZM4 21H10C10.2652 21 10.5196 20.8946 10.7071 20.7071C10.8946 20.5196 11 20.2652 11 20V14C11 13.7348 10.8946 13.4804 10.7071 13.2929C10.5196 13.1054 10.2652 13 10 13H4C3.73478 13 3.48043 13.1054 3.29289 13.2929C3.10536 13.4804 3 13.7348 3 14V20C3 20.2652 3.10536 20.5196 3.29289 20.7071C3.48043 20.8946 3.73478 21 4 21ZM17 21C19.206 21 21 19.206 21 17C21 14.794 19.206 13 17 13C14.794 13 13 14.794 13 17C13 19.206 14.794 21 17 21Z"
-                      fill="#8C8A87"
-                    />
+                      fill="#8C8A87" />
                   </svg>
 
                   <span> Проекты </span>
@@ -1608,19 +890,11 @@ require_once "../modules/base.php";
               </li>
               <li class="header__user-menu-item">
                 <a class="header__user-menu-link" href="#">
-                  <svg
-                    class="header__user-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="header__user-path"
+                  <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="header__user-path"
                       d="M2.93289 5.21495C5.23589 2.99095 8.80489 3.71795 11.9999 6.49995C15.1949 3.71795 18.7639 3.08495 21.0669 5.30995C23.6489 7.80295 22.5839 12.6299 19.1309 16.2049C16.9309 18.4829 14.2929 20.3249 11.9999 21.0949V21C9.70689 20.2299 7.06889 18.3879 4.86889 16.11C1.41589 12.535 0.349893 7.70895 2.93289 5.21495Z"
-                      fill="#8C8A87"
-                    />
+                      fill="#8C8A87" />
                   </svg>
 
                   <span> Избранное </span>
@@ -1630,36 +904,13 @@ require_once "../modules/base.php";
               <li class="header__user-menu-item">
                 <a class="header__user-menu-link" href="#">
                   <div class="message-count newMessage">
-                    <svg
-                      class="header__user-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 128 128"
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="../img"
-                      aria-label="Chat icon"
-                    >
-                      <path
-                        class="header__user-path"
+                    <svg class="header__user-icon" width="24" height="24" viewBox="0 0 128 128"
+                      xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chat icon">
+                      <path class="header__user-path"
                         d="M64 20C37.5 20 16 37.1 16 58.2c0 14.3 9.9 26.8 24.5 33.3v18.5l19.4-13.9c1.4.1 2.7.2 4.1.2 26.5 0 48-17.1 48-38.2S90.5 20 64 20z"
-                        fill="#8e8e8e"
-                      />
-                      <rect
-                        class="messageLine"
-                        x="43"
-                        y="48"
-                        width="42"
-                        height="6"
-                        fill="#ffffff"
-                      />
-                      <rect
-                        class="messageLine"
-                        x="43"
-                        y="64"
-                        width="28"
-                        height="6"
-                        fill="#ffffff"
-                      />
+                        fill="#8e8e8e" />
+                      <rect class="messageLine" x="43" y="48" width="42" height="6" fill="#ffffff" />
+                      <rect class="messageLine" x="43" y="64" width="28" height="6" fill="#ffffff" />
                     </svg>
                     <span class="count">1</span>
                   </div>
@@ -1667,469 +918,1026 @@ require_once "../modules/base.php";
                 </a>
               </li>
             </ul>
-            <div class="mobile__menu-userBox mobilMenuUserBox">
-              <div class="header__user-balance">
-                <div class="header__user-summ"><span>143 000</span> ₽</div>
-                <a href="#" class="header__user-replenish"> Пополнить </a>
+            <div class="header__user-balance">
+              <div class="header__user-summ"><span>143 000</span> ₽</div>
+              <a href="#" class="header__user-replenish"> Пополнить </a>
+            </div>
+            <div class="header__user-logo">
+              <div class="header__user-img">
+                <img src="../img/userMenu/userlogo.png" alt="logo" />
               </div>
-              <div class="header__user-logo">
-                <div class="header__user-img">
-                  <img src="../img/userMenu/userlogo.png" alt="logo" />
-                </div>
-                <svg
-                  class="header__user-icon"
-                  class="arrow"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1606_63149)">
-                    <path
-                      d="M7.92113 4.00004C7.67651 3.99788 7.441 4.09272 7.26613 4.26379C7.13838 4.39121 7.05176 4.55399 7.01745 4.73113C6.98313 4.90827 7.0027 5.09163 7.07363 5.25754C7.12191 5.36729 7.1916 5.46631 7.27863 5.54879L11.7961 10.0113L7.27863 14.4738C7.11325 14.643 7.0216 14.8708 7.02371 15.1074C7.02582 15.3439 7.12152 15.5701 7.28988 15.7363C7.45966 15.9042 7.6882 15.9993 7.92697 16.0014C8.16574 16.0035 8.39593 15.9124 8.56863 15.7475L13.7324 10.6475C13.8165 10.5642 13.8834 10.465 13.929 10.3557C13.9746 10.2464 13.998 10.1291 13.998 10.0107C13.998 9.89222 13.9746 9.77495 13.929 9.66563C13.8834 9.55632 13.8165 9.45712 13.7324 9.37379L8.56988 4.27504C8.48518 4.18839 8.38409 4.11946 8.2725 4.07225C8.16091 4.02503 8.0423 4.00049 7.92113 4.00004Z"
-                      fill="#000"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1606_63149">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <div class="user__list user__list--mobile">
-                  <div class="user__list-hide">
-                    <div class="user__list-box">
-                      <div class="user__list-roles">
-                        <div class="user__list-role user__list-buyer active">
-                          Я покупатель
-                        </div>
-                        <div class="user__list-role user__list-seller">
-                          Я продавец
-                        </div>
+              <svg class="header__user-icon" class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1606_63149)">
+                  <path
+                    d="M7.92113 4.00004C7.67651 3.99788 7.441 4.09272 7.26613 4.26379C7.13838 4.39121 7.05176 4.55399 7.01745 4.73113C6.98313 4.90827 7.0027 5.09163 7.07363 5.25754C7.12191 5.36729 7.1916 5.46631 7.27863 5.54879L11.7961 10.0113L7.27863 14.4738C7.11325 14.643 7.0216 14.8708 7.02371 15.1074C7.02582 15.3439 7.12152 15.5701 7.28988 15.7363C7.45966 15.9042 7.6882 15.9993 7.92697 16.0014C8.16574 16.0035 8.39593 15.9124 8.56863 15.7475L13.7324 10.6475C13.8165 10.5642 13.8834 10.465 13.929 10.3557C13.9746 10.2464 13.998 10.1291 13.998 10.0107C13.998 9.89222 13.9746 9.77495 13.929 9.66563C13.8834 9.55632 13.8165 9.45712 13.7324 9.37379L8.56988 4.27504C8.48518 4.18839 8.38409 4.11946 8.2725 4.07225C8.16091 4.02503 8.0423 4.00049 7.92113 4.00004Z"
+                    fill="#000" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1606_63149">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="user__list">
+                <div class="user__list-hide">
+                  <div class="user__list-box">
+                    <div class="user__list-roles">
+                      <div class="user__list-role user__list-buyer active">
+                        Я покупатель
                       </div>
-                      <div class="user__list-checkbox underlineBorder">
-                        <span>
-                          Принимаю заказы
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_1611_73135)">
-                              <g clip-path="url(#clip1_1611_73135)">
-                                <mask
-                                  id="mask0_1611_73135"
-                                  style="mask-type: luminance"
-                                  maskUnits="userSpaceOnUse"
-                                  x="0"
-                                  y="0"
-                                  width="16"
-                                  height="16"
-                                >
-                                  <path d="M0 0H16V16H0V0Z" fill="white" />
-                                </mask>
-                                <g mask="url(#mask0_1611_73135)">
-                                  <path
-                                    d="M7.96 11.286V11.264M15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1C6.14348 1 4.36301 1.7375 3.05025 3.05025C1.7375 4.36301 1 6.14348 1 8C1 9.85652 1.7375 11.637 3.05025 12.9497C4.36301 14.2625 6.14348 15 8 15C9.85652 15 11.637 14.2625 12.9497 12.9497C14.2625 11.637 15 9.85652 15 8Z"
-                                    stroke="#8A8A8A"
-                                    stroke-width="1.4"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                  <path
-                                    d="M7.95698 9.35982C7.94798 8.66782 8.57798 8.37382 9.04698 8.10682C9.61798 7.79182 10.005 7.28982 10.005 6.59482C10.005 5.56482 9.17198 4.73682 8.14798 4.73682C7.11798 4.73682 6.28998 5.56382 6.28998 6.59482"
-                                    stroke="#8A8A8A"
-                                    stroke-width="1.4"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                </g>
+                      <div class="user__list-role user__list-seller">
+                        Я продавец
+                      </div>
+                    </div>
+                    <div class="user__list-checkbox underlineBorder">
+                      <span>
+                        Принимаю заказы
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1611_73135)">
+                            <g clip-path="url(#clip1_1611_73135)">
+                              <mask id="mask0_1611_73135" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0"
+                                y="0" width="16" height="16">
+                                <path d="M0 0H16V16H0V0Z" fill="white" />
+                              </mask>
+                              <g mask="url(#mask0_1611_73135)">
+                                <path
+                                  d="M7.96 11.286V11.264M15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1C6.14348 1 4.36301 1.7375 3.05025 3.05025C1.7375 4.36301 1 6.14348 1 8C1 9.85652 1.7375 11.637 3.05025 12.9497C4.36301 14.2625 6.14348 15 8 15C9.85652 15 11.637 14.2625 12.9497 12.9497C14.2625 11.637 15 9.85652 15 8Z"
+                                  stroke="#8A8A8A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M7.95698 9.35982C7.94798 8.66782 8.57798 8.37382 9.04698 8.10682C9.61798 7.79182 10.005 7.28982 10.005 6.59482C10.005 5.56482 9.17198 4.73682 8.14798 4.73682C7.11798 4.73682 6.28998 5.56382 6.28998 6.59482"
+                                  stroke="#8A8A8A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
                               </g>
                             </g>
-                            <defs>
-                              <clipPath id="clip0_1611_73135">
-                                <rect width="16" height="16" fill="white" />
-                              </clipPath>
-                              <clipPath id="clip1_1611_73135">
-                                <rect width="16" height="16" fill="white" />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <label class="switch">
-                          <input type="checkbox" checked />
-                          <span class="slider"></span>
-                        </label>
-                      </div>
-                      <ul class="user__list-items">
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Профиль </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Настройки </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Помощь </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link">
-                            Язык интерфейса
-                            <span
-                              >RU <img src="../img/userMenu/ru.png" alt=""
-                            /></span>
-                          </a>
-                        </li>
-                        <li class="user__list-item underlineBorder">
-                          <a href="#" class="user__list-link upEmp">
-                            <img src="../img/userMenu/employedUp.svg" alt="" />
-                            Увеличьте доход на 47%
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="exit">Выйти</div>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1611_73135">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                            <clipPath id="clip1_1611_73135">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider"></span>
+                      </label>
                     </div>
+                    <ul class="user__list-items">
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Профиль </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Настройки </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Помощь </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link">
+                          Язык интерфейса
+                          <span>RU <img src="../img/userMenu/ru.png" alt="" /></span>
+                        </a>
+                      </li>
+                      <li class="user__list-item underlineBorder">
+                        <a href="#" class="user__list-link upEmp">
+                          <img src="../img/userMenu/employedUp.svg" alt="" />
+                          Увеличьте доход на 47%
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="exit">Выйти</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="regBlockMobile regMenuMobile">
-            <ul class="header__user-menu userMenuMobileUl">
-              <li class="header__user-menu-item">
-                <a class="header__user-menu-link" href="#">
-                  <svg
-                    class="header__user-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="header__user-path"
-                      d="M4 11H10C10.2652 11 10.5196 10.8946 10.7071 10.7071C10.8946 10.5196 11 10.2652 11 10V4C11 3.73478 10.8946 3.48043 10.7071 3.29289C10.5196 3.10536 10.2652 3 10 3H4C3.73478 3 3.48043 3.10536 3.29289 3.29289C3.10536 3.48043 3 3.73478 3 4V10C3 10.2652 3.10536 10.5196 3.29289 10.7071C3.48043 10.8946 3.73478 11 4 11ZM14 11H20C20.2652 11 20.5196 10.8946 20.7071 10.7071C20.8946 10.5196 21 10.2652 21 10V4C21 3.73478 20.8946 3.48043 20.7071 3.29289C20.5196 3.10536 20.2652 3 20 3H14C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4V10C13 10.2652 13.1054 10.5196 13.2929 10.7071C13.4804 10.8946 13.7348 11 14 11ZM4 21H10C10.2652 21 10.5196 20.8946 10.7071 20.7071C10.8946 20.5196 11 20.2652 11 20V14C11 13.7348 10.8946 13.4804 10.7071 13.2929C10.5196 13.1054 10.2652 13 10 13H4C3.73478 13 3.48043 13.1054 3.29289 13.2929C3.10536 13.4804 3 13.7348 3 14V20C3 20.2652 3.10536 20.5196 3.29289 20.7071C3.48043 20.8946 3.73478 21 4 21ZM17 21C19.206 21 21 19.206 21 17C21 14.794 19.206 13 17 13C14.794 13 13 14.794 13 17C13 19.206 14.794 21 17 21Z"
-                      fill="#8C8A87"
-                    ></path>
-                  </svg>
-
-                  <span> Услуги </span>
-                </a>
-              </li>
-              <li class="header__user-menu-item">
-                <a class="header__user-menu-link" href="#">
-                  <svg
-                    class="header__user-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="header__user-path"
-                      d="M5.41101 3.933L7.17101 12.21C7.22618 12.4695 7.38218 12.6965 7.60469 12.841C7.71486 12.9125 7.83805 12.9617 7.96722 12.9856C8.09639 13.0096 8.22901 13.0078 8.35751 12.9805C8.48601 12.9532 8.60787 12.9008 8.71614 12.8264C8.8244 12.752 8.91695 12.657 8.9885 12.5468C9.06004 12.4366 9.10919 12.3135 9.13313 12.1843C9.15707 12.0551 9.15533 11.9225 9.12801 11.794L7.47001 4H13.925L14.988 9H17.033L15.814 3.267C15.718 2.815 15.67 2.59 15.55 2.421C15.4443 2.27193 15.2997 2.15468 15.132 2.082C14.943 2 14.713 2 14.25 2H6.97601C6.30001 2 5.96101 2 5.72601 2.14C5.51956 2.26188 5.36376 2.45387 5.28701 2.681C5.20001 2.941 5.27001 3.271 5.41101 3.933Z"
-                      fill="#8C8A87"
-                    ></path>
-                    <path
-                      class="header__user-path"
-                      d="M5.9 12.48L5.371 10H1L2.8 18.466C2.993 19.369 3.09 19.821 3.33 20.159C3.54134 20.4566 3.8301 20.6908 4.165 20.836C4.545 21 5.007 21 5.931 21H17.681C18.568 21 19.011 21 19.381 20.846C19.7073 20.7096 19.9917 20.4891 20.205 20.207C20.447 19.887 20.558 19.459 20.78 18.6L23 10H10.075L10.399 11.523C10.5259 12.1197 10.4106 12.7424 10.0783 13.2541C9.74612 13.7658 9.22424 14.1246 8.6275 14.2515C8.03076 14.3784 7.40805 14.2631 6.89636 13.9308C6.38467 13.5986 6.02691 13.0767 5.9 12.48Z"
-                      fill="#8C8A87"
-                    ></path>
-                  </svg>
-
-                  <span> Заказы </span>
-                </a>
-              </li>
-              <li class="header__user-menu-item">
-                <a class="header__user-menu-link" href="#">
-                  <svg
-                    class="header__user-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="header__user-path"
-                      d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM13 16.915V18H11V16.92C8.661 16.553 8 14.918 8 14H10C10.011 14.143 10.159 15 12 15C13.38 15 14 14.415 14 14C14 13.676 14 13 12 13C8.52 13 8 11.12 8 10C8 8.712 9.029 7.416 11 7.085V6.012H13V7.121C14.734 7.531 15.4 8.974 15.4 10H14.4L13.4 10.018C13.386 9.638 13.185 9 12 9C10.701 9 10 9.516 10 10C10 10.374 10 11 12 11C15.48 11 16 12.88 16 14C16 15.288 14.971 16.584 13 16.915Z"
-                      fill="#8C8A87"
-                    ></path>
-                  </svg>
-
-                  <span> Биржа </span>
-                </a>
-              </li>
-              <li class="header__user-menu-item">
-                <a class="header__user-menu-link" href="#">
-                  <svg
-                    class="header__user-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="header__user-path"
-                      d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM13 16.915V18H11V16.92C8.661 16.553 8 14.918 8 14H10C10.011 14.143 10.159 15 12 15C13.38 15 14 14.415 14 14C14 13.676 14 13 12 13C8.52 13 8 11.12 8 10C8 8.712 9.029 7.416 11 7.085V6.012H13V7.121C14.734 7.531 15.4 8.974 15.4 10H14.4L13.4 10.018C13.386 9.638 13.185 9 12 9C10.701 9 10 9.516 10 10C10 10.374 10 11 12 11C15.48 11 16 12.88 16 14C16 15.288 14.971 16.584 13 16.915Z"
-                      fill="#8C8A87"
-                    ></path>
-                  </svg>
-
-                  <span> Портфолио </span>
-                </a>
-              </li>
-              <li class="header__user-menu-item">
-                <a class="header__user-menu-link" href="#">
-                  <div class="message-count newMessage">
-                    <svg
-                      class="header__user-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 128 128"
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="../img"
-                      aria-label="Chat icon"
-                    >
-                      <path
-                        class="header__user-path"
-                        d="M64 20C37.5 20 16 37.1 16 58.2c0 14.3 9.9 26.8 24.5 33.3v18.5l19.4-13.9c1.4.1 2.7.2 4.1.2 26.5 0 48-17.1 48-38.2S90.5 20 64 20z"
-                        fill="#8e8e8e"
-                      ></path>
-                      <rect
-                        class="messageLine"
-                        x="43"
-                        y="48"
-                        width="42"
-                        height="6"
-                        fill="#ffffff"
-                      ></rect>
-                      <rect
-                        class="messageLine"
-                        x="43"
-                        y="64"
-                        width="28"
-                        height="6"
-                        fill="#ffffff"
-                      ></rect>
-                    </svg>
-                    <span class="count">1</span>
-                  </div>
-                  <span> Чаты </span>
-                </a>
-              </li>
-            </ul>
-            <div class="mobile__menu-userBox mobilMenuUserBox">
-              <div class="header__user-balance">
-                <div class="header__user-summ"><span>143 000</span> ₽</div>
-                <a href="#" class="header__user-replenish"> Пополнить </a>
-              </div>
-              <div class="header__user-logo">
-                <div class="header__user-img">
-                  <img src="../img/userMenu/userlogo.png" alt="logo" />
-                </div>
-                <svg
-                  class="header__user-icon"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1606_63149)">
-                    <path
-                      d="M7.92113 4.00004C7.67651 3.99788 7.441 4.09272 7.26613 4.26379C7.13838 4.39121 7.05176 4.55399 7.01745 4.73113C6.98313 4.90827 7.0027 5.09163 7.07363 5.25754C7.12191 5.36729 7.1916 5.46631 7.27863 5.54879L11.7961 10.0113L7.27863 14.4738C7.11325 14.643 7.0216 14.8708 7.02371 15.1074C7.02582 15.3439 7.12152 15.5701 7.28988 15.7363C7.45966 15.9042 7.6882 15.9993 7.92697 16.0014C8.16574 16.0035 8.39593 15.9124 8.56863 15.7475L13.7324 10.6475C13.8165 10.5642 13.8834 10.465 13.929 10.3557C13.9746 10.2464 13.998 10.1291 13.998 10.0107C13.998 9.89222 13.9746 9.77495 13.929 9.66563C13.8834 9.55632 13.8165 9.45712 13.7324 9.37379L8.56988 4.27504C8.48518 4.18839 8.38409 4.11946 8.2725 4.07225C8.16091 4.02503 8.0423 4.00049 7.92113 4.00004Z"
-                      fill="#000"
-                    ></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1606_63149">
-                      <rect width="20" height="20" fill="white"></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-                <div class="user__list user__list--mobile">
-                  <div class="user__list-hide">
-                    <div class="user__list-box">
-                      <div class="user__list-roles">
-                        <div class="user__list-role user__list-buyer active">
-                          Я покупатель
-                        </div>
-                        <div class="user__list-role user__list-seller">
-                          Я продавец
-                        </div>
-                      </div>
-                      <div class="user__list-checkbox underlineBorder">
-                        <span>
-                          Принимаю заказы
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_1611_73135)">
-                              <g clip-path="url(#clip1_1611_73135)">
-                                <mask
-                                  id="mask0_1611_73135"
-                                  style="mask-type: luminance"
-                                  maskUnits="userSpaceOnUse"
-                                  x="0"
-                                  y="0"
-                                  width="16"
-                                  height="16"
-                                >
-                                  <path d="M0 0H16V16H0V0Z" fill="white"></path>
-                                </mask>
-                                <g mask="url(#mask0_1611_73135)">
-                                  <path
-                                    d="M7.96 11.286V11.264M15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1C6.14348 1 4.36301 1.7375 3.05025 3.05025C1.7375 4.36301 1 6.14348 1 8C1 9.85652 1.7375 11.637 3.05025 12.9497C4.36301 14.2625 6.14348 15 8 15C9.85652 15 11.637 14.2625 12.9497 12.9497C14.2625 11.637 15 9.85652 15 8Z"
-                                    stroke="#8A8A8A"
-                                    stroke-width="1.4"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  ></path>
-                                  <path
-                                    d="M7.95698 9.35982C7.94798 8.66782 8.57798 8.37382 9.04698 8.10682C9.61798 7.79182 10.005 7.28982 10.005 6.59482C10.005 5.56482 9.17198 4.73682 8.14798 4.73682C7.11798 4.73682 6.28998 5.56382 6.28998 6.59482"
-                                    stroke="#8A8A8A"
-                                    stroke-width="1.4"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  ></path>
-                                </g>
-                              </g>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_1611_73135">
-                                <rect
-                                  width="16"
-                                  height="16"
-                                  fill="white"
-                                ></rect>
-                              </clipPath>
-                              <clipPath id="clip1_1611_73135">
-                                <rect
-                                  width="16"
-                                  height="16"
-                                  fill="white"
-                                ></rect>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <label class="switch">
-                          <input type="checkbox" checked="" />
-                          <span class="slider"></span>
-                        </label>
-                      </div>
-                      <ul class="user__list-items">
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Профиль </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Настройки </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link"> Помощь </a>
-                        </li>
-                        <li class="user__list-item">
-                          <a href="#" class="user__list-link">
-                            Язык интерфейса
-                            <span
-                              >RU <img src="../img/userMenu/ru.png" alt=""
-                            /></span>
-                          </a>
-                        </li>
-                        <li class="user__list-item underlineBorder">
-                          <a href="#" class="user__list-link upEmp">
-                            <img src="../img/userMenu/employedUp.svg" alt="" />
-                            Увеличьте доход на 47%
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="exit">Выйти</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="registration-and-login-block mobileRegBtn">
-            <input
-              type="button"
-              value="Зарегистрироваться"
-              class="headerReg register-button modal-btn"
-              data-modalname="modal__reg"
-            />
-            <input
-              type="button"
-              value="Войти"
-              class="loginBtn login-button modal-btn"
-              data-modalname="modal__login"
-            />
-          </div>
-          <input
-            type="text"
-            placeholder="Искать услуги..."
-            class="search-service-input"
-            name="search-service"
-          />
-          <a href="#" class="mobile-main-action">
-            <img
-              src="../img/new-mobile-menu/home.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-            На главную
-          </a>
-          <button
-            class="mobile-main-action"
-            type="button"
-            data-target="catalog"
-          >
-            <img
-              src="../img/new-mobile-menu/windows-icon.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-            Каталог услуг
-          </button>
-          <a href="#" class="mobile-main-action">
-            <img
-              src="../img/new-mobile-menu/currency-coin-dollar.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-            Начать зарабатывать
-          </a>
-          <a href="#" class="mobile-main-action">
-            <img
-              src="../img/new-mobile-menu/favourite.svg"
-              alt="menu-icon"
-              class="menu-icon"
-            />
-            Полезное
-          </a>
-          <a href="#" class="mobile-main-action mobile-main-action--last">
-            <img
-              src="../img/new-mobile-menu/information-circle.svg"
-              alt="information-circle"
-              class="information-cirlce-icon"
-            />
-            Политика и правила
-          </a>
         </div>
-
-        <div class="mobile-menu-screen" data-screen="catalog"></div>
-        <!-- сюда JS сам подставит категории / разделы / ссылки -->
       </div>
-    </aside>
 
+      <div class="nav-part2-container">
+        <div class="nav-part2">
+          <ul class="nav-part2__list">
+            <li class="nav-menu-item" data-menu="design">
+              <a href="#">Дизайн &amp; Графика</a>
+            </li>
+
+            <li class="nav-menu-item" data-menu="dev">
+              <a href="#">Разработка и IT</a>
+            </li>
+
+            <li class="nav-menu-item" data-menu="texts">
+              <a href="#">Тексты и переводы</a>
+            </li>
+
+            <li class="nav-menu-item" data-menu="seo">
+              <a href="#">SEO и трафик</a>
+            </li>
+
+            <li class="nav-menu-item" data-menu="audio">
+              <a href="#">Аудио, видео, съемка</a>
+            </li>
+
+            <li class="nav-menu-item" data-menu="business">
+              <a href="#">Бизнес и жизнь</a>
+            </li>
+
+            <li class="nav-menu-item" data-menu="crypto">
+              <a href="#">Блокчейн и крипто</a>
+            </li>
+
+            <li class="nav-menu-item" data-menu="ai">
+              <a href="#">Нейросети</a>
+            </li>
+          </ul>
+
+          <div class="mega-menu__wrapper">
+            <div class="mega-menu">
+              <div class="mega-menu-column mega-menu-column--categories">
+                <div class="mega-menu_line" data-menu="design">
+                  <div class="mega-menu__img">
+                    <img src="../img/userMenu/logo.png" alt="icon" />
+                  </div>
+
+                  <div class="mega-menu__desc">
+                    <div class="mega-menu__count">6498 товаров</div>
+                    <div class="mega-menu__title">Дизайн и графика</div>
+                  </div>
+
+                  <div class="mega-menu__icon">
+                    <img src="../img/userMenu/arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="mega-menu_line" data-menu="dev">
+                  <div class="mega-menu__img">
+                    <img src="../img/userMenu/logo2.png" alt="icon" />
+                  </div>
+
+                  <div class="mega-menu__desc">
+                    <div class="mega-menu__count">33562 товара</div>
+                    <div class="mega-menu__title">Разработка и IT</div>
+                  </div>
+
+                  <div class="mega-menu__icon">
+                    <img src="../img/userMenu/arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="mega-menu_line" data-menu="texts">
+                  <div class="mega-menu__img">
+                    <img src="../img/userMenu/logo3.png" alt="icon" />
+                  </div>
+
+                  <div class="mega-menu__desc">
+                    <div class="mega-menu__count">257 товаров</div>
+                    <div class="mega-menu__title">Тексты и переводы</div>
+                  </div>
+
+                  <div class="mega-menu__icon">
+                    <img src="../img/userMenu/arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="mega-menu_line" data-menu="seo">
+                  <div class="mega-menu__img">
+                    <img src="../img/userMenu/logo4.png" alt="icon" />
+                  </div>
+
+                  <div class="mega-menu__desc">
+                    <div class="mega-menu__count">114 товаров</div>
+                    <div class="mega-menu__title">Трафик, SMM и SEO</div>
+                  </div>
+
+                  <div class="mega-menu__icon">
+                    <img src="../img/userMenu/arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="mega-menu_line" data-menu="audio">
+                  <div class="mega-menu__img">
+                    <img src="../img/userMenu/logo5.png" alt="icon" />
+                  </div>
+
+                  <div class="mega-menu__desc">
+                    <div class="mega-menu__count">221 товар</div>
+                    <div class="mega-menu__title">Аудио &amp; Видео</div>
+                  </div>
+
+                  <div class="mega-menu__icon">
+                    <img src="../img/userMenu/arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="mega-menu_line" data-menu="business">
+                  <div class="mega-menu__img">
+                    <img src="../img/userMenu/logo6.png" alt="icon" />
+                  </div>
+
+                  <div class="mega-menu__desc">
+                    <div class="mega-menu__count">893 товара</div>
+                    <div class="mega-menu__title">Бизнес и жизнь</div>
+                  </div>
+
+                  <div class="mega-menu__icon">
+                    <img src="../img/userMenu/arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="mega-menu_line" data-menu="crypto">
+                  <div class="mega-menu__img">
+                    <img src="../img/userMenu/logo7.png" alt="icon" />
+                  </div>
+
+                  <div class="mega-menu__desc">
+                    <div class="mega-menu__count">3310 товаров</div>
+                    <div class="mega-menu__title">Блокчейн и крипто</div>
+                  </div>
+
+                  <div class="mega-menu__icon">
+                    <img src="../img/userMenu/arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="mega-menu_line" data-menu="ai">
+                  <div class="mega-menu__img">
+                    <img src="../img/userMenu/logo8.png" alt="icon" />
+                  </div>
+
+                  <div class="mega-menu__desc">
+                    <div class="mega-menu__count">3310 товаров</div>
+                    <div class="mega-menu__title">Нейросети</div>
+                  </div>
+
+                  <div class="mega-menu__icon">
+                    <img src="../img/userMenu/arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="mega-menu_line" data-menu="custom-task">
+                  <div class="mega-menu__img">
+                    <img src="../img/userMenu/add.png" alt="icon" />
+                  </div>
+
+                  <div class="mega-menu__desc">
+                    <div class="mega-menu__title">Создать свою задачу</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__box" data-menu-content="design">
+                <h2 class="mega-menu__title-line">Дизайн и графика</h2>
+
+                <div class="mega-menu__wrap">
+                  <div class="mega-menu-column">
+                    <h4>Логотип и брендинг</h4>
+                    <a href="#">
+                      Логотипы
+                      <img src="../img/icons/fire.svg" alt="fire icon" class="fire-icon" />
+                    </a>
+                    <a href="#">Фирменный стиль</a>
+                    <a href="#">Визитки</a>
+                    <a href="#">Брендирование и сувенирка</a>
+
+                    <h4>Презентации и инфографика</h4>
+                    <a href="#">Презентации</a>
+                    <a href="#">Инфографика</a>
+                    <a href="#">Карта и схема</a>
+
+                    <h4>Арт и иллюстрации</h4>
+                    <a href="#">Портрет, шарж, карикатура</a>
+                    <a href="#">Иллюстрации и рисунки</a>
+                    <a href="#">Дизайн игр</a>
+                    <a href="#">Тату, принты</a>
+                    <a href="#">Стикеры</a>
+                    <a href="#">NFT арт</a>
+                    <a href="#">Готовые шаблоны и рисунки</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Веб и мобильный дизайн</h4>
+                    <a href="#">
+                      Веб-дизайн
+                      <img src="../img/icons/fire.svg" alt="fire icon" class="fire-icon" />
+                    </a>
+                    <a href="#">Мобильный дизайн</a>
+                    <a href="#">Email-дизайн</a>
+                    <a href="#">
+                      Баннеры и иконки
+                      <img src="../img/icons/fire.svg" alt="fire icon" class="fire-icon" />
+                    </a>
+                    <a href="#">Юзабилити-аудит</a>
+
+                    <h4>Маркетплейсы и соцсети</h4>
+                    <a href="#">
+                      Дизайн в соцсетях
+                      <img src="../img/icons/fire.svg" alt="fire icon" class="fire-icon" />
+                    </a>
+                    <a href="#">Дизайн для маркетплейсов</a>
+
+                    <h4>Интерьер и экстерьер</h4>
+                    <a href="#">Интерьер</a>
+                    <a href="#">Дизайн домов и сооружений</a>
+                    <a href="#">Ландшафтный дизайн</a>
+                    <a href="#">Дизайн мебели</a>
+
+                    <h4>Обработка и редактирование</h4>
+                    <a href="#">Отрисовка в векторе</a>
+                    <a href="#">
+                      Фотомонтаж и обработка
+                      <img src="../img/icons/fire.svg" alt="fire icon" class="fire-icon" />
+                    </a>
+                    <a href="#">
+                      3D-графика
+                      <img src="../img/icons/fire.svg" alt="fire icon" class="fire-icon" />
+                    </a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Полиграфия</h4>
+                    <a href="#">Брошюра и буклет</a>
+                    <a href="#">Листовки и флаер</a>
+                    <a href="#">Плакат и афиша</a>
+                    <a href="#">Календарь и открытка</a>
+                    <a href="#">Каталог, меню, книга</a>
+                    <a href="#">Грамота и сертификат</a>
+
+                    <h4>Промышленный дизайн</h4>
+                    <a href="#">Электроника и устройства</a>
+                    <a href="#">Предметы и аксессуары</a>
+                    <a href="#">Упаковка и этикетка</a>
+
+                    <h4>Наружная реклама</h4>
+                    <a href="#">Билборды и стенды</a>
+                    <a href="#">Витрины и вывески</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__box" data-menu-content="dev">
+                <h2 class="mega-menu__title-line">Разработка и IT</h2>
+
+                <div class="mega-menu__wrap">
+                  <div class="mega-menu-column">
+                    <h4>Доработка и настройка сайта</h4>
+                    <a href="#">Дорабокта сайта </a>
+                    <a href="#">Интернет-магазин
+                      <span class="newService pulseAnime">Новый</span></a>
+                    <a href="#">Landing page</a>
+                    <a href="#">Доработка сайта</a>
+                    <a href="#">Верстка</a>
+
+                    <h4>CMS и конструкторы</h4>
+                    <a href="#">WordPress</a>
+                    <a href="#">Tilda</a>
+                    <a href="#">Bitrix</a>
+                    <a href="#">Webflow</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Программирование</h4>
+                    <a href="#">Frontend</a>
+                    <a href="#">Backend</a>
+                    <a href="#">JavaScript</a>
+                    <a href="#">PHP</a>
+                    <a href="#">Python</a>
+
+                    <h4>Интеграции</h4>
+                    <a href="#">API</a>
+                    <a href="#">CRM</a>
+                    <a href="#">Платежные системы</a>
+                    <a href="#">Боты</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Мобильные приложения</h4>
+                    <a href="#">iOS</a>
+                    <a href="#">Android</a>
+                    <a href="#">Flutter</a>
+                    <a href="#">React Native</a>
+
+                    <h4>Поддержка и администрирование</h4>
+                    <a href="#">Исправление ошибок</a>
+                    <a href="#">Настройка сервера</a>
+                    <a href="#">Техническая поддержка</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__box" data-menu-content="texts">
+                <h2 class="mega-menu__title-line">Тексты и переводы</h2>
+
+                <div class="mega-menu__wrap">
+                  <div class="mega-menu-column">
+                    <h4>Копирайтинг</h4>
+                    <a href="#">Статьи</a>
+                    <a href="#">SEO-тексты</a>
+                    <a href="#">Продающие тексты</a>
+                    <a href="#">Описание товаров</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Редактура</h4>
+                    <a href="#">Корректура</a>
+                    <a href="#">Редактирование</a>
+                    <a href="#">Рерайтинг</a>
+                    <a href="#">Нейминг</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Переводы</h4>
+                    <a href="#">Английский</a>
+                    <a href="#">Немецкий</a>
+                    <a href="#">Французский</a>
+                    <a href="#">Другие языки</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__box" data-menu-content="seo">
+                <h2 class="mega-menu__title-line">Трафик, SMM и SEO</h2>
+
+                <div class="mega-menu__wrap">
+                  <div class="mega-menu-column">
+                    <h4>SEO</h4>
+                    <a href="#">SEO-аудит</a>
+                    <a href="#">Семантическое ядро</a>
+                    <a href="#">Внутренняя оптимизация</a>
+                    <a href="#">Ссылочное продвижение</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>SMM</h4>
+                    <a href="#">Ведение соцсетей</a>
+                    <a href="#">Контент-план</a>
+                    <a href="#">Оформление профиля</a>
+                    <a href="#">Продвижение</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Реклама</h4>
+                    <a href="#">Контекстная реклама</a>
+                    <a href="#">Таргетированная реклама</a>
+                    <a href="#">Настройка аналитики</a>
+                    <a href="#">Email-маркетинг</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__box" data-menu-content="audio">
+                <h2 class="mega-menu__title-line">Аудио &amp; Видео</h2>
+
+                <div class="mega-menu__wrap">
+                  <div class="mega-menu-column">
+                    <h4>Видео</h4>
+                    <a href="#">Монтаж видео</a>
+                    <a href="#">Анимация</a>
+                    <a href="#">Интро и заставки</a>
+                    <a href="#">Цветокоррекция</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Аудио</h4>
+                    <a href="#">Озвучка</a>
+                    <a href="#">Сведение звука</a>
+                    <a href="#">Музыка</a>
+                    <a href="#">Подкасты</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Съемка</h4>
+                    <a href="#">Видеосъемка</a>
+                    <a href="#">Фотосъемка</a>
+                    <a href="#">Обработка фото</a>
+                    <a href="#">Ретушь</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__box" data-menu-content="business">
+                <h2 class="mega-menu__title-line">Бизнес и жизнь</h2>
+
+                <div class="mega-menu__wrap">
+                  <div class="mega-menu-column">
+                    <h4>Бизнес</h4>
+                    <a href="#">Бизнес-план</a>
+                    <a href="#">Финансовая модель</a>
+                    <a href="#">Консультации</a>
+                    <a href="#">Документы</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Обучение</h4>
+                    <a href="#">Репетиторы</a>
+                    <a href="#">Курсовые и дипломы</a>
+                    <a href="#">Презентации</a>
+                    <a href="#">Помощь с учебой</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Личное</h4>
+                    <a href="#">Психология</a>
+                    <a href="#">Планирование</a>
+                    <a href="#">Карьера</a>
+                    <a href="#">Разное</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__box" data-menu-content="crypto">
+                <h2 class="mega-menu__title-line">Блокчейн и крипто</h2>
+
+                <div class="mega-menu__wrap">
+                  <div class="mega-menu-column">
+                    <h4>Blockchain</h4>
+                    <a href="#">Smart contracts</a>
+                    <a href="#">Web3</a>
+                    <a href="#">NFT</a>
+                    <a href="#">DeFi</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Крипто-проекты</h4>
+                    <a href="#">Токеномика</a>
+                    <a href="#">Whitepaper</a>
+                    <a href="#">Аудит проекта</a>
+                    <a href="#">Маркетинг</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Разработка</h4>
+                    <a href="#">Solidity</a>
+                    <a href="#">DApp</a>
+                    <a href="#">Wallet integration</a>
+                    <a href="#">Crypto API</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__box" data-menu-content="ai">
+                <h2 class="mega-menu__title-line">Нейросети</h2>
+
+                <div class="mega-menu__wrap">
+                  <div class="mega-menu-column">
+                    <h4>Генерация контента</h4>
+                    <a href="#">Генерация изображений</a>
+                    <a href="#">Генерация текстов</a>
+                    <a href="#">Промпты</a>
+                    <a href="#">AI-видео</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Автоматизация</h4>
+                    <a href="#">ChatGPT</a>
+                    <a href="#">AI-боты</a>
+                    <a href="#">Автоматизация процессов</a>
+                    <a href="#">Интеграции AI</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>AI для бизнеса</h4>
+                    <a href="#">AI-консультации</a>
+                    <a href="#">Анализ данных</a>
+                    <a href="#">AI-презентации</a>
+                    <a href="#">AI-дизайн</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-menu__box" data-menu-content="custom-task">
+                <h2 class="mega-menu__title-line">Создать свою задачу</h2>
+
+                <div class="mega-menu__wrap">
+                  <div class="mega-menu-column">
+                    <h4>Не нашли нужную услугу?</h4>
+                    <a href="#">Опишите задачу</a>
+                    <a href="#">Укажите бюджет</a>
+                    <a href="#">Получите предложения</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Популярные форматы</h4>
+                    <a href="#">Разовая задача</a>
+                    <a href="#">Долгосрочный проект</a>
+                    <a href="#">Консультация</a>
+                  </div>
+
+                  <div class="mega-menu-column">
+                    <h4>Помощь</h4>
+                    <a href="#">Как создать задачу</a>
+                    <a href="#">Как выбрать исполнителя</a>
+                    <a href="#">Безопасная сделка</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <header class="phone-header">
+    <div class="mobile-topbar">
+      <a href="#" class="mobile-topbar__logo">
+        <img src="../img/logo.svg" alt="Fiwork" />
+      </a>
+
+      <button class="mobile-burger-btn" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+
+  <aside class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__header">
+      <a href="#" class="mobile-drawer__logo">
+        <img src="../img/logo.svg" alt="Fiwork" />
+      </a>
+
+      <button class="mobile-drawer__close" type="button" aria-label="Закрыть меню">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-drawer__body">
+      <div class="mobile-menu-screen" data-screen="root">
+        <div class="userBlockMobile regMenuMobile">
+          <ul class="header__user-menu userMenuMobileUl">
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <div class="header__user-menu--prize">
+                  Призы
+                  <img src="../img/userMenu/coin.svg" alt="" />
+                </div>
+
+                <span> Колесо призов </span>
+              </a>
+            </li>
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="header__user-path"
+                    d="M5.41101 3.933L7.17101 12.21C7.22618 12.4695 7.38218 12.6965 7.60469 12.841C7.71486 12.9125 7.83805 12.9617 7.96722 12.9856C8.09639 13.0096 8.22901 13.0078 8.35751 12.9805C8.48601 12.9532 8.60787 12.9008 8.71614 12.8264C8.8244 12.752 8.91695 12.657 8.9885 12.5468C9.06004 12.4366 9.10919 12.3135 9.13313 12.1843C9.15707 12.0551 9.15533 11.9225 9.12801 11.794L7.47001 4H13.925L14.988 9H17.033L15.814 3.267C15.718 2.815 15.67 2.59 15.55 2.421C15.4443 2.27193 15.2997 2.15468 15.132 2.082C14.943 2 14.713 2 14.25 2H6.97601C6.30001 2 5.96101 2 5.72601 2.14C5.51956 2.26188 5.36376 2.45387 5.28701 2.681C5.20001 2.941 5.27001 3.271 5.41101 3.933Z"
+                    fill="#8C8A87" />
+                  <path class="header__user-path"
+                    d="M5.9 12.48L5.371 10H1L2.8 18.466C2.993 19.369 3.09 19.821 3.33 20.159C3.54134 20.4566 3.8301 20.6908 4.165 20.836C4.545 21 5.007 21 5.931 21H17.681C18.568 21 19.011 21 19.381 20.846C19.7073 20.7096 19.9917 20.4891 20.205 20.207C20.447 19.887 20.558 19.459 20.78 18.6L23 10H10.075L10.399 11.523C10.5259 12.1197 10.4106 12.7424 10.0783 13.2541C9.74612 13.7658 9.22424 14.1246 8.6275 14.2515C8.03076 14.3784 7.40805 14.2631 6.89636 13.9308C6.38467 13.5986 6.02691 13.0767 5.9 12.48Z"
+                    fill="#8C8A87" />
+                </svg>
+
+                <span> Заказы </span>
+              </a>
+            </li>
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="header__user-path"
+                    d="M4 11H10C10.2652 11 10.5196 10.8946 10.7071 10.7071C10.8946 10.5196 11 10.2652 11 10V4C11 3.73478 10.8946 3.48043 10.7071 3.29289C10.5196 3.10536 10.2652 3 10 3H4C3.73478 3 3.48043 3.10536 3.29289 3.29289C3.10536 3.48043 3 3.73478 3 4V10C3 10.2652 3.10536 10.5196 3.29289 10.7071C3.48043 10.8946 3.73478 11 4 11ZM14 11H20C20.2652 11 20.5196 10.8946 20.7071 10.7071C20.8946 10.5196 21 10.2652 21 10V4C21 3.73478 20.8946 3.48043 20.7071 3.29289C20.5196 3.10536 20.2652 3 20 3H14C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4V10C13 10.2652 13.1054 10.5196 13.2929 10.7071C13.4804 10.8946 13.7348 11 14 11ZM4 21H10C10.2652 21 10.5196 20.8946 10.7071 20.7071C10.8946 20.5196 11 20.2652 11 20V14C11 13.7348 10.8946 13.4804 10.7071 13.2929C10.5196 13.1054 10.2652 13 10 13H4C3.73478 13 3.48043 13.1054 3.29289 13.2929C3.10536 13.4804 3 13.7348 3 14V20C3 20.2652 3.10536 20.5196 3.29289 20.7071C3.48043 20.8946 3.73478 21 4 21ZM17 21C19.206 21 21 19.206 21 17C21 14.794 19.206 13 17 13C14.794 13 13 14.794 13 17C13 19.206 14.794 21 17 21Z"
+                    fill="#8C8A87" />
+                </svg>
+
+                <span> Проекты </span>
+              </a>
+            </li>
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="header__user-path"
+                    d="M2.93289 5.21495C5.23589 2.99095 8.80489 3.71795 11.9999 6.49995C15.1949 3.71795 18.7639 3.08495 21.0669 5.30995C23.6489 7.80295 22.5839 12.6299 19.1309 16.2049C16.9309 18.4829 14.2929 20.3249 11.9999 21.0949V21C9.70689 20.2299 7.06889 18.3879 4.86889 16.11C1.41589 12.535 0.349893 7.70895 2.93289 5.21495Z"
+                    fill="#8C8A87" />
+                </svg>
+
+                <span> Избранное </span>
+              </a>
+            </li>
+
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <div class="message-count newMessage">
+                  <svg class="header__user-icon" width="24" height="24" viewBox="0 0 128 128"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chat icon">
+                    <path class="header__user-path"
+                      d="M64 20C37.5 20 16 37.1 16 58.2c0 14.3 9.9 26.8 24.5 33.3v18.5l19.4-13.9c1.4.1 2.7.2 4.1.2 26.5 0 48-17.1 48-38.2S90.5 20 64 20z"
+                      fill="#8e8e8e" />
+                    <rect class="messageLine" x="43" y="48" width="42" height="6" fill="#ffffff" />
+                    <rect class="messageLine" x="43" y="64" width="28" height="6" fill="#ffffff" />
+                  </svg>
+                  <span class="count">1</span>
+                </div>
+                <span> Чаты </span>
+              </a>
+            </li>
+          </ul>
+          <div class="mobile__menu-userBox mobilMenuUserBox">
+            <div class="header__user-balance">
+              <div class="header__user-summ"><span>143 000</span> ₽</div>
+              <a href="#" class="header__user-replenish"> Пополнить </a>
+            </div>
+            <div class="header__user-logo">
+              <div class="header__user-img">
+                <img src="../img/userMenu/userlogo.png" alt="logo" />
+              </div>
+              <svg class="header__user-icon" class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1606_63149)">
+                  <path
+                    d="M7.92113 4.00004C7.67651 3.99788 7.441 4.09272 7.26613 4.26379C7.13838 4.39121 7.05176 4.55399 7.01745 4.73113C6.98313 4.90827 7.0027 5.09163 7.07363 5.25754C7.12191 5.36729 7.1916 5.46631 7.27863 5.54879L11.7961 10.0113L7.27863 14.4738C7.11325 14.643 7.0216 14.8708 7.02371 15.1074C7.02582 15.3439 7.12152 15.5701 7.28988 15.7363C7.45966 15.9042 7.6882 15.9993 7.92697 16.0014C8.16574 16.0035 8.39593 15.9124 8.56863 15.7475L13.7324 10.6475C13.8165 10.5642 13.8834 10.465 13.929 10.3557C13.9746 10.2464 13.998 10.1291 13.998 10.0107C13.998 9.89222 13.9746 9.77495 13.929 9.66563C13.8834 9.55632 13.8165 9.45712 13.7324 9.37379L8.56988 4.27504C8.48518 4.18839 8.38409 4.11946 8.2725 4.07225C8.16091 4.02503 8.0423 4.00049 7.92113 4.00004Z"
+                    fill="#000" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1606_63149">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="user__list user__list--mobile">
+                <div class="user__list-hide">
+                  <div class="user__list-box">
+                    <div class="user__list-roles">
+                      <div class="user__list-role user__list-buyer active">
+                        Я покупатель
+                      </div>
+                      <div class="user__list-role user__list-seller">
+                        Я продавец
+                      </div>
+                    </div>
+                    <div class="user__list-checkbox underlineBorder">
+                      <span>
+                        Принимаю заказы
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1611_73135)">
+                            <g clip-path="url(#clip1_1611_73135)">
+                              <mask id="mask0_1611_73135" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0"
+                                y="0" width="16" height="16">
+                                <path d="M0 0H16V16H0V0Z" fill="white" />
+                              </mask>
+                              <g mask="url(#mask0_1611_73135)">
+                                <path
+                                  d="M7.96 11.286V11.264M15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1C6.14348 1 4.36301 1.7375 3.05025 3.05025C1.7375 4.36301 1 6.14348 1 8C1 9.85652 1.7375 11.637 3.05025 12.9497C4.36301 14.2625 6.14348 15 8 15C9.85652 15 11.637 14.2625 12.9497 12.9497C14.2625 11.637 15 9.85652 15 8Z"
+                                  stroke="#8A8A8A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M7.95698 9.35982C7.94798 8.66782 8.57798 8.37382 9.04698 8.10682C9.61798 7.79182 10.005 7.28982 10.005 6.59482C10.005 5.56482 9.17198 4.73682 8.14798 4.73682C7.11798 4.73682 6.28998 5.56382 6.28998 6.59482"
+                                  stroke="#8A8A8A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                              </g>
+                            </g>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1611_73135">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                            <clipPath id="clip1_1611_73135">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                    <ul class="user__list-items">
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Профиль </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Настройки </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Помощь </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link">
+                          Язык интерфейса
+                          <span>RU <img src="../img/userMenu/ru.png" alt="" /></span>
+                        </a>
+                      </li>
+                      <li class="user__list-item underlineBorder">
+                        <a href="#" class="user__list-link upEmp">
+                          <img src="../img/userMenu/employedUp.svg" alt="" />
+                          Увеличьте доход на 47%
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="exit">Выйти</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="regBlockMobile regMenuMobile">
+          <ul class="header__user-menu userMenuMobileUl">
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="header__user-path"
+                    d="M4 11H10C10.2652 11 10.5196 10.8946 10.7071 10.7071C10.8946 10.5196 11 10.2652 11 10V4C11 3.73478 10.8946 3.48043 10.7071 3.29289C10.5196 3.10536 10.2652 3 10 3H4C3.73478 3 3.48043 3.10536 3.29289 3.29289C3.10536 3.48043 3 3.73478 3 4V10C3 10.2652 3.10536 10.5196 3.29289 10.7071C3.48043 10.8946 3.73478 11 4 11ZM14 11H20C20.2652 11 20.5196 10.8946 20.7071 10.7071C20.8946 10.5196 21 10.2652 21 10V4C21 3.73478 20.8946 3.48043 20.7071 3.29289C20.5196 3.10536 20.2652 3 20 3H14C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4V10C13 10.2652 13.1054 10.5196 13.2929 10.7071C13.4804 10.8946 13.7348 11 14 11ZM4 21H10C10.2652 21 10.5196 20.8946 10.7071 20.7071C10.8946 20.5196 11 20.2652 11 20V14C11 13.7348 10.8946 13.4804 10.7071 13.2929C10.5196 13.1054 10.2652 13 10 13H4C3.73478 13 3.48043 13.1054 3.29289 13.2929C3.10536 13.4804 3 13.7348 3 14V20C3 20.2652 3.10536 20.5196 3.29289 20.7071C3.48043 20.8946 3.73478 21 4 21ZM17 21C19.206 21 21 19.206 21 17C21 14.794 19.206 13 17 13C14.794 13 13 14.794 13 17C13 19.206 14.794 21 17 21Z"
+                    fill="#8C8A87"></path>
+                </svg>
+
+                <span> Услуги </span>
+              </a>
+            </li>
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="header__user-path"
+                    d="M5.41101 3.933L7.17101 12.21C7.22618 12.4695 7.38218 12.6965 7.60469 12.841C7.71486 12.9125 7.83805 12.9617 7.96722 12.9856C8.09639 13.0096 8.22901 13.0078 8.35751 12.9805C8.48601 12.9532 8.60787 12.9008 8.71614 12.8264C8.8244 12.752 8.91695 12.657 8.9885 12.5468C9.06004 12.4366 9.10919 12.3135 9.13313 12.1843C9.15707 12.0551 9.15533 11.9225 9.12801 11.794L7.47001 4H13.925L14.988 9H17.033L15.814 3.267C15.718 2.815 15.67 2.59 15.55 2.421C15.4443 2.27193 15.2997 2.15468 15.132 2.082C14.943 2 14.713 2 14.25 2H6.97601C6.30001 2 5.96101 2 5.72601 2.14C5.51956 2.26188 5.36376 2.45387 5.28701 2.681C5.20001 2.941 5.27001 3.271 5.41101 3.933Z"
+                    fill="#8C8A87"></path>
+                  <path class="header__user-path"
+                    d="M5.9 12.48L5.371 10H1L2.8 18.466C2.993 19.369 3.09 19.821 3.33 20.159C3.54134 20.4566 3.8301 20.6908 4.165 20.836C4.545 21 5.007 21 5.931 21H17.681C18.568 21 19.011 21 19.381 20.846C19.7073 20.7096 19.9917 20.4891 20.205 20.207C20.447 19.887 20.558 19.459 20.78 18.6L23 10H10.075L10.399 11.523C10.5259 12.1197 10.4106 12.7424 10.0783 13.2541C9.74612 13.7658 9.22424 14.1246 8.6275 14.2515C8.03076 14.3784 7.40805 14.2631 6.89636 13.9308C6.38467 13.5986 6.02691 13.0767 5.9 12.48Z"
+                    fill="#8C8A87"></path>
+                </svg>
+
+                <span> Заказы </span>
+              </a>
+            </li>
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="header__user-path"
+                    d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM13 16.915V18H11V16.92C8.661 16.553 8 14.918 8 14H10C10.011 14.143 10.159 15 12 15C13.38 15 14 14.415 14 14C14 13.676 14 13 12 13C8.52 13 8 11.12 8 10C8 8.712 9.029 7.416 11 7.085V6.012H13V7.121C14.734 7.531 15.4 8.974 15.4 10H14.4L13.4 10.018C13.386 9.638 13.185 9 12 9C10.701 9 10 9.516 10 10C10 10.374 10 11 12 11C15.48 11 16 12.88 16 14C16 15.288 14.971 16.584 13 16.915Z"
+                    fill="#8C8A87"></path>
+                </svg>
+
+                <span> Биржа </span>
+              </a>
+            </li>
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <svg class="header__user-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="header__user-path"
+                    d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM13 16.915V18H11V16.92C8.661 16.553 8 14.918 8 14H10C10.011 14.143 10.159 15 12 15C13.38 15 14 14.415 14 14C14 13.676 14 13 12 13C8.52 13 8 11.12 8 10C8 8.712 9.029 7.416 11 7.085V6.012H13V7.121C14.734 7.531 15.4 8.974 15.4 10H14.4L13.4 10.018C13.386 9.638 13.185 9 12 9C10.701 9 10 9.516 10 10C10 10.374 10 11 12 11C15.48 11 16 12.88 16 14C16 15.288 14.971 16.584 13 16.915Z"
+                    fill="#8C8A87"></path>
+                </svg>
+
+                <span> Портфолио </span>
+              </a>
+            </li>
+            <li class="header__user-menu-item">
+              <a class="header__user-menu-link" href="#">
+                <div class="message-count newMessage">
+                  <svg class="header__user-icon" width="24" height="24" viewBox="0 0 128 128"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chat icon">
+                    <path class="header__user-path"
+                      d="M64 20C37.5 20 16 37.1 16 58.2c0 14.3 9.9 26.8 24.5 33.3v18.5l19.4-13.9c1.4.1 2.7.2 4.1.2 26.5 0 48-17.1 48-38.2S90.5 20 64 20z"
+                      fill="#8e8e8e"></path>
+                    <rect class="messageLine" x="43" y="48" width="42" height="6" fill="#ffffff"></rect>
+                    <rect class="messageLine" x="43" y="64" width="28" height="6" fill="#ffffff"></rect>
+                  </svg>
+                  <span class="count">1</span>
+                </div>
+                <span> Чаты </span>
+              </a>
+            </li>
+          </ul>
+          <div class="mobile__menu-userBox mobilMenuUserBox">
+            <div class="header__user-balance">
+              <div class="header__user-summ"><span>143 000</span> ₽</div>
+              <a href="#" class="header__user-replenish"> Пополнить </a>
+            </div>
+            <div class="header__user-logo">
+              <div class="header__user-img">
+                <img src="../img/userMenu/userlogo.png" alt="logo" />
+              </div>
+              <svg class="header__user-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1606_63149)">
+                  <path
+                    d="M7.92113 4.00004C7.67651 3.99788 7.441 4.09272 7.26613 4.26379C7.13838 4.39121 7.05176 4.55399 7.01745 4.73113C6.98313 4.90827 7.0027 5.09163 7.07363 5.25754C7.12191 5.36729 7.1916 5.46631 7.27863 5.54879L11.7961 10.0113L7.27863 14.4738C7.11325 14.643 7.0216 14.8708 7.02371 15.1074C7.02582 15.3439 7.12152 15.5701 7.28988 15.7363C7.45966 15.9042 7.6882 15.9993 7.92697 16.0014C8.16574 16.0035 8.39593 15.9124 8.56863 15.7475L13.7324 10.6475C13.8165 10.5642 13.8834 10.465 13.929 10.3557C13.9746 10.2464 13.998 10.1291 13.998 10.0107C13.998 9.89222 13.9746 9.77495 13.929 9.66563C13.8834 9.55632 13.8165 9.45712 13.7324 9.37379L8.56988 4.27504C8.48518 4.18839 8.38409 4.11946 8.2725 4.07225C8.16091 4.02503 8.0423 4.00049 7.92113 4.00004Z"
+                    fill="#000"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_1606_63149">
+                    <rect width="20" height="20" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="user__list user__list--mobile">
+                <div class="user__list-hide">
+                  <div class="user__list-box">
+                    <div class="user__list-roles">
+                      <div class="user__list-role user__list-buyer active">
+                        Я покупатель
+                      </div>
+                      <div class="user__list-role user__list-seller">
+                        Я продавец
+                      </div>
+                    </div>
+                    <div class="user__list-checkbox underlineBorder">
+                      <span>
+                        Принимаю заказы
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1611_73135)">
+                            <g clip-path="url(#clip1_1611_73135)">
+                              <mask id="mask0_1611_73135" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0"
+                                y="0" width="16" height="16">
+                                <path d="M0 0H16V16H0V0Z" fill="white"></path>
+                              </mask>
+                              <g mask="url(#mask0_1611_73135)">
+                                <path
+                                  d="M7.96 11.286V11.264M15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1C6.14348 1 4.36301 1.7375 3.05025 3.05025C1.7375 4.36301 1 6.14348 1 8C1 9.85652 1.7375 11.637 3.05025 12.9497C4.36301 14.2625 6.14348 15 8 15C9.85652 15 11.637 14.2625 12.9497 12.9497C14.2625 11.637 15 9.85652 15 8Z"
+                                  stroke="#8A8A8A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                  d="M7.95698 9.35982C7.94798 8.66782 8.57798 8.37382 9.04698 8.10682C9.61798 7.79182 10.005 7.28982 10.005 6.59482C10.005 5.56482 9.17198 4.73682 8.14798 4.73682C7.11798 4.73682 6.28998 5.56382 6.28998 6.59482"
+                                  stroke="#8A8A8A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                              </g>
+                            </g>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1611_73135">
+                              <rect width="16" height="16" fill="white"></rect>
+                            </clipPath>
+                            <clipPath id="clip1_1611_73135">
+                              <rect width="16" height="16" fill="white"></rect>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <label class="switch">
+                        <input type="checkbox" checked="" />
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                    <ul class="user__list-items">
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Профиль </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Настройки </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link"> Помощь </a>
+                      </li>
+                      <li class="user__list-item">
+                        <a href="#" class="user__list-link">
+                          Язык интерфейса
+                          <span>RU <img src="../img/userMenu/ru.png" alt="" /></span>
+                        </a>
+                      </li>
+                      <li class="user__list-item underlineBorder">
+                        <a href="#" class="user__list-link upEmp">
+                          <img src="../img/userMenu/employedUp.svg" alt="" />
+                          Увеличьте доход на 47%
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="exit">Выйти</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="registration-and-login-block mobileRegBtn">
+          <input type="button" value="Зарегистрироваться" class="headerReg register-button modal-btn"
+            data-modalname="modal__reg" />
+          <input type="button" value="Войти" class="loginBtn login-button modal-btn" data-modalname="modal__login" />
+        </div>
+        <input type="text" placeholder="Искать услуги..." class="search-service-input" name="search-service" />
+        <a href="#" class="mobile-main-action">
+          <img src="../img/new-mobile-menu/home.svg" alt="menu-icon" class="menu-icon" />
+          На главную
+        </a>
+        <button class="mobile-main-action" type="button" data-target="catalog">
+          <img src="../img/new-mobile-menu/windows-icon.svg" alt="menu-icon" class="menu-icon" />
+          Каталог услуг
+        </button>
+        <a href="#" class="mobile-main-action">
+          <img src="../img/new-mobile-menu/currency-coin-dollar.svg" alt="menu-icon" class="menu-icon" />
+          Начать зарабатывать
+        </a>
+        <a href="#" class="mobile-main-action">
+          <img src="../img/new-mobile-menu/favourite.svg" alt="menu-icon" class="menu-icon" />
+          Полезное
+        </a>
+        <a href="#" class="mobile-main-action mobile-main-action--last">
+          <img src="../img/new-mobile-menu/information-circle.svg" alt="information-circle"
+            class="information-cirlce-icon" />
+          Политика и правила
+        </a>
+      </div>
+
+      <div class="mobile-menu-screen" data-screen="catalog"></div>
+      <!-- сюда JS сам подставит категории / разделы / ссылки -->
+    </div>
+  </aside>
     <div class="main-block">
       <div class="main-container">
         <div class="freelancer-profile-block">
@@ -4345,5 +4153,7 @@ require_once "../modules/base.php";
       },
     });
   </script>
-  <script src="../js/new.js"></script>
+  <!-- <script src="../js/new.js"></script> -->
+  <script src="https://alex-project1.github.io/access/new.js"></script>
+
 </html>
