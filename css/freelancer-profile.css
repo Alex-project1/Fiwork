@@ -86,6 +86,8 @@ input:valid {
     display: grid;
     grid-template-columns: 340px 1fr;
     gap: 60px;
+    max-width: 1240px;
+
 }
 
 .freelancer-reviews-container{
