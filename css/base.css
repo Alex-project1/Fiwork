@@ -998,11 +998,11 @@ header {
 
 .mega-menu__wrapper {
   position: absolute;
-  left: 0;
+  left: -40px;
+  width: 1calc(100% +80px);
   top: 100%;
   z-index: 1000;
 
-  width: 100%;
   padding-top: 16px;
 
   opacity: 0;
@@ -4526,7 +4526,7 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 100%;
   z-index: 50;
 
-  width: 100%;
+
 
   opacity: 0;
   visibility: hidden;
@@ -4619,6 +4619,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
   width: 100%;
   height: 18px;
+  
 }
 
 /* =========================
@@ -4650,7 +4651,7 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 100%;
   z-index: 5502;
 
-  width: 100%;
+ 
   padding-top: 16px;
 
   opacity: 0;
@@ -4662,6 +4663,9 @@ input[type="number"]::-webkit-outer-spin-button {
     opacity 0.2s ease,
     visibility 0.2s ease,
     transform 0.2s ease;
+
+     left: -40px;
+  width: calc(100% + 80px);
 }
 
 .mega-menu__wrapper.is-open {
@@ -6283,6 +6287,7 @@ font-weight: 400;
 /* NDA inner adaptive end */
 .mega-menu__wrapper {
   pointer-events: none !important;
+
 }
 
 .mega-menu__wrapper.is-open {
