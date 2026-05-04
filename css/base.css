@@ -5305,7 +5305,7 @@ max-width: 300px;
 
 .ndaModal__box {
   padding: 12px 24px;
-  max-height: calc(100dvh - 143px);
+ 
  
 }
 
@@ -5396,6 +5396,7 @@ max-width: 300px;
   padding: 5px 7px 5px 18px;
   position: relative;
   animation: softPulse 2.4s ease-in-out infinite;
+  margin-bottom: 10px;
 
 }
 .ndaModal__item--btn.borderBtn.accept {
@@ -5658,6 +5659,7 @@ font-weight: 400;
 }
 .ndaModal__btn-info--acceptBox{
   justify-content: space-between;
+ margin-bottom: 10px;
 }
 .ndaModal__btn-info--accept a {
   position: relative;
@@ -5814,6 +5816,460 @@ font-weight: 400;
   color: #6B7280;
   font-weight: 400;
 }
+@media (max-height:900px){
+  .ndaModal__box {
+    max-height: calc(100dvh - 143px);
+    overflow-y: scroll;
+   
+  }
+}
+@media (max-width:750px){
+  .ndaModal__btn-info--btn-box {
+    flex-direction: column;
+  }
+}
 /* чекбокс соглашения конец */
 
 /*NDA modals end */
+/* NDA inner adaptive start */
+
+/* Базовая защита картинок внутри NDA */
+.ndaModal img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ndaModal__item-user--logo,
+.ndaModal__item-user--logo img {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.ndaModal__item-user--img {
+  flex: 0 0 auto;
+  width: 34px;
+  min-width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ndaModal__item-user--img img {
+  width: 34px;
+  max-height: 42px;
+  object-fit: contain;
+}
+
+.ndaModal__item-line--img {
+  flex: 0 0 auto;
+  width: 22px;
+  min-width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ndaModal__item-line--img img,
+.ndaModalBtn-img,
+.ndaModal__btn-info img {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  object-fit: contain;
+}
+
+/* Чтобы длинные тексты не ломали строку */
+.ndaModal__item-user,
+.ndaModal__item-user--info,
+.ndaModal__item-line--info,
+.agree__info,
+.ndaModal__btn-info--accept {
+  min-width: 0;
+}
+
+.ndaModal__item-user--name,
+.ndaModal__item-user--job,
+.ndaModal__item-line--title,
+.ndaModal__item-line--text,
+.agree__title,
+.agree__text {
+  overflow-wrap: anywhere;
+}
+
+/* Скролл только внутреннего контента */
+.ndaModal__box {
+  max-height: calc(100dvh - 145px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.ndaModal__box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ndaModal__box::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 999px;
+}
+
+.ndaModal__box::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+  .ndaModa__title {
+    padding: 16px 48px 12px 18px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .ndaModal__box {
+    padding: 12px 18px;
+    max-height: calc(100dvh - 128px);
+  }
+
+  .ndaModal__subTitle {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .ndaModal__item-title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .ndaModal__item-line,
+  .ndaModal__doc-ready {
+    padding: 12px;
+  }
+
+  .ndaModal__doc-warning {
+    padding: 12px;
+    line-height: 18px;
+    align-items: flex-start;
+  }
+
+  .ndaModal__item-user {
+    gap: 12px;
+  }
+
+  .ndaModal__item-user--name {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .ndaModal__item-user--job {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .ndaModal__item-line--title {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .ndaModal__item-line--text {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .messageTextarea {
+    height: 120px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .ndaModal__btn-info--btn-box {
+    gap: 12px;
+  }
+
+  .ndaModal__btn-info {
+    line-height: 17px;
+  }
+}
+
+/* Мобильные */
+@media (max-width: 560px) {
+  .ndaModa__title {
+    padding: 15px 44px 10px 14px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .ndaModal__box {
+    padding: 10px 14px;
+    max-height: calc(100dvh - 110px);
+  }
+
+  .ndaModal__item {
+    margin-bottom: 14px;
+  }
+
+  .ndaModal__item-title {
+    flex-wrap: wrap;
+    gap: 4px 7px;
+  }
+
+  .ndaModal__item-title span {
+    width: 100%;
+    font-size: 11px;
+  }
+
+  .ndaModal__item-line {
+    gap: 12px;
+  }
+
+  /* Верхние карточки: юзер/документ + кнопка */
+  .ndaModal__item-box > .ndaModal__item-line:not(.df) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ndaModal__item-box > .ndaModal__item-line:not(.df) .ndaModal__item-user {
+    width: 100%;
+  }
+
+  .ndaModal__item-box > .ndaModal__item-line:not(.df) .ndaModal__item--btn {
+    align-self: flex-start;
+  }
+
+  .ndaModal__item-box > .ndaModal__item-line:not(.df) .changeDoc {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ndaModal__doc-ready,
+  .ndaModal__doc-warning {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .ndaModal__doc-ready img,
+  .ndaModal__doc-warning img {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+  }
+
+  /* Настройки */
+  .ndaModal__item-line.df {
+    gap: 10px;
+  }
+
+  .ndaModal__item-line.df .ndaModal__item-line--info {
+    flex: 1;
+  }
+
+  .ndaModal__item-line .switch {
+    margin-left: auto;
+  }
+
+  .custom-select {
+    width: 100%;
+    max-width: 140px;
+    margin-left: auto;
+  }
+
+  .custom-select select {
+    width: 100%;
+  }
+
+  /* Нижний блок с предупреждением и кнопкой */
+  .ndaModal__btn-info--btn-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ndaModal__btn-info {
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ndaModal__btn-btn,
+  .ndaModal__btn-btn--accept {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .ndaModal__create {
+    padding: 10px 14px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  /* Чекбокс принятия */
+  .agree {
+    gap: 10px;
+  }
+
+  .agree__custom {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+
+  .agree__title {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .agree__text {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+
+/* Узкие телефоны */
+@media (max-width: 420px) {
+  .ndaModa__title {
+    padding: 14px 40px 10px 12px;
+    font-size: 17px;
+    line-height: 23px;
+  }
+
+  .ndaModal__box {
+    padding: 10px 12px;
+    max-height: calc(100dvh - 98px);
+  }
+
+  .ndaModal__subTitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .ndaModal__item-title {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .ndaModal__item-box {
+    border-radius: 8px;
+  }
+
+  .ndaModal__item-line,
+  .ndaModal__doc-ready,
+  .ndaModal__doc-warning {
+    padding: 10px;
+  }
+
+  .ndaModal__item-user--logo,
+  .ndaModal__item-user--logo img {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+
+  .ndaModal__item-user--img {
+    width: 30px;
+    min-width: 30px;
+  }
+
+  .ndaModal__item-user--img img {
+    width: 30px;
+    max-height: 38px;
+  }
+
+  .ndaModal__item-user--name {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .ndaModal__item-user--job {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .ndaModal__item--btn.borderBtn {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .changeDoc {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .messageTextarea {
+    height: 125px;
+    padding: 10px 12px 28px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .textareaCounter {
+    right: 10px;
+    bottom: 10px;
+    font-size: 10px;
+  }
+
+  .ndaModal__item-line.df {
+    align-items: flex-start;
+  }
+
+  .ndaModal__item-line--img {
+    width: 20px;
+    min-width: 20px;
+  }
+
+  .ndaModal__item-line--img img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .ndaModal__item-line .switch {
+    align-self: center;
+  }
+
+  .custom-select {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .ndaModal__btn-info {
+    padding: 8px 10px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .ndaModal__btn-btn {
+    padding: 12px 14px;
+    font-size: 11px;
+  }
+}
+
+/* Очень низкие экраны */
+@media (max-height: 720px) {
+  .ndaModa__title {
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+
+  .ndaModal__box {
+    max-height: calc(100dvh - 88px);
+  }
+
+  .ndaModal__item {
+    margin-bottom: 10px;
+  }
+
+  .messageTextarea {
+    height: 88px;
+  }
+}
+
+/* NDA inner adaptive end */
+.mega-menu__wrapper {
+  pointer-events: none !important;
+}
+
+.mega-menu__wrapper.is-open {
+  pointer-events: auto !important;
+}

@@ -253,7 +253,6 @@ on(document, "mouseup", function () {
   /* =========================
        DESKTOP MEGA MENU
   ========================= */
-
   function initDesktopMegaMenu() {
     const menuWrapper = qs(SELECTORS.megaWrapper);
     const navPart2 = qs(SELECTORS.navPart2);
@@ -261,137 +260,175 @@ on(document, "mouseup", function () {
     const navLinks = qsa(SELECTORS.navItemLink);
     const megaLines = qsa(SELECTORS.megaLine);
     const megaBoxes = qsa(SELECTORS.megaBox);
-
+  
     if (!menuWrapper || !navPart2 || !navItems.length) return;
-
+  
     const desktopQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
     let closeTimer = null;
-
+  
+    // разрешаем заходить в megaWrapper только после наведения на nav
+    let canEnterMegaWrapper = false;
+  
     function isDesktop() {
       return desktopQuery.matches && window.innerWidth > 1024;
     }
-
+  
     function openMenu() {
       clearTimeout(closeTimer);
       addClass(menuWrapper, "is-open");
       addClass(document.body, "mega-menu-open");
     }
-
+  
     function closeMenuNow() {
       clearTimeout(closeTimer);
+  
+      canEnterMegaWrapper = false;
+  
       removeClass(menuWrapper, "is-open");
       removeClass(document.body, "mega-menu-open");
-
+  
       navItems.forEach((item) => removeClass(item, "is-active"));
       megaLines.forEach((line) => removeClass(line, "is-active"));
       megaBoxes.forEach((box) => removeClass(box, "is-active"));
     }
-
+  
     function closeMenuWithDelay() {
       clearTimeout(closeTimer);
-
+  
       closeTimer = setTimeout(function () {
-        if (navPart2.matches(":hover") || menuWrapper.matches(":hover")) return;
+        const isNavHovered = navPart2.matches(":hover");
+        const isMegaHovered = menuWrapper.matches(":hover");
+  
+        // megaWrapper может удерживать меню только если мы пришли туда из nav
+        if (isNavHovered || (isMegaHovered && canEnterMegaWrapper)) return;
+  
         closeMenuNow();
       }, 250);
     }
-
+  
     function setActiveMenu(menuKey, shouldOpen = true) {
       if (!menuKey) return;
-
+  
       navItems.forEach((item) => {
         toggleClass(item, "is-active", item.dataset.menu === menuKey);
       });
-
+  
       megaLines.forEach((line) => {
         toggleClass(line, "is-active", line.dataset.menu === menuKey);
       });
-
+  
       megaBoxes.forEach((box) => {
         toggleClass(box, "is-active", box.dataset.menuContent === menuKey);
       });
-
+  
       if (shouldOpen) openMenu();
     }
-
-    // if (navItems.some((item) => item.dataset.menu === "design")) {
-    //   setActiveMenu("design", false);
-    // }
-
+  
     onAll(navItems, "mouseenter", function () {
       if (!isDesktop()) return;
+  
+      canEnterMegaWrapper = true;
       setActiveMenu(this.dataset.menu);
     });
-
+  
     onAll(navItems, "focusin", function () {
       if (!isDesktop()) return;
+  
+      canEnterMegaWrapper = true;
       setActiveMenu(this.dataset.menu);
     });
-
+  
     onAll(megaLines, "mouseenter", function () {
       if (!isDesktop()) return;
+  
+      // если меню уже закрывается/закрылось, hover по старой области не должен открывать снова
+      if (!hasClass(menuWrapper, "is-open") || !canEnterMegaWrapper) return;
+  
       setActiveMenu(this.dataset.menu);
     });
-
+  
     onAll(megaLines, "focusin", function () {
       if (!isDesktop()) return;
+  
+      if (!hasClass(menuWrapper, "is-open") || !canEnterMegaWrapper) return;
+  
       setActiveMenu(this.dataset.menu);
     });
-
-    [navPart2, menuWrapper].forEach((element) => {
-      on(element, "mouseenter", function () {
-        if (!isDesktop()) return;
-        clearTimeout(closeTimer);
-        openMenu();
-      });
-
-      on(element, "mouseleave", function () {
-        if (!isDesktop()) return;
-        closeMenuWithDelay();
-      });
+  
+    on(navPart2, "mouseenter", function () {
+      if (!isDesktop()) return;
+  
+      clearTimeout(closeTimer);
     });
-
+  
+    on(navPart2, "mouseleave", function () {
+      if (!isDesktop()) return;
+  
+      // после выхода из nav можно перейти в megaWrapper
+      canEnterMegaWrapper = hasClass(menuWrapper, "is-open");
+  
+      closeMenuWithDelay();
+    });
+  
+    on(menuWrapper, "mouseenter", function () {
+      if (!isDesktop()) return;
+  
+      // если пользователь вернулся в область megaWrapper после ухода наружу — не открываем
+      if (!canEnterMegaWrapper || !hasClass(menuWrapper, "is-open")) return;
+  
+      clearTimeout(closeTimer);
+    });
+  
+    on(menuWrapper, "mouseleave", function () {
+      if (!isDesktop()) return;
+  
+      // после ухода из megaWrapper возвращение в старую область уже не должно открывать меню
+      canEnterMegaWrapper = false;
+  
+      closeMenuWithDelay();
+    });
+  
     onAll(navLinks, "click", function (event) {
       if (isDesktop()) return;
-
+  
       const item = this.closest(SELECTORS.navItem);
       if (!item) return;
-
+  
       event.preventDefault();
-
+  
       const menuKey = item.dataset.menu;
       if (!menuKey) return;
-
+  
       if (hasClass(item, "is-active") && hasClass(menuWrapper, "is-open")) {
         closeMenuNow();
       } else {
         setActiveMenu(menuKey, true);
       }
     });
-
+  
     onAll(megaLines, "click", function () {
       if (!isDesktop()) return;
+  
+      if (!hasClass(menuWrapper, "is-open") || !canEnterMegaWrapper) return;
+  
       setActiveMenu(this.dataset.menu, true);
     });
-
+  
     on(document, "click", function (event) {
       if (event.target.closest(SELECTORS.navPart2)) return;
+      if (event.target.closest(SELECTORS.megaWrapper)) return;
+  
       closeMenuNow();
     });
-
+  
     on(document, "keyup", function (event) {
       if (event.key === "Escape") closeMenuNow();
     });
-
+  
     on(window, "resize", function () {
       closeMenuNow();
-
-      // if (navItems.some((item) => item.dataset.menu === "design")) {
-      //   setActiveMenu("design", false);
-      // }
     });
   }
-
   /* =========================
        MOBILE BURGER MENU
   ========================= */
