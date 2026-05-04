@@ -5967,14 +5967,18 @@ closeModal();
   }
 </script> -->
 <script>
-  const textarea = document.querySelector(".messageTextarea");
-const counterCurrent = document.querySelector(".textareaCounter__current");
+const textareas = document.querySelectorAll(".messageTextarea");
 
-if (textarea && counterCurrent) {
+textareas.forEach((textarea, index) => {
+  const counters = document.querySelectorAll(".textareaCounter__current");
+  const counter = counters[index];
+
+  if (!counter) return;
+
   textarea.addEventListener("input", () => {
-    counterCurrent.textContent = textarea.value.length;
+    counter.textContent = textarea.value.length;
   });
-}
+});
 </script>
     <script src="../js/new.js"></script>
     
