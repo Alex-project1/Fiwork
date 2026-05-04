@@ -46,291 +46,541 @@
 <body>
 
 
-       <div class="overlayGray">
-      <div id="modal__login" class="modal__login modal">
-        <div class="modal__close">
-          <svg
-            class="closeSvg"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
-              fill="#818C99"
-            />
-          </svg>
-        </div>
-        <div class="modal__box">
-          <form action="" class="modal__form">
-            <div class="modal__form-title">Вход</div>
-            <input
-              placeholder="Телефон, почта или логин"
-              type="text"
-              class="modal__form-input"
-            />
-            <input
-              placeholder="Пароль"
-              type="password"
-              class="modal__form-input"
-            />
-            <div class="modal__form-box">
-              <div class="checkbox__box">
-                <input
-                  type="checkbox"
-                  id="remember"
-                  class="modal__form-checkbox"
-                />
-                <label for="remember">Запомнить пароль</label>
-              </div>
-              <a class="modal__login-forgot" href="#">Забыли пароль?</a>
-            </div>
-            <button type="button" class="modal__blue-btn" id="loginBtn">
-              Войти
-            </button>
-          </form>
-        </div>
-        <div class="modal__box bottomBox">
-          <div class="bottomBox__title">Или продолжить через</div>
-          <div class="bottomBox__social">
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc1.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc2.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc3.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc4.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc5.svg" alt="socialIcon" />
-            </div>
-          </div>
-          <div class="bottomBox__title">Нет аккаунта на Fiwork?</div>
-          <div class="btnBox">
-            <button
-              class="modal__login-headerReg modal-btn"
-              data-modalname="modal__reg"
-            >
-              Зарегистрироваться
-            </button>
-            <a href="#" class="modal__privacy"
-              >Регистрируясь, вы принимаете Условия использования.
-              Политика конфиденциальности.</a
-            >
-          </div>
-        </div>
+  <div class="overlayGray active">
+    <div id="modal__login" class="modal__login modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
       </div>
-      <div id="modal__reg" class="modal__reg modal">
-        <div class="modal__close">
-          <svg
-            class="closeSvg"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
-              fill="#818C99"
-            />
-          </svg>
-        </div>
-        <div class="modal__box">
-          <form action="" class="modal__form">
-            <div class="modal__form-title">Создать аккаунт</div>
-            <div class="modal__form-subTitle">
-              это займет не более 5 минут, обещаем 😉
+      <div class="modal__box">
+        <form action="" class="modal__form">
+          <div class="modal__form-title">Вход</div>
+          <input placeholder="Телефон, почта или логин" type="text" class="modal__form-input" />
+          <input placeholder="Пароль" type="password" class="modal__form-input" />
+          <div class="modal__form-box">
+            <div class="checkbox__box">
+              <input type="checkbox" id="remember" class="modal__form-checkbox" />
+              <label for="remember">Запомнить пароль</label>
             </div>
-            <div class="role-select">
-              <input
-                type="radio"
-                name="role"
-                id="customer"
-                class="role-radio"
-              />
-              <label for="customer" class="role-card">
-                <span class="role-circle"></span>
-                <div class="role-content">
-                  <div class="role-title">Заказать услуги</div>
-                  <div class="role-subtitle">Нужна помощь с проектом</div>
-                </div>
-              </label>
-
-              <input
-                type="radio"
-                name="role"
-                id="worker"
-                class="role-radio"
-                checked
-              />
-              <label for="worker" class="role-card">
-                <span class="role-circle"></span>
-                <div class="role-content">
-                  <div class="role-title">Начать зарабатывать</div>
-                  <div class="role-subtitle">Ищу новые проекты для работы</div>
-                </div>
-              </label>
-            </div>
-
-            <input
-              placeholder="Телефон, почта или логин"
-              type="text"
-              class="modal__form-input"
-            />
-            <input
-              placeholder="Пароль"
-              type="password"
-              class="modal__form-input"
-            />
-
-            <button
-              type="button"
-              class="modal__blue-btn modal-btn"
-              data-modalname="modal__about"
-            >
-              Продолжить
-            </button>
-          </form>
-        </div>
-        <div class="modal__box bottomBox">
-          <div class="bottomBox__title">Или продолжить через</div>
-          <div class="bottomBox__social">
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc1.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc2.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc3.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc4.svg" alt="socialIcon" />
-            </div>
-            <div class="bottomBox__social-item">
-              <img src="../img/userMenu/soc5.svg" alt="socialIcon" />
-            </div>
+            <a class="modal__login-forgot" href="#">Забыли пароль?</a>
           </div>
-
-          <div class="btnBox">
-            <a href="#" class="modal__privacy"
-              >Регистрируясь, вы принимаете Условия использования.
-              Политика конфиденциальности.</a
-            >
-          </div>
-        </div>
-      </div>
-      <div id="modal__about" class="modal__about modal">
-        <div class="modal__close">
-          <svg
-            class="closeSvg"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
-              fill="#818C99"
-            />
-          </svg>
-        </div>
-        <div class="modal__box">
-          <div class="modal__form-title">Расскажите о себе</div>
-          <div class="modal__form-subTitle">Немного о себе, и погнали 🚀</div>
-          <div class="profile-setup">
-            <label class="avatar-box">
-              <input
-                type="file"
-                id="avatarInput"
-                class="avatar-file-input"
-                accept="image/*"
-              />
-
-              <div class="avatar">A</div>
-
-              <div class="avatar-upload-box">
-                <div class="avatar-upload">
-                  <img src="../img/userMenu/photo.svg" alt="icon" />
-                </div>
-              </div>
-            </label>
-            <form class="profile-form">
-              <input
-                type="text"
-                placeholder="Имя"
-                value="Амир"
-                class="profile-input"
-              />
-
-              <input
-                type="text"
-                placeholder="Username"
-                value="amkrsk"
-                class="profile-input"
-              />
-              <div class="select-wrapper">
-                <select class="profile-select">
-                  <option value="individual">Физическое лицо</option>
-                  <option value="company">Компания</option>
-                  <option value="freelancer">Фрилансер</option>
-                </select>
-              </div>
-
-              <div class="profile-buttons">
-                <button type="button" class="skip-btn">Пропустить</button>
-
-                <button type="submit" class="start-btn">Начать</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div
-        id="modal__changepass-saccess"
-        class="modal__changepass-saccess modal"
-      >
-        <div class="modal__close">
-          <svg
-            class="closeSvg"
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
-              fill="#818C99"
-            />
-          </svg>
-        </div>
-        <div class="modal__box changepass-saccess">
-          <div class="changepass-saccess-logo"></div>
-          <div class="modal__form-title">
-            Готово! <br />
-            Пароль обновлён
-          </div>
-          <div class="modal__form-subTitle">
-            Давайте войдём снова и продолжим работу
-          </div>
-          <div
-            class="changepass-saccess-btn modal-btn"
-            data-modalname="modal__login"
-          >
+          <button type="button" class="modal__blue-btn" id="loginBtn">
             Войти
+          </button>
+        </form>
+      </div>
+      <div class="modal__box bottomBox">
+        <div class="bottomBox__title">Или продолжить через</div>
+        <div class="bottomBox__social">
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc1.svg" alt="socialIcon" />
           </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc2.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc3.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc4.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc5.svg" alt="socialIcon" />
+          </div>
+        </div>
+        <div class="bottomBox__title">Нет аккаунта на Fiwork?</div>
+        <div class="btnBox">
+          <button class="modal__login-headerReg modal-btn" data-modalname="modal__reg">
+            Зарегистрироваться
+          </button>
+          <a href="#" class="modal__privacy">Регистрируясь, вы принимаете Условия использования.
+            Политика конфиденциальности.</a>
         </div>
       </div>
     </div>
+    <div id="modal__reg" class="modal__reg modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="modal__box">
+        <form action="" class="modal__form">
+          <div class="modal__form-title">Создать аккаунт</div>
+          <div class="modal__form-subTitle">
+            это займет не более 5 минут, обещаем 😉
+          </div>
+          <div class="role-select">
+            <input type="radio" name="role" id="customer" class="role-radio" />
+            <label for="customer" class="role-card">
+              <span class="role-circle"></span>
+              <div class="role-content">
+                <div class="role-title">Заказать услуги</div>
+                <div class="role-subtitle">Нужна помощь с проектом</div>
+              </div>
+            </label>
+
+            <input type="radio" name="role" id="worker" class="role-radio" checked />
+            <label for="worker" class="role-card">
+              <span class="role-circle"></span>
+              <div class="role-content">
+                <div class="role-title">Начать зарабатывать</div>
+                <div class="role-subtitle">Ищу новые проекты для работы</div>
+              </div>
+            </label>
+          </div>
+
+          <input placeholder="Телефон, почта или логин" type="text" class="modal__form-input" />
+          <input placeholder="Пароль" type="password" class="modal__form-input" />
+
+          <button type="button" class="modal__blue-btn modal-btn" data-modalname="modal__about">
+            Продолжить
+          </button>
+        </form>
+      </div>
+      <div class="modal__box bottomBox">
+        <div class="bottomBox__title">Или продолжить через</div>
+        <div class="bottomBox__social">
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc1.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc2.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc3.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc4.svg" alt="socialIcon" />
+          </div>
+          <div class="bottomBox__social-item">
+            <img src="../img/userMenu/soc5.svg" alt="socialIcon" />
+          </div>
+        </div>
+
+        <div class="btnBox">
+          <a href="#" class="modal__privacy">Регистрируясь, вы принимаете Условия использования.
+            Политика конфиденциальности.</a>
+        </div>
+      </div>
+    </div>
+    <div id="modal__about" class="modal__about modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="modal__box">
+        <div class="modal__form-title">Расскажите о себе</div>
+        <div class="modal__form-subTitle">Немного о себе, и погнали 🚀</div>
+        <div class="profile-setup">
+          <label class="avatar-box">
+            <input type="file" id="avatarInput" class="avatar-file-input" accept="image/*" />
+
+            <div class="avatar">A</div>
+
+            <div class="avatar-upload-box">
+              <div class="avatar-upload">
+                <img src="../img/userMenu/photo.svg" alt="icon" />
+              </div>
+            </div>
+          </label>
+          <form class="profile-form">
+            <input type="text" placeholder="Имя" value="Амир" class="profile-input" />
+
+            <input type="text" placeholder="Username" value="amkrsk" class="profile-input" />
+            <div class="select-wrapper">
+              <select class="profile-select">
+                <option value="individual">Физическое лицо</option>
+                <option value="company">Компания</option>
+                <option value="freelancer">Фрилансер</option>
+              </select>
+            </div>
+
+            <div class="profile-buttons">
+              <button type="button" class="skip-btn">Пропустить</button>
+
+              <button type="submit" class="start-btn">Начать</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal__changepass-saccess" class="modal__changepass-saccess modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="modal__box changepass-saccess">
+        <div class="changepass-saccess-logo"></div>
+        <div class="modal__form-title">
+          Готово! <br />
+          Пароль обновлён
+        </div>
+        <div class="modal__form-subTitle">
+          Давайте войдём снова и продолжим работу
+        </div>
+        <div class="changepass-saccess-btn modal-btn" data-modalname="modal__login">
+          Войти
+        </div>
+      </div>
+    </div>
+    <div id="addTaskModal" class="modal__addTaskModal modal">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+
+      <div class="addTaskModal__title">Новая задача</div>
+
+      <form class="addTaskModal__form">
+        <label class="addTaskModal__label">
+          <span class="addTaskModal__labelText">
+            <span class="addTaskModal__required">*</span>
+            Описание задачи
+          </span>
+
+          <textarea class="addTaskModal__textarea"></textarea>
+        </label>
+
+        <label class="addTaskModal__label">
+          <span class="addTaskModal__labelText">
+            <span class="addTaskModal__required">*</span>
+            Категория
+          </span>
+
+          <div class="addTaskModal__category">
+            <select class="addTaskModal__select">
+              <option>Дизайн</option>
+              <option>Разработка</option>
+              <option>Тестирование</option>
+            </select>
+
+            <button class="addTaskModal__categoryBtn" type="button">+</button>
+          </div>
+        </label>
+
+        <div class="addTaskModal__priority">
+          <div class="addTaskModal__priorityTitle">Приоритет</div>
+
+          <label class="addTaskModal__priorityItem addTaskModal__priorityItem--low">
+            <input type="radio" name="priority" checked />
+            <span>Низкий</span>
+          </label>
+
+          <label class="addTaskModal__priorityItem addTaskModal__priorityItem--medium">
+            <input type="radio" name="priority" />
+            <span>Средний</span>
+          </label>
+
+          <label class="addTaskModal__priorityItem addTaskModal__priorityItem--high">
+            <input type="radio" name="priority" />
+            <span>Высокий</span>
+          </label>
+
+          <label class="addTaskModal__priorityItem addTaskModal__priorityItem--urgent">
+            <input type="radio" name="priority" />
+            <span>Срочный</span>
+          </label>
+        </div>
+
+        <button class="addTaskModal__submit" type="submit">Добавить</button>
+      </form>
+    </div>
+
+    <div id="sendNda" class="ndaModal modal ">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="ndaModa__title">Отправка NDA фрилансеру</div>
+      <div class="ndaModal__box">
+        <div class="ndaModal__subTitle">
+          NDA — соглашение о неразглашении конфиденциальной информации. После
+          подписания фрилансер получит доступ к проекту.
+        </div>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">1. Фрилансер</div>
+          <div class="ndaModal__item-box">
+            <div class="ndaModal__item-line">
+              <div class="ndaModal__item-user">
+                <div class="ndaModal__item-user--logo">
+                  <img src="../img/order/logoNda.png" alt="avatar" />
+                </div>
+                <div class="ndaModal__item-user--info">
+                  <div class="ndaModal__item-user--name">Алексей Смирнов</div>
+                  <div class="ndaModal__item-user--job">Веб-разработчик</div>
+                </div>
+              </div>
+              <div class="ndaModal__item--btn borderBtn">
+                Есть право подписи
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">2. Документ NDA</div>
+          <div class="ndaModal__item-box">
+            <div class="ndaModal__item-line">
+              <div class="ndaModal__item-user">
+                <div class="ndaModal__item-user--img">
+                  <img src="../img/order/nda.png" alt="img" />
+                </div>
+                <div class="ndaModal__item-user--info">
+                  <div class="ndaModal__item-user--name">
+                    NDA стандартный договор.pdf
+                  </div>
+                  <div class="ndaModal__item-user--job">PDF • 128 КБ</div>
+                </div>
+              </div>
+              <button type="button" class="ndaModal__item--btn changeDoc">
+                Заменить документ
+              </button>
+            </div>
+            <div class="ndaModal__doc-ready">
+              <img src="../img/order/ready.svg" alt="ready" />
+              Документ готов к отправке
+            </div>
+            <div class="ndaModal__doc-warning">
+              <img src="../img/order/warn.svg" alt="warn" />
+              Фрилансер сможет скачать документ перед подписанием
+            </div>
+          </div>
+        </div>
+
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">
+            3. Сопроводительное сообщение <span>(необязательно)</span>
+          </div>
+          <div class="ndaModal__item-box borderNone">
+            <div class="ndaModal__item-line borderNone">
+              <div class="textareaBox">
+                <textarea class="messageTextarea" maxlength="500" placeholder="Введите сообщение"></textarea>
+
+                <div class="textareaCounter">
+                  <span class="textareaCounter__current">0</span>/<span>500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">
+            4. Настройки
+
+          </div>
+          <div class="ndaModal__item-box ">
+            <div class="ndaModal__item-line df  ">
+              <div class="ndaModal__item-line--img">
+                <img src="../img/order/shield.svg" alt="icon">
+              </div>
+              <div class="ndaModal__item-line--info">
+                <div class="ndaModal__item-line--title">
+                  Требовать обязательное подписание
+                </div>
+                <div class="ndaModal__item-line--text">
+                  Фрилансер не сможет получить доступ к проекту без подписания NDA
+                </div>
+
+
+
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked="">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="ndaModal__item-line df  ndaModal__item-line--bottom">
+              <div class="ndaModal__item-line--img">
+                <img src="../img/order/clock.svg" alt="icon">
+              </div>
+              <div class="ndaModal__item-line--info">
+                <div class="ndaModal__item-line--title">
+                  Срок действия NDA
+                </div>
+                <div class="ndaModal__item-line--text">
+                  Документ будет действовать в течение выбранного периода
+                </div>
+
+
+
+              </div>
+              <div class="custom-select">
+                <select>
+                  <option selected>2 года</option>
+                  <option>1 год</option>
+                  <option>5 лет</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="ndaModal__btn-line df mt">
+            <div class="ndaModal__btn-info df">
+              <img src="../img/order/lock.svg" alt="lock">
+              Документ будет отправлен через защищённый канал.
+              Подписание происходит с юридической силой.
+            </div>
+            <div class="ndaModal__btn-btn df">
+              <svg class="sendSvg" width="17" height="18" viewBox="0 0 17 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 8.27941L15.75 0.75L11.0625 16.75L7.3125 10.1618L0.75 8.27941Z" stroke="white"
+                  stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+
+              Отправить NDA
+            </div>
+          </div>
+        </div>
+
+        
+        
+      </div>
+      <div class="ndaModal__create">
+        Создать <a href="#">индивидуальный документ</a> для продавца
+      </div>
+    </div>
+    <div id="sendNda" class="ndaModal modal active">
+      <div class="modal__close">
+        <svg class="closeSvg" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.3591 0.307538C11.7692 0.717588 11.7692 1.38241 11.3591 1.79246L7.3185 5.83333L11.3591 9.87422C11.735 10.2501 11.7663 10.8401 11.4531 11.2516L11.3591 11.3591C10.9491 11.7692 10.2843 11.7692 9.87422 11.3591L5.83333 7.3185L1.79246 11.3591C1.38241 11.7692 0.717588 11.7692 0.307538 11.3591C-0.102513 10.9491 -0.102513 10.2843 0.307538 9.87422L4.34817 5.83333L0.307538 1.79246C-0.0683417 1.41658 -0.0996651 0.826623 0.213568 0.415063L0.307538 0.307538C0.717588 -0.102513 1.38241 -0.102513 1.79246 0.307538L5.83333 4.34817L9.87422 0.307538C10.2843 -0.102513 10.9491 -0.102513 11.3591 0.307538Z"
+            fill="#818C99" />
+        </svg>
+      </div>
+      <div class="ndaModa__title">Принять NDA</div>
+      <div class="ndaModal__box">
+        <div class="ndaModal__subTitle">
+          Заказчик просит подписать соглашение о неразглашении перед доступом к проекту.
+        </div>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">1. Проект и заказчик</div>
+          <div class="ndaModal__item-box">
+            <div class="ndaModal__item-line">
+              <div class="ndaModal__item-user">
+                <div class="ndaModal__item-user--logo">
+                  <img src="../img/order/logoNda.png" alt="avatar" />
+                </div>
+                <div class="ndaModal__item-user--info">
+                  <div class="ndaModal__item-user--name">Алексей Смирнов</div>
+                  <div class="ndaModal__item-user--job">SaaS Dashboard · фиксированный бюджет $1 200</div>
+                </div>
+              </div>
+              <div class="ndaModal__item--btn borderBtn accept">
+                NDA
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">2. Документ для подписания</div>
+          <div class="ndaModal__item-box">
+            <div class="ndaModal__item-line">
+              <div class="ndaModal__item-user">
+                <div class="ndaModal__item-user--img">
+                  <img src="../img/order/nda.png" alt="img" />
+                </div>
+                <div class="ndaModal__item-user--info">
+                  <div class="ndaModal__item-user--name">
+                    NDA стандартный договор.pdf
+                  </div>
+                  <div class="ndaModal__item-user--job">PDF • 128 КБ</div>
+                </div>
+              </div>
+              <button type="button" class="ndaModal__item--btn changeDoc">
+                Открыть PDF
+              </button>
+            </div>
+            <div class="ndaModal__doc-ready">
+              <img src="../img/order/ready.svg" alt="ready" />
+              Документ готов к отправке
+            </div>
+            <div class="ndaModal__doc-warning">
+              <img src="../img/order/warn.svg" alt="warn" />
+              После принятия заказчик сможет открыть вам доступ к материалам проекта
+            </div>
+          </div>
+        </div>
+
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">
+            3. Сообщение от заказчика <span>(необязательно)</span>
+          </div>
+          <div class="ndaModal__item-box borderNone">
+            <div class="ndaModal__item-line borderNone">
+              <div class="textareaBox">
+                <textarea class="messageTextarea" maxlength="500" placeholder="Введите сообщение"></textarea>
+
+                <div class="textareaCounter">
+                  <span class="textareaCounter__current">0</span>/<span>500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="ndaModal__item">
+          <div class="ndaModal__item-title">
+            4. Подтверждение
+
+          </div>
+          <div class="ndaModal__item-box ">
+            <div class="ndaModal__item-line df  ">
+              <label class="agree">
+                <input type="checkbox" class="agree__checkbox">
+              
+                <span class="agree__custom"></span>
+              
+                <div class="agree__info">
+                  <div class="agree__title">
+                    Я прочитал(а) NDA и принимаю условия соглашения
+                  </div>
+                  <div class="agree__text">
+                    Подписывая данный документ и подтверждая действие кодом из SMS, вы подписываете его простой электронной подписью (ПЭП) в соответствии с условиями Соглашения об использовании электронной подписи и правилами Платформы. Такая подпись признаётся аналогом собственноручной подписи Стороны.
+                  </div>
+                </div>
+              </label>
+            </div>
+        
+          </div>
+          <div class="ndaModal__btn-line df mt ndaModal__btn-info--acceptBox">
+            <div class="ndaModal__btn-info df">
+              <img src="../img/order/lock.svg" alt="lock">
+            <div class="ndaModal__btn-info--accept">
+              Вы принимаете NDA с юридической фиксацией
+              <span>Копия будет доступна в разделе <a href="#">«Документы»</a> .</span>
+            </div>
+            </div>
+            <div class="ndaModal__btn-btn ndaModal__btn-btn--accept df">
+              Принять и подписать
+            </div>
+          </div>
+        </div>
+
+        
+        
+      </div>
+ 
+    </div>
+  </div>
 
     <header class="computer-header reg">
       <div class="container">
