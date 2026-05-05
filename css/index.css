@@ -577,24 +577,41 @@ footer {
   border-radius: 8px;
   width: 100%;
   height: 40px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-family: var(--font6);
   font-weight: 600;
   font-size: 14px;
   line-height: 143%;
   text-align: center;
+
   color: #fff;
   background: #2196f3;
   border: 0;
   cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
+/* hover */
 .services-nav-container3 input[type="button"]:hover {
   background: #107cd3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(33, 150, 243, 0.35);
 }
 
+/* active (нажатие) */
+.services-nav-container3 input[type="button"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(33, 150, 243, 0.25);
+  background: #0d6fb8;
+}
 .services-nav-container1 {
   height: 100%;
   width: 100%;
@@ -1100,6 +1117,9 @@ footer {
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
+.start-earning-banner-text .become-freelancer:hover img {
+transform: translateX(3px);
+}
 
 .start-earning-banner-text .become-freelancer:active {
   transform: scale(0.97);
@@ -1313,9 +1333,32 @@ footer {
   justify-content: center;
   gap: 6px;
 }
+.additional-apps-platforms a {
+  display: inline-block;
+  border-radius: 10px; /* чтобы тень выглядела аккуратно */
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.2s ease;
+}
 
-.addional-apps-platforms a img {
+.additional-apps-platforms a img {
   width: 132px;
+  display: block;
+  border-radius: 10px;
+}
+
+/* hover */
+.additional-apps-platforms a:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* active (клик) */
+.additional-apps-platforms a:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
 }
 /*End of additional apps block*/
 
@@ -2586,24 +2629,41 @@ footer {
     border-radius: 8px;
     width: 100%;
     height: 40px;
+  
     display: flex;
     align-items: center;
     justify-content: center;
+  
     font-family: var(--font6);
     font-weight: 600;
     font-size: 14px;
     line-height: 143%;
     text-align: center;
+  
     color: #fff;
     background: #2196f3;
     border: 0;
     cursor: pointer;
+  
+    transition:
+      background 0.2s ease,
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
   }
-
-  .services-nav-container3 input[type="button"]:hover {
+  
+  /* hover */
+  .add-project:hover {
     background: #107cd3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(33, 150, 243, 0.35);
   }
-
+  
+  /* active (нажатие) */
+  .add-project:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(33, 150, 243, 0.25);
+    background: #0d6fb8;
+  }
   .services-nav-container1 {
     height: 100%;
     width: 100%;
