@@ -3818,18 +3818,20 @@ input:valid {
     width: 100%;
     height: 94px;
     resize: none;
-    background-color: #f9fafb;
+    background-color: #fff;
     border: 1px solid #d1d5db;
     padding: 8px;
     border-radius: 6px;
     outline: none;
 }
 
-.addTaskModal__textarea:focus,
+.addTaskModal__textarea:focus {
+    border-color: #03a9f4;
+  background-color: #F9FAFB;
+}
 .addTaskModal__select:focus {
     border-color: #0075ff;
 }
-
 .addTaskModal__category {
     display: flex;
     width: 100%;
@@ -3846,7 +3848,22 @@ input:valid {
     background: #fff;
     font-size: 13px;
     color: #9ca3af;
-}
+    cursor: pointer;
+  
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .addTaskModal__select:hover {
+    border-color: #94a3b8;
+    background-color: #f9fafb;
+    box-shadow: 0 0 0 2px rgba(0, 117, 255, 0.05);
+  }
+  
+  /* фокус — приоритетнее hover */
+  .addTaskModal__select:focus {
+    border-color: #0075ff;
+    background-color: #fff;
+  }
 
 .addTaskModal__categoryBtn {
     width: 39px;
