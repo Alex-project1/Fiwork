@@ -1324,6 +1324,25 @@ transform: translateX(3px);
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: qrAttention 4s infinite;
+}
+
+@keyframes qrAttention {
+  0%, 60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  75% {
+    transform: scale(0.98);
+  }
+  80% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .additional-apps-platforms {
@@ -2226,6 +2245,7 @@ transform: translateX(3px);
   border: 0;
   background: none;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .lang-switch .seg.active {
@@ -2233,7 +2253,7 @@ transform: translateX(3px);
   border-radius: 10px;
   width: 42px;
   height: 20px;
-  background: #aeaeae;
+  background: #2196f3;
   color: white;
 }
 

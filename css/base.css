@@ -3349,7 +3349,7 @@ transition: all .3s;
 
 /* hover только для НЕ активных */
 .lang-switch .seg:not(.active):hover {
-  background-color: #f3f4f6;
+  background-color: #e4e4e4;
   color: #111827;
 
   transform: translateY(-1px);
