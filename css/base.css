@@ -5364,8 +5364,12 @@ max-width: 300px;
 .ndaModal__item-box {
   border-radius: 10px;
   border: 1px solid #E5E7EB;
+  transition: all .3s;
+  overflow: hidden;
 }
-
+.ndaModal__item-box:hover{
+  border-color: #03a9f4
+}
 .ndaModal__item-line,
 .ndaModal__doc-ready {
 
@@ -5545,7 +5549,9 @@ max-width: 300px;
   border-color: transparent;
   padding: 0;
 }
-
+.borderNone:hover{
+  border-color: transparent !important;
+}
 .messageTextarea {
   width: 100%;
   resize: none;
@@ -5558,6 +5564,11 @@ max-width: 300px;
   color: #111827;
   font-size: 13px;
   font-weight: 400;
+  transition: 
+  border-color 0.2s ease,
+  box-shadow 0.2s ease,
+  background-color 0.2s ease,
+  transform 0.1s ease;
 
 }
 
@@ -5570,10 +5581,14 @@ max-width: 300px;
   font-weight: 400;
 
 }
+.messageTextarea:hover{
 
+  border-color: #03a9f4;
+}
 .messageTextarea:focus {
   border-color: #03a9f4;
   background-color: #F9FAFB;
+
 }
 
 .df {
@@ -5777,11 +5792,37 @@ font-weight: 400;
   font-size: 12px;font-weight: 400;
   text-align: center;
 }
-.ndaModal__create a{
+.ndaModal__create a {
+  position: relative;
   color: #177DE5;
   text-decoration: none;
 }
 
+.ndaModal__create a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  width: 100%;
+  height: 1px;
+  background-color: #177DE5;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
+}
+
+.ndaModal__create a:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+.ndaModal__create a:not(:hover)::after {
+  transform: scaleX(0);
+  transform-origin: center;
+}
 /* чекбокс соглашения начало */
 .agree {
   display: flex;
@@ -5858,6 +5899,34 @@ font-weight: 400;
   .ndaModal__btn-info--btn-box {
     flex-direction: column;
   }
+}
+@media (hover:hover){
+
+  .agree:hover .agree__custom {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+  .agree:hover .agree__text {
+color:#000;
+}
+.agree:hover .agree__title {
+  color: #2563EB;
+}
+}
+
+.agree:active .agree__custom {
+  transform: scale(0.95);
+}
+
+.agree__checkbox:checked + .agree__custom {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+.agree__custom {
+  transition: 
+    all 0.2s ease,
+    box-shadow 0.25s ease,
+    transform 0.15s ease;
 }
 /* чекбокс соглашения конец */
 
@@ -6111,7 +6180,6 @@ font-weight: 400;
     width: 100%;
   }
 
-  /* Нижний блок с предупреждением и кнопкой */
   .ndaModal__btn-info--btn-box {
     flex-direction: column;
     align-items: stretch;
@@ -6135,7 +6203,6 @@ font-weight: 400;
     line-height: 16px;
   }
 
-  /* Чекбокс принятия */
   .agree {
     gap: 10px;
   }
